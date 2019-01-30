@@ -15,19 +15,19 @@
 
 
 
-<meta name="description" content="算法之链表逆序问题 有一链表，链表数据为：1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 6 -&amp;gt; 7  使其逆序，数据为：7 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 4 -&amp;gt; 3 -&amp;gt; 2 -&amp;gt; 1  解决方法（3种）1.就地逆序 新增一节点的指针域，用于存储当前节点的后继节点  需要当前节点，前驱节点 遍历链表，直到最后一个节点">
+<meta name="description" content="算法之链表逆序问题 有一链表，链表数据为：1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 6 -&amp;gt; 7  使其逆序，数据为：7 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 4 -&amp;gt; 3 -&amp;gt; 2 -&amp;gt; 1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TimeJjc&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/2019/01/30/数据结构与算法之逆序/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="算法之链表逆序问题 有一链表，链表数据为：1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 6 -&amp;gt; 7  使其逆序，数据为：7 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 4 -&amp;gt; 3 -&amp;gt; 2 -&amp;gt; 1  解决方法（3种）1.就地逆序 新增一节点的指针域，用于存储当前节点的后继节点  需要当前节点，前驱节点 遍历链表，直到最后一个节点">
+<meta property="og:description" content="算法之链表逆序问题 有一链表，链表数据为：1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 6 -&amp;gt; 7  使其逆序，数据为：7 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 4 -&amp;gt; 3 -&amp;gt; 2 -&amp;gt; 1">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/01/30/数据结构与算法之逆序/img/reverse/variables_head.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/30/数据结构与算法之逆序/img/reverse/variables_pre.png">
-<meta property="og:updated_time" content="2019-01-30T05:33:27.431Z">
+<meta property="og:updated_time" content="2019-01-30T06:38:56.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TimeJjc&#39;s Blog">
-<meta name="twitter:description" content="算法之链表逆序问题 有一链表，链表数据为：1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 6 -&amp;gt; 7  使其逆序，数据为：7 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 4 -&amp;gt; 3 -&amp;gt; 2 -&amp;gt; 1  解决方法（3种）1.就地逆序 新增一节点的指针域，用于存储当前节点的后继节点  需要当前节点，前驱节点 遍历链表，直到最后一个节点">
+<meta name="twitter:description" content="算法之链表逆序问题 有一链表，链表数据为：1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; 6 -&amp;gt; 7  使其逆序，数据为：7 -&amp;gt; 6 -&amp;gt; 5 -&amp;gt; 4 -&amp;gt; 3 -&amp;gt; 2 -&amp;gt; 1">
 <meta name="twitter:image" content="http://yoursite.com/2019/01/30/数据结构与算法之逆序/img/reverse/variables_head.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -293,8 +293,9 @@
           
         <h2 id="算法之链表逆序"><a href="#算法之链表逆序" class="headerlink" title="算法之链表逆序"></a>算法之链表逆序</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
 <li>有一链表，链表数据为：1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 </li>
-<li>使其逆序，数据为：7 -&gt; 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1</li>
+<li>使其逆序，数据为：7 -&gt; 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1  </li>
 </ul>
+<a id="more"></a>
 <h3 id="解决方法（3种）"><a href="#解决方法（3种）" class="headerlink" title="解决方法（3种）"></a>解决方法（3种）</h3><h5 id="1-就地逆序"><a href="#1-就地逆序" class="headerlink" title="1.就地逆序"></a>1.就地逆序</h5><ul>
 <li>新增一节点的指针域，用于存储当前节点的后继节点 </li>
 <li>需要当前节点，前驱节点</li>
@@ -408,7 +409,7 @@ public class Reverse {
         <p><span>本文标题:</span><a href="/2019/01/30/数据结构与算法之逆序/"></a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
         <p><span>发布时间:</span>2019-01-30, 09:46:38</p>
-        <p><span>最后更新:</span>2019-01-30, 13:33:27</p>
+        <p><span>最后更新:</span>2019-01-30, 14:38:56</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/01/30/数据结构与算法之逆序/" title="">http://yoursite.com/2019/01/30/数据结构与算法之逆序/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/01/30/数据结构与算法之逆序/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
