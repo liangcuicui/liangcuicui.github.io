@@ -182,6 +182,8 @@
                             
                                 <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
+                                <a class="fa CSDN" href="https://blog.csdn.net/TimeJjc" title="CSDN"></a>
+                            
                         </ul>
                     </nav>
                 </section>
@@ -259,6 +261,8 @@
                                 <a class="fa GitHub" target="_blank" href="https://github.com/liangcuicui" title="GitHub"></a>
                             
                                 <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/TimeJjc" title="CSDN"></a>
                             
                         </ul>
             </nav>
@@ -367,17 +371,19 @@
             </div>
         
 		
-			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-			<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-			<span class="post-meta-divider">|</span>
-			<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人</span>
+			<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+			<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+			<script type="text/javascript" src="/js/src/fireworks.js"></script>
+		
+		
+		  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 		
     </div>
 	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 	<script>
 		var now = new Date(); 
 		function createtime() { 
-			var grt= new Date("24/1/2019 13:27:47");
+			var grt= new Date("24/01/2019 13:27:47");
 			now.setTime(now.getTime()+250); 
 			days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
 			hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
@@ -485,10 +491,6 @@ MathJax.Hub.Queue(function() {
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
   </div>
-  
-    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/src/fireworks.js"></script>
   
 </body>
 </html>
