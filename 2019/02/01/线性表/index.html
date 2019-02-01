@@ -15,20 +15,22 @@
 
 
 
-<meta name="description" content="算法复杂度分类：时间复杂度&amp;#160;和&amp;#160;空间复杂度指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。">
-<meta name="keywords" content="数据结构,算法">
+<meta name="description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表 条件&amp;#160;&amp;#160;&amp;#160;&amp;#160;第一个元素无前驱，最后一个元素无后继，其他元素都有且只有一个前驱和后继。线性关系是不允许有第三者的！！！    数据类型&amp;#160;&amp;#160;&amp;#160;&amp;#160;一组性质相同的值的集合及定义在此集合上的一些操作的总称&amp;#160;&amp;#160">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="时间复杂度与空间复杂度">
-<meta property="og:url" content="http://yoursite.com/2019/02/01/时间复杂度与空间复杂度/index.html">
+<meta property="og:title" content="线性表（List）之增删改查">
+<meta property="og:url" content="http://yoursite.com/2019/02/01/线性表/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="算法复杂度分类：时间复杂度&amp;#160;和&amp;#160;空间复杂度指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。">
+<meta property="og:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表 条件&amp;#160;&amp;#160;&amp;#160;&amp;#160;第一个元素无前驱，最后一个元素无后继，其他元素都有且只有一个前驱和后继。线性关系是不允许有第三者的！！！    数据类型&amp;#160;&amp;#160;&amp;#160;&amp;#160;一组性质相同的值的集合及定义在此集合上的一些操作的总称&amp;#160;&amp;#160">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/时间复杂度与空间复杂度/timeComplexity.png">
-<meta property="og:updated_time" content="2019-02-01T12:23:38.554Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/LNode.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/node.png">
+<meta property="og:updated_time" content="2019-02-01T14:40:03.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时间复杂度与空间复杂度">
-<meta name="twitter:description" content="算法复杂度分类：时间复杂度&amp;#160;和&amp;#160;空间复杂度指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/01/时间复杂度与空间复杂度/timeComplexity.png">
+<meta name="twitter:title" content="线性表（List）之增删改查">
+<meta name="twitter:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表 条件&amp;#160;&amp;#160;&amp;#160;&amp;#160;第一个元素无前驱，最后一个元素无后继，其他元素都有且只有一个前驱和后继。线性关系是不允许有第三者的！！！    数据类型&amp;#160;&amp;#160;&amp;#160;&amp;#160;一组性质相同的值的集合及定义在此集合上的一些操作的总称&amp;#160;&amp;#160">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -60,7 +62,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>时间复杂度与空间复杂度 | TimeJjc&#39;s Blog</title>
+<title>线性表（List）之增删改查 | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +279,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-时间复杂度与空间复杂度" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-线性表" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/02/01/时间复杂度与空间复杂度/" class="article-date">
-      <time datetime="2019-02-01T02:13:43.000Z" itemprop="datePublished">2019-02-01</time>
+      <a href="/2019/02/01/线性表/" class="article-date">
+      <time datetime="2019-02-01T08:31:54.000Z" itemprop="datePublished">2019-02-01</time>
 </a>
 
 
@@ -296,7 +298,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      时间复杂度与空间复杂度
+      线性表（List）之增删改查
     </h1>
   
 
@@ -306,7 +308,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">703字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -315,7 +317,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
@@ -327,7 +329,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -337,25 +339,100 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><p>分类：时间复杂度&#160;和&#160;空间复杂度<br>指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。<br><a id="more"></a><br>方法：</p>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>&#160;&#160;&#160;&#160;由0或多个数据元素组成的有限个序列，为0时，是空表</p>
+<h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><p>&#160;&#160;&#160;&#160;第一个元素无前驱，最后一个元素无后继，其他元素都<strong><em>有且只有</em></strong>一个前驱和后继。线性关系是不允许有第三者的！！！   </p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>&#160;&#160;&#160;&#160;一组性质相同的值的集合及定义在此集合上的一些操作的总称<br>&#160;&#160;&#160;&#160;JAVA中数据类型分为两种：  </p>
 <ul>
-<li>事前分析估算法（渐进复杂度)<br>&#160;常用的算法，依据统计方法对算法进行估算</li>
-<li>事后统计法<br>&#160;&#160;&#160;&#160;通过设计好的测试程序和数据，利用计算机计时器对不同算法编制的程序的运行时间进行比较，从而确定算法效率的高低。<br>&#160;&#160;&#160;&#160;但是需要花费大量的时间和经历，若测试发现算法不可取，则损失重大。   </li>
+<li><p>基本数据（原子）类型：不可再分<br><img src="/2019/02/01/线性表/type_base.png" alt="">  </p>
+</li>
+<li><p>引用数据类型<br>&#160;&#160;&#160;&#160;类、接口、数组<br>&#160;&#160;&#160;&#160;很重要！！！，否则无法理解“指针”操作</p>
+</li>
 </ul>
-<p>算法效率的度量因素：  </p>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><ul>
+<li>求元素个数</li>
+<li>插入</li>
+<li>删除</li>
+<li>查找</li>
+<li>判断是否为空  </li>
+</ul>
+<h1 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h1><p>&#160;&#160;&#160;&#160;顺序存储和链表存储  </p>
+<h2 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h2><p>&#160;&#160;&#160;&#160;栈内存是顺序结构的<br>&#160;&#160;&#160;&#160;用一段地址连续的存储单元依次存储线性表的数据元素<br>需要封装的属性（3）：</p>
+<ul>
+<li>起始位置</li>
+<li>最大存储容量</li>
+<li>当前长度<br><strong><em><font color="red">注意：线性表的首地址为：1</font></em></strong>    </li>
+</ul>
+<p>时间复杂度</p>
 <ol>
-<li>算法采用的策略、方案</li>
-<li>编译产生的代码质量</li>
-<li>问题的输入规模（输入量）</li>
-<li>及其执行指令的速度<br>&#160;<strong><em>一个程序的运行时间依赖于算法的好坏和问题的输入规模。</em></strong>   </li>
+<li>删除/插入<br>最好情况：不移动元素&#160;O(1)<br>最坏情况:移动n个元素&#160;O(n)<br>平均情况:O((n-1)/2),&#160;即&#160;O(n)   </li>
 </ol>
-<p>函数的渐近增长：<br>判断一个算法的效率时，函数中的尝试和其他次要项可忽略，关注的应该是最高想的阶数。 </p>
-<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p><strong>官方定义：</strong><br>&#160;&#160;&#160;&#160;在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。<br>&#160;&#160;&#160;&#160;算法的时间复杂度，也就是算法的时间量度，记作：<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;T(n) = O(f(n))<br>&#160;&#160;表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的<strong>渐进时间复杂度</strong>，简称<strong>时间复杂度</strong>，其中f(n)是问题规模n的某个函数<br>比较：<br><img src="/2019/02/01/时间复杂度与空间复杂度/timeComplexity.png" alt="">   </p>
-<p>时间复杂度所消耗的时间从小到大依次为:<br>O(1) &lt; O(lon(n)) &lt; O(n) &lt; O(nlogn) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n) &lt; O(n!) &lt; O(n^n)    </p>
-<h3 id="最坏情况和平均情况"><a href="#最坏情况和平均情况" class="headerlink" title="最坏情况和平均情况"></a>最坏情况和平均情况</h3><ul>
-<li>最坏运行时间<br>&#160;&#160;&#160;&#160;一个算法有最好的情况和最坏的情况。在应用中，这是一个最中药的需求，除了特别指定，我们所提到的运行时间都是最坏情况的运行时间。  </li>
-<li>平均运行时间<br>&#160;&#160;&#160;&#160;期望的运行时间     <h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2>通过计算算法所需要的存储空间实现的，计算公式为:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;S(n) = O(f(n));<br>&#160;&#160;&#160;&#160;其中f(n)是关于问题规模n所占存储空间的函数。<br>是对一个算法在运行过程中临时占用存储空间大小的度量</li>
+<p>&#160;&#160;&#160;2.存、取<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;都为&#160;O(1)  </p>
+<p>优点  </p>
+<ol>
+<li>不需要为博爱中元素之间的逻辑关系增加额外的存储空间 </li>
+<li>快速存取表中任意位置的元素……虽让人家是顺序的呢，嘿嘿嘿  </li>
+</ol>
+<p>缺点  </p>
+<ol>
+<li>插入和删除太慢了，除非数据特别少，否则不要用啊！！！</li>
+<li>若线性表的长度变化较大（大量的插入和删除） ，无法确定存储空格键的容量啊</li>
+<li>存储空间碎片化，毕竟人家存储空间的分配是一整块来着的呀，当一大块空间剩下一小块时，而这一小块空间又不够我们用的，那就只能浪费掉，然后再次申请一大块空间，两个大块之间的小块就属于“碎片”啦  </li>
+</ol>
+<h2 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h2><p>位置是随意的哦，但是要求存元素本身及其后继指针  </p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>数据域<br>存储数据元素信息的域  </li>
+<li>指针域<br>存储后继位置的域  </li>
+<li>指针<br>指针域中存储的信息  </li>
+<li>结点(存储映像)<br>数据域 + 指针域    <h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><img src="/2019/02/01/线性表/LNode.png" alt="">  </li>
 </ul>
+<h4 id="头指针-头节点-首元节点"><a href="#头指针-头节点-首元节点" class="headerlink" title="头指针/头节点/首元节点"></a>头指针/头节点/首元节点</h4><ul>
+<li>头指针<br>指链表指向的第一个结点的指针，若链表有头检点，则是指向头结点的指针。<br>单链表可由一个头指针唯一确定（标识）</li>
+<li>元首结点<br>指链表中存储第一个元素的结点</li>
+<li>头结点<br>在链表的首元结点之前附设的一个节点，数据域内存放的是空表标志和表长等信息<br><img src="/2019/02/01/线性表/node.png" alt="">  </li>
+</ul>
+<p>&#160;&#160;&#160;&#160;<strong> 无论链表是否为空，头指针均不为 </strong>，人家是唯一标识啊😏     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class LNode &#123;</span><br><span class="line">	/** 数据域 */</span><br><span class="line">	private  int data ;</span><br><span class="line">	</span><br><span class="line">	/** 节点域 */</span><br><span class="line">	private LNode next;</span><br><span class="line"></span><br><span class="line">	public int getData() &#123;</span><br><span class="line">		return data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	public void setData(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode getNext() &#123;</span><br><span class="line">		return next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setNext(LNode next) &#123;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data, LNode next) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="单链表的读取"><a href="#单链表的读取" class="headerlink" title="单链表的读取"></a>单链表的读取</h4><ul>
+<li>获得链表第i个数据<br>&#160;1. 声明一个结点p指向链表第一个结点，初始化&#160;j&#160;从1开始<br>&#160;2. 当j&lt;i时，遍历链表，p指针后移，j++;<br>&#160;3. 若循环到末尾p为空，则不存在第i个元素<br>&#160;4. 否则查找成功，返回结点p的数据  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class GetIData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode IData(LNode head,int i) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		while(head != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			head = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		//判断是否遍历完整个链表</span><br><span class="line">		if(head == null || j&lt;i)</span><br><span class="line">			return null;</span><br><span class="line">		</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">&amp;#160;&amp;#160;&amp;#160;&amp;#160;单链表的循环，建议使用while,因为并不知道单链表的长度</span><br><span class="line">#### 单链表的插入 ####</span><br><span class="line">- 在第i个数据插入结点  </span><br><span class="line">&amp;#160;1.  新节点指向当前结点的后继   </span><br><span class="line">&amp;#160;2. 当前结点指向新节点</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>public class InsertData {</p>
+<pre><code>public static LNode insert(LNode head, int i, int newData) {
+    int j = 0;
+    LNode tmp = head;
+    while (tmp != null &amp;&amp; j&lt;i) {
+        tmp = head.getNext();
+        j++;
+    }
+    if(tmp == null || j&lt;i || i&lt;0) {
+        return null;
+    }
+    //new一个空结点p
+    LNode p = new LNode(0);
+    &lt;font color=red&gt;p.setData(newData);&lt;/font&gt;
+    //p指向head后继:p.next = head.next
+    p.setNext(tmp.getNext());
+    //head指向p:head.next = p;
+    tmp.setNext(p);
+    return head.getNext();
+}
+</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">这里返回的时head.getNext()是因为，在定义head时，为：</span><br><span class="line"></span><br><span class="line">&gt; LNode head = new LNode(0);  </span><br><span class="line">这时head是有头节点的   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](线性表/head.png)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 单链表的删除 ####</span><br><span class="line">&amp;#160;1. 找到要删除结点的前驱结点（j=1开始）  </span><br><span class="line">&amp;#160;2. 前驱结点直接指向要删除结点的后继结点</span><br></pre></td></tr></table></figure>
+<p>public class DeleteNode {</p>
+<pre><code>public static LNode deleteINode(LNode node, int i) {
+    int j = 1;
+    LNode tmp = node;
+    while(tmp != null &amp;&amp; j&lt;i) {
+        tmp = tmp.getNext();
+        j++;
+    }
+    if(tmp == null || j&lt;i || i&lt;0) {
+        return null;
+    }
+    tmp.setNext(tmp.getNext().getNext());
+    return node.getNext();
+}
+</code></pre><p>}<br><code>`</code>  </p>
 
       
     </div>
@@ -364,13 +441,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></p>
+        <p><span>本文标题:</span><a href="/2019/02/01/线性表/">线性表（List）之增删改查</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
-        <p><span>发布时间:</span>2019-02-01, 10:13:43</p>
-        <p><span>最后更新:</span>2019-02-01, 20:23:38</p>
+        <p><span>发布时间:</span>2019-02-01, 16:31:54</p>
+        <p><span>最后更新:</span>2019-02-01, 22:40:03</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/01/时间复杂度与空间复杂度/" title="时间复杂度与空间复杂度">http://yoursite.com/2019/02/01/时间复杂度与空间复杂度/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/01/时间复杂度与空间复杂度/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/02/01/线性表/" title="线性表（List）之增删改查">http://yoursite.com/2019/02/01/线性表/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/01/线性表/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -382,16 +459,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/01/线性表/">
-                    线性表（List）之增删改查
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/01/30/数据结构与算法之逆序/">
-                    
+                <a href="/2019/02/01/时间复杂度与空间复杂度/">
+                    时间复杂度与空间复杂度
                 </a>
             </div>
         
@@ -403,7 +474,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#算法复杂度"><span class="toc-number">1.</span> <span class="toc-text">算法复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.1.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#最坏情况和平均情况"><span class="toc-number">1.1.1.</span> <span class="toc-text">最坏情况和平均情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#空间复杂度"><span class="toc-number">1.2.</span> <span class="toc-text">空间复杂度</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#条件"><span class="toc-number">2.</span> <span class="toc-text">条件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本操作"><span class="toc-number">4.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">5.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序存储"><span class="toc-number">5.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式存储"><span class="toc-number">5.2.</span> <span class="toc-text">链式存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">5.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单链表"><span class="toc-number">5.2.2.</span> <span class="toc-text">单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#头指针-头节点-首元节点"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">头指针/头节点/首元节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的读取"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">单链表的读取</span></a></li></ol></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -439,7 +510,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"时间复杂度与空间复杂度　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"线性表（List）之增删改查　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -459,15 +530,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/02/01/线性表/" title="上一篇: 线性表（List）之增删改查">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/01/30/数据结构与算法之逆序/" title="下一篇: ">
+            <a href="/2019/02/01/时间复杂度与空间复杂度/" title="下一篇: 时间复杂度与空间复杂度">
                 <i class="fa fa-angle-right"></i>
             </a>
         
