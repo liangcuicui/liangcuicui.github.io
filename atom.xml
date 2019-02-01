@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-30T10:19:32.475Z</updated>
+  <updated>2019-02-01T03:52:18.815Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>时间复杂度与空间复杂度</title>
+    <link href="http://yoursite.com/2019/02/01/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    <id>http://yoursite.com/2019/02/01/时间复杂度与空间复杂度/</id>
+    <published>2019-02-01T02:13:43.000Z</published>
+    <updated>2019-02-01T03:52:18.815Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><p>分类：时间复杂度&#160;和&#160;空间复杂度<br>指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。<br>方法：</p><ul><li>事前分析估算法（渐进复杂度)<br>&#160;常用的算法，依据统计方法对算法进行估算</li><li>事后统计法<br>&#160;&#160;&#160;&#160;通过设计好的测试程序和数据，利用计算机计时器对不同算法编制的程序的运行时间进行比较，从而确定算法效率的高低。<br>&#160;&#160;&#160;&#160;但是需要花费大量的时间和经历，若测试发现算法不可取，则损失重大。   <a id="more"></a>算法效率的度量因素：  </li></ul><ol><li>算法采用的策略、方案</li><li>编译产生的代码质量</li><li>问题的输入规模（输入量）</li><li>及其执行指令的速度<br>&#160;<strong><em>一个程序的运行时间依赖于算法的好坏和问题的输入规模。</em></strong>   </li></ol><p>函数的渐近增长：<br>判断一个算法的效率时，函数中的尝试和其他次要项可忽略，关注的应该是最高想的阶数。 </p><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p><strong>官方定义：</strong><br>&#160;&#160;&#160;&#160;在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。<br>&#160;&#160;&#160;&#160;算法的时间复杂度，也就是算法的时间量度，记作：<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;T(n) = O(f(n))<br>&#160;&#160;表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的<strong>渐进时间复杂度</strong>，简称<strong>时间复杂度</strong>，其中f(n)是问题规模n的某个函数<br>比较：<br><img src="/2019/02/01/时间复杂度与空间复杂度/timeComplexity.png" alt="">   </p><p>时间复杂度所消耗的时间从小到大依次为:<br>O(1) &lt; O(lon(n)) &lt; O(n) &lt; O(nlogn) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n) &lt; O(n!) &lt; O(n^n)    </p><h3 id="最坏情况和平均情况"><a href="#最坏情况和平均情况" class="headerlink" title="最坏情况和平均情况"></a>最坏情况和平均情况</h3><ul><li>最坏运行时间<br>&#160;&#160;&#160;&#160;一个算法有最好的情况和最坏的情况。在应用中，这是一个最中药的需求，除了特别指定，我们所提到的运行时间都是最坏情况的运行时间。  </li><li>平均运行时间<br>&#160;&#160;&#160;&#160;期望的运行时间     <h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2>通过计算算法所需要的存储空间实现的，计算公式为:<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;S(n) = O(f(n));<br>&#160;&#160;&#160;&#160;其中f(n)是关于问题规模n所占存储空间的函数。<br>是对一个算法在运行过程中临时占用存储空间大小的度量</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;算法复杂度&quot;&gt;&lt;a href=&quot;#算法复杂度&quot; class=&quot;headerlink&quot; title=&quot;算法复杂度&quot;&gt;&lt;/a&gt;算法复杂度&lt;/h1&gt;&lt;p&gt;分类：时间复杂度&amp;#160;和&amp;#160;空间复杂度&lt;br&gt;指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。&lt;br&gt;方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事前分析估算法（渐进复杂度)&lt;br&gt;&amp;#160;常用的算法，依据统计方法对算法进行估算&lt;/li&gt;
+&lt;li&gt;事后统计法&lt;br&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;通过设计好的测试程序和数据，利用计算机计时器对不同算法编制的程序的运行时间进行比较，从而确定算法效率的高低。&lt;br&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;但是需要花费大量的时间和经历，若测试发现算法不可取，则损失重大。&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="数据结构，算法" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="http://yoursite.com/2019/01/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8B%E9%80%86%E5%BA%8F/"/>
     <id>http://yoursite.com/2019/01/30/数据结构与算法之逆序/</id>
     <published>2019-01-30T01:46:38.719Z</published>
-    <updated>2019-01-30T10:19:32.475Z</updated>
+    <updated>2019-02-01T03:10:45.084Z</updated>
     
     <content type="html"><![CDATA[<h2 id="算法之链表逆序"><a href="#算法之链表逆序" class="headerlink" title="算法之链表逆序"></a>算法之链表逆序</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul><li>有一链表，链表数据为：1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 </li><li>使其逆序，数据为：7 -&gt; 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1  </li></ul><a id="more"></a><h3 id="解决方法（3种）"><a href="#解决方法（3种）" class="headerlink" title="解决方法（3种）"></a>解决方法（3种）</h3><h5 id="1-就地逆序"><a href="#1-就地逆序" class="headerlink" title="1.就地逆序"></a>1.就地逆序</h5><ul><li>新增一节点的指针域，用于存储当前节点的后继节点 </li><li>需要当前节点，前驱节点</li><li>遍历链表，直到最后一个节点  </li></ul><p><strong>节点类</strong></p><pre><code>/** * 链表节点类 * @author 梁翠翠 * */public class LNode {    /** 数据域 */    private  int data ;    /** 节点域 */    private LNode next;    public int getData() {        return data;    }    public LNode(int data) {        this.data = data;    }     public void setData(int data) {        this.data = data;    }    public LNode getNext() {        return next;    }    public void setNext(LNode next) {        this.next = next;    }    public LNode(int data, LNode next) {        this.data = data;        this.next = next;    }} </code></pre><p>   <strong>测试类</strong></p><pre><code>/** * 基础的链表反转 * @author 梁翠翠 * */public class Reverse {    /**     * 直接反转节点指向     * @param head 头节点     * @return 逆序后的链表     */    public static LNode Reverse_base(LNode head) {        //没有节点或只有一个节点则直接返回        if(head == null || head.getNext() == null)            return head;        //前驱节点        LNode pre = null;        //下一节点        LNode next = null;        //当前节点        LNode cur = head;        //循环链表        while(cur != null) {            //next存储当前节点的后继节点，以免丢失            next = cur.getNext();            //当前节点指向下一节点            cur.setNext(pre);            pre = cur;            cur = next;        }        return pre;    }    public static void main(String[] args) {        LNode head = new LNode(0);        //LNode tail = new LNode(0);        LNode tail = head;        System.out.println(&quot;原始链表&quot;);        for(int i=1; i&lt;8; i++) {            LNode tmp = new LNode(i);            tail.setNext(tmp);            tail = tmp;            System.out.print(tail.getData()+&quot; &quot;);        }        System.out.println();        LNode lNode = Reverse_base(head);        System.out.println(&quot;逆序链表&quot;);        while(lNode.getNext() != null) {            System.out.print(lNode.getData()+&quot; &quot;);            lNode = lNode.getNext();        }    }}</code></pre><p>以上是所有的代码<br>在逆序前，存值到链表中：<br><img src="/2019/01/30/数据结构与算法之逆序/variables_head.png" alt="">  </p><p>逆序后，链表pre   </p><p><img src="/2019/01/30/数据结构与算法之逆序/variables_pre.png" alt="">   </p><p>由于第一次使用Markdown pad2  之后会不断优化<br>解法有3种，后续会更新</p>]]></content>
     
@@ -34,6 +57,8 @@
     
     </summary>
     
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
