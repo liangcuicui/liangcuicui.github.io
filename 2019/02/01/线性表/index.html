@@ -26,7 +26,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
 <meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/LNode.png">
 <meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/node.png">
-<meta property="og:updated_time" content="2019-02-02T01:34:57.656Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/head.png">
+<meta property="og:updated_time" content="2019-02-02T01:39:41.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表（List）之增删改查">
 <meta name="twitter:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
@@ -393,47 +394,21 @@
 <p>&#160;&#160;&#160;&#160;<strong> 无论链表是否为空，头指针均不为 </strong>，人家是唯一标识啊😏     </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class LNode &#123;</span><br><span class="line">	/** 数据域 */</span><br><span class="line">	private  int data ;</span><br><span class="line">	</span><br><span class="line">	/** 节点域 */</span><br><span class="line">	private LNode next;</span><br><span class="line"></span><br><span class="line">	public int getData() &#123;</span><br><span class="line">		return data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	public void setData(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode getNext() &#123;</span><br><span class="line">		return next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setNext(LNode next) &#123;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data, LNode next) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="单链表的读取"><a href="#单链表的读取" class="headerlink" title="单链表的读取"></a>单链表的读取</h4><ul>
-<li>获得链表第i个数据<br>&#160;1. 声明一个结点p指向链表第一个结点，初始化&#160;j&#160;从1开始<br>&#160;2. 当j&lt;i时，遍历链表，p指针后移，j++;<br>&#160;3. 若循环到末尾p为空，则不存在第i个元素<br>&#160;4. 否则查找成功，返回结点p的数据  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class GetIData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode IData(LNode head,int i) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		while(head != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			head = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		//判断是否遍历完整个链表</span><br><span class="line">		if(head == null || j&lt;i)</span><br><span class="line">			return null;</span><br><span class="line">		</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">```    </span><br><span class="line">&amp;#160;&amp;#160;&amp;#160;&amp;#160;单链表的循环，建议使用while,因为并不知道单链表的长度</span><br><span class="line">#### 单链表的插入 ####</span><br><span class="line">- 在第i个数据插入结点  </span><br><span class="line">&amp;#160;1.  新节点指向当前结点的后继   </span><br><span class="line">&amp;#160;2. 当前结点指向新节点</span><br></pre></td></tr></table></figure>
-</li>
+<li>获得链表第i个数据<br>&#160;1. 声明一个结点p指向链表第一个结点，初始化&#160;j&#160;从1开始<br>&#160;2. 当j&lt;i时，遍历链表，p指针后移，j++;<br>&#160;3. 若循环到末尾p为空，则不存在第i个元素<br>&#160;4. 否则查找成功，返回结点p的数据</li>
 </ul>
-<p>public class InsertData {</p>
-<pre><code>public static LNode insert(LNode head, int i, int newData) {
-    int j = 0;
-    LNode tmp = head;
-    while (tmp != null &amp;&amp; j&lt;i) {
-        tmp = head.getNext();
-        j++;
-    }
-    if(tmp == null || j&lt;i || i&lt;0) {
-        return null;
-    }
-    //new一个空结点p
-    LNode p = new LNode(0);
-    &lt;font color=red&gt;p.setData(newData);&lt;/font&gt;
-    //p指向head后继:p.next = head.next
-    p.setNext(tmp.getNext());
-    //head指向p:head.next = p;
-    tmp.setNext(p);
-    return head.getNext();
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">这里返回的时head.getNext()是因为，在定义head时，为：</span><br><span class="line"></span><br><span class="line">&gt; LNode head = new LNode(0);  </span><br><span class="line">这时head是有头节点的   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](线性表/head.png)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 单链表的删除 ####</span><br><span class="line">&amp;#160;1. 找到要删除结点的前驱结点（j=1开始）  </span><br><span class="line">&amp;#160;2. 前驱结点直接指向要删除结点的后继结点</span><br></pre></td></tr></table></figure>
-<p>public class DeleteNode {</p>
-<pre><code>public static LNode deleteINode(LNode node, int i) {
-    int j = 1;
-    LNode tmp = node;
-    while(tmp != null &amp;&amp; j&lt;i) {
-        tmp = tmp.getNext();
-        j++;
-    }
-    if(tmp == null || j&lt;i || i&lt;0) {
-        return null;
-    }
-    tmp.setNext(tmp.getNext().getNext());
-    return node.getNext();
-}
-</code></pre><p>}</p>
-<p><code>`</code>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class GetIData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode IData(LNode head,int i) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		while(head != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			head = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		//判断是否遍历完整个链表</span><br><span class="line">		if(head == null || j&lt;i)</span><br><span class="line">			return null;</span><br><span class="line">		</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&#160;&#160;&#160;&#160;单链表的循环，建议使用while,因为并不知道单链表的长度</p>
+<h4 id="单链表的插入"><a href="#单链表的插入" class="headerlink" title="单链表的插入"></a>单链表的插入</h4><ul>
+<li>在第i个数据插入结点<br>&#160;1. 新节点指向当前结点的后继<br>&#160;2. 当前结点指向新节点</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class InsertData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode insert(LNode head, int i, int newData) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		LNode tmp = head;</span><br><span class="line">		while (tmp != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			tmp = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		if(tmp == null || j&lt;i || i&lt;0) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		//new一个空结点p</span><br><span class="line">		LNode p = new LNode(0);</span><br><span class="line">		&lt;font color=red&gt;p.setData(newData);&lt;/font&gt;</span><br><span class="line">		//p指向head后继:p.next = head.next</span><br><span class="line">		p.setNext(tmp.getNext());</span><br><span class="line">		//head指向p:head.next = p;</span><br><span class="line">		tmp.setNext(p);</span><br><span class="line">		return head.getNext();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里返回的时head.getNext()是因为，在定义head时，为：</p>
+<blockquote>
+<p>LNode head = new LNode(0);<br>这时head是有头节点的   </p>
+</blockquote>
+<p><img src="/2019/02/01/线性表/head.png" alt="">  </p>
+<h4 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h4><p>&#160;1. 找到要删除结点的前驱结点（j=1开始）<br>&#160;2. 前驱结点直接指向要删除结点的后继结点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class DeleteNode &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode deleteINode(LNode node, int i) &#123;</span><br><span class="line">		int j = 1;</span><br><span class="line">		LNode tmp = node;</span><br><span class="line">		while(tmp != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			tmp = tmp.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		if(tmp == null || j&lt;i || i&lt;0) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp.setNext(tmp.getNext().getNext());</span><br><span class="line">		return node.getNext();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -445,7 +420,7 @@
         <p><span>本文标题:</span><a href="/2019/02/01/线性表/">线性表（List）之增删改查</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
         <p><span>发布时间:</span>2019-02-01, 16:31:54</p>
-        <p><span>最后更新:</span>2019-02-02, 09:34:57</p>
+        <p><span>最后更新:</span>2019-02-02, 09:39:41</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/01/线性表/" title="线性表（List）之增删改查">http://yoursite.com/2019/02/01/线性表/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/01/线性表/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -459,6 +434,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/02/02/线性表-2/">
+                    线性表(2)
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -475,7 +456,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#条件"><span class="toc-number">2.</span> <span class="toc-text">条件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本操作"><span class="toc-number">4.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">5.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序存储"><span class="toc-number">5.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式存储"><span class="toc-number">5.2.</span> <span class="toc-text">链式存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">5.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单链表"><span class="toc-number">5.2.2.</span> <span class="toc-text">单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#头指针-头节点-首元节点"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">头指针/头节点/首元节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的读取"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">单链表的读取</span></a></li></ol></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#条件"><span class="toc-number">2.</span> <span class="toc-text">条件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本操作"><span class="toc-number">4.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">5.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序存储"><span class="toc-number">5.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式存储"><span class="toc-number">5.2.</span> <span class="toc-text">链式存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">5.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单链表"><span class="toc-number">5.2.2.</span> <span class="toc-text">单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#头指针-头节点-首元节点"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">头指针/头节点/首元节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的读取"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">单链表的读取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的插入"><span class="toc-number">5.2.2.3.</span> <span class="toc-text">单链表的插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的删除"><span class="toc-number">5.2.2.4.</span> <span class="toc-text">单链表的删除</span></a></li></ol></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -531,7 +512,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/02/02/线性表-2/" title="上一篇: 线性表(2)">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -543,7 +526,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">数据结构与算法之逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">数据结构与算法之逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
 
 
