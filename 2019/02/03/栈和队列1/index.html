@@ -14,17 +14,19 @@
 <meta name="author" content="梁翠翠">
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="TimeJjc&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。注意：  一定要判断栈是否满，是否空 建表时，要考虑栈数据的类型，可能会有多种数据类型基本操作顺序栈（数组）   基础操作     判断栈是否为空 判断是否栈满，若满，返回false或者增加容量 栈的大小 返回栈顶元素 入栈 进栈">
+<meta name="keywords" content="数据结构,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="栈和队列1">
+<meta property="og:url" content="http://yoursite.com/2019/02/03/栈和队列1/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
+<meta property="og:description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。注意：  一定要判断栈是否满，是否空 建表时，要考虑栈数据的类型，可能会有多种数据类型基本操作顺序栈（数组）   基础操作     判断栈是否为空 判断是否栈满，若满，返回false或者增加容量 栈的大小 返回栈顶元素 入栈 进栈">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-07T15:16:18.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TimeJjc&#39;s Blog">
+<meta name="twitter:title" content="栈和队列1">
+<meta name="twitter:description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。注意：  一定要判断栈是否满，是否空 建表时，要考虑栈数据的类型，可能会有多种数据类型基本操作顺序栈（数组）   基础操作     判断栈是否为空 判断是否栈满，若满，返回false或者增加容量 栈的大小 返回栈顶元素 入栈 进栈">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -52,13 +54,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>TimeJjc&#39;s Blog</title>
+<title>栈和队列1 | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +67,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -275,9 +275,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-栈和队列1" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-栈和队列1" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2019/02/03/栈和队列1/" class="article-date">
@@ -295,8 +293,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/03/栈和队列1/">栈和队列1</a>
+    <h1 class="article-title" itemprop="name">
+      栈和队列1
     </h1>
   
 
@@ -321,6 +319,17 @@
 </div>
         
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -359,512 +368,119 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-线性表之循环链表" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/02/02/线性表之循环链表/" class="article-date">
-      <time datetime="2019-02-02T07:51:44.000Z" itemprop="datePublished">2019-02-02</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a>
-    </h1>
-  
-
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.1k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
-      </span>
-    </span>
-</div>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="（单）循环链表"><a href="#（单）循环链表" class="headerlink" title="（单）循环链表"></a>（单）循环链表</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>最后一个结点的指针域指向头节点，形成一个环<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/02/02/线性表之循环链表/#more">阅读全文 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/02/03/栈和队列1/">栈和队列1</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
+        <p><span>发布时间:</span>2019-02-03, 13:05:21</p>
+        <p><span>最后更新:</span>2019-02-07, 23:16:18</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/02/03/栈和队列1/" title="栈和队列1">http://yoursite.com/2019/02/03/栈和队列1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/03/栈和队列1/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-线性表-2" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/02/02/线性表-2/" class="article-date">
-      <time datetime="2019-02-02T01:36:21.000Z" itemprop="datePublished">2019-02-02</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/02/线性表-2/">线性表(2)</a>
-    </h1>
-  
-
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">796字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
-      </span>
-    </span>
-</div>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>&#160;&#160;&#160;&#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次简历各元素结点并逐个插入链表。<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/02/02/线性表-2/#more">阅读全文 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/02/02/线性表之循环链表/">
+                    线性表之循环链表
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
 
-
-
-
-
-
-
-
-
-  
-    <article id="post-线性表" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/02/01/线性表/" class="article-date">
-      <time datetime="2019-02-01T08:31:54.000Z" itemprop="datePublished">2019-02-01</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/01/线性表/">线性表（List）之增删改查</a>
-    </h1>
-  
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#栈"><span class="toc-number">1.</span> <span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">1.1.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#顺序栈（数组）"><span class="toc-number">1.1.1.</span> <span class="toc-text">顺序栈（数组）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链表栈"><span class="toc-number">1.2.</span> <span class="toc-text">链表栈</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进制扩展"><span class="toc-number">2.</span> <span class="toc-text">进制扩展</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#队列"><span class="toc-number">3.</span> <span class="toc-text">队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组实现"><span class="toc-number">3.1.</span> <span class="toc-text">数组实现</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
 
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.3k字</span>
-      </span>
-    </span>
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
 
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
-      </span>
-    </span>
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"栈和队列1　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
 </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>&#160;&#160;&#160;&#160;由0或多个数据元素组成的有限个序列，为0时，是空表<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/02/01/线性表/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-时间复杂度与空间复杂度" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/02/01/时间复杂度与空间复杂度/" class="article-date">
-      <time datetime="2019-02-01T02:13:43.000Z" itemprop="datePublished">2019-02-01</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a>
-    </h1>
-  
 
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">703字</span>
-      </span>
-    </span>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
-      </span>
-    </span>
-</div>
         
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><p>分类：时间复杂度&#160;和&#160;空间复杂度<br>指在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和空间资源。<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/02/01/时间复杂度与空间复杂度/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-数据结构与算法之逆序" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/01/30/数据结构与算法之逆序/" class="article-date">
-      <time datetime="2019-01-30T01:46:38.719Z" itemprop="datePublished">2019-01-30</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <hr>
-<p>title: 算法之链表逆序<br>date: 2019-01-30 09:46:38<br>tags: </p>
-<ul>
-<li>数据结构</li>
-<li>算法</li>
-</ul>
-<hr>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
-<li>有一链表，链表数据为：1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 </li>
-<li>使其逆序，数据为：7 -&gt; 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1  </li>
-</ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2019/01/30/数据结构与算法之逆序/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/01/24/hello-world/" class="article-date">
-      <time datetime="2019-01-24T05:27:47.829Z" itemprop="datePublished">2019-01-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+            <a href="/2019/02/02/线性表之循环链表/" title="下一篇: 线性表之循环链表">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/24/hello-world/">Hello World</a>
-    </h1>
-  
+    </div>
 
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">73字</span>
-      </span>
-    </span>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">数据结构与算法之逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
+
+
+
+    <script>
         
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
