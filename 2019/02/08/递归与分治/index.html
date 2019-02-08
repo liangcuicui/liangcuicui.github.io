@@ -15,25 +15,18 @@
 
 
 
-<meta name="description" content="（单）循环链表定义最后一个结点的指针域指向头节点，形成一个环">
+<meta name="description" content="递归直接或间接调用自身的一种方法，减少了程序的代码量，即：&amp;#160;&amp;#160;&amp;#160;&amp;#160;用有限的语句定义对象的无限集合前提条件：  不可无限制的调用自己，需要有一个出口 子问题不可大于原始问题">
 <meta name="keywords" content="数据结构,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表之循环链表">
-<meta property="og:url" content="http://yoursite.com/2019/02/02/线性表之循环链表/index.html">
+<meta property="og:title" content="递归与分治">
+<meta property="og:url" content="http://yoursite.com/2019/02/08/递归与分治/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="（单）循环链表定义最后一个结点的指针域指向头节点，形成一个环">
+<meta property="og:description" content="递归直接或间接调用自身的一种方法，减少了程序的代码量，即：&amp;#160;&amp;#160;&amp;#160;&amp;#160;用有限的语句定义对象的无限集合前提条件：  不可无限制的调用自己，需要有一个出口 子问题不可大于原始问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/loopList.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/loopListDouble。PNG">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/doubleList.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/doubleLoopList.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/insertDouble.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/doubleDelete.PNG">
-<meta property="og:updated_time" content="2019-02-03T05:04:57.929Z">
+<meta property="og:updated_time" content="2019-02-08T15:12:12.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表之循环链表">
-<meta name="twitter:description" content="（单）循环链表定义最后一个结点的指针域指向头节点，形成一个环">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/loopList.PNG">
+<meta name="twitter:title" content="递归与分治">
+<meta name="twitter:description" content="递归直接或间接调用自身的一种方法，减少了程序的代码量，即：&amp;#160;&amp;#160;&amp;#160;&amp;#160;用有限的语句定义对象的无限集合前提条件：  不可无限制的调用自己，需要有一个出口 子问题不可大于原始问题">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -65,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>线性表之循环链表 | TimeJjc&#39;s Blog</title>
+<title>递归与分治 | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -282,11 +275,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-线性表之循环链表" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-递归与分治" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/02/02/线性表之循环链表/" class="article-date">
-      <time datetime="2019-02-02T07:51:44.000Z" itemprop="datePublished">2019-02-02</time>
+      <a href="/2019/02/08/递归与分治/" class="article-date">
+      <time datetime="2019-02-08T14:59:34.000Z" itemprop="datePublished">2019-02-08</time>
 </a>
 
 
@@ -301,7 +294,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      线性表之循环链表
+      递归与分治
     </h1>
   
 
@@ -311,7 +304,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.1k字</span>
+        <span class="post-count">216字</span>
       </span>
     </span>
 
@@ -320,7 +313,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -342,54 +335,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="（单）循环链表"><a href="#（单）循环链表" class="headerlink" title="（单）循环链表"></a>（单）循环链表</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>最后一个结点的指针域指向头节点，形成一个环<br><a id="more"></a></p>
-<h2 id="约瑟夫-Josephus-环"><a href="#约瑟夫-Josephus-环" class="headerlink" title="约瑟夫(Josephus)环"></a>约瑟夫(Josephus)环</h2><p>&#160;&#160;&#160;&#160;已知n个人（以编号1,2,3…n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依次规律重复下去，知道圆桌周围的人全部出列，通常我们设置编号0~n-1  </p>
-<p>循环链表解决思路：</p>
+        <h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>直接或间接调用自身的一种方法，减少了程序的代码量，即：<br>&#160;&#160;&#160;&#160;用有限的语句定义对象的无限集合<br>前提条件：</p>
 <ul>
-<li>尾节点不指向头节点，找到要出列结点的前一个结点p</li>
-<li>p指向出列结点的下一个结点</li>
-<li>若尾节点指向头节点，此时只剩下一个结点，则直接输出</li>
+<li>不可无限制的调用自己，需要有一个出口</li>
+<li>子问题不可大于原始问题<a id="more"></a>
+最典型的递归案例是：斐波那契数列，汉诺塔（梵塔），快排、树<br><strong>缺点</strong><br>运行效率低，因此除非没有更好的算法，或者是特定条件下，一般不建议使用递归。<br>递归调用的过程中，系统为每一层的返回点、局部变量等都开辟了栈来存储，因此如果过多的使用递归，容易造成栈溢出。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Josphus &#123;</span><br><span class="line">	</span><br><span class="line">	public static void josphus(LNode head, int m) &#123;</span><br><span class="line">		if(head == null) &#123;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		LNode tmp = head;</span><br><span class="line">		System.out.println();</span><br><span class="line">		while(tmp.getNext() != tmp) &#123;</span><br><span class="line">			for(int i=0;i&lt;m-1;i++) &#123;</span><br><span class="line">				tmp = tmp.getNext();</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.print(tmp.getNext().getData()+&quot; &quot;);</span><br><span class="line">			tmp.setNext(tmp.getNext().getNext());</span><br><span class="line">		&#125;</span><br><span class="line">		//最后一个不要忘了输出</span><br><span class="line">		System.out.println(tmp.getData());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="连接两个链表"><a href="#连接两个链表" class="headerlink" title="连接两个链表"></a>连接两个链表</h2><p>题目： 实现将两个线性表（a1,a2,…,an）和（b1,b2,…,bm）连接成一个线性表（a1,…,an,b1,…,bm）的运算<br>更灵活的循环链表：去掉头指针，增加一个尾指针rear<br><img src="/2019/02/02/线性表之循环链表/loopList.PNG" alt="">  </p>
-<p>思路：</p>
-<ul>
-<li>单链表<br>&#160;&#160;&#160;&#160;如果是单链表或头指针表示的单循环表上做这种连接操作，都需要遍历第一个链表，找到结点an，然后将结点b1放到结点an后面，时间复杂度是O（n）  </li>
-<li>循环链表<br>&#160;&#160;&#160;&#160;因为循环链表有尾指针，所以只需要改变尾指针，无需遍历，时间复杂度是O(1)    </li>
-</ul>
-<p><img src="/2019/02/02/线性表之循环链表/loopListDouble。PNG" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class TwoToOne &#123;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * </span><br><span class="line">	 * @param a 第一个链表的尾指针</span><br><span class="line">	 * @param b 第二个链表的尾指针</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public static LNode twoOne(LNode a, LNode b) &#123;</span><br><span class="line">		LNode tmp = a.getNext();//a的头节点</span><br><span class="line">		System.out.println(&quot;aaa&quot;+b.getNext().getNext().getData());</span><br><span class="line">		a.setNext(b.getNext().getNext());</span><br><span class="line">		b.setNext(tmp);</span><br><span class="line">		return tmp;//新链表的头结点位置</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="判断单链表中是否有环"><a href="#判断单链表中是否有环" class="headerlink" title="判断单链表中是否有环"></a>判断单链表中是否有环</h2><p><strong>所谓有环，不一定是尾节点指向头节点，尾节点可以指向链表中的任意结点</strong><br>方法一：</p>
-<ul>
-<li>使用p,q两个指针，p总是向前走，单q每次都从头开始走</li>
-<li>对于每个结点，看p走的步数是否和q与q一样，不一样代表有环  </li>
-</ul>
-<p>方法二：</p>
-<ul>
-<li>使用p,q两个指针，p每次向前走一步,q每次向前走两步</li>
-<li>若某个时候p == q,则有环  </li>
-</ul>
-<p>我觉得，第一个好理解一点！！！  因为不知道第二种方法的原因</p>
-<h2 id="魔术师发牌问题"><a href="#魔术师发牌问题" class="headerlink" title="魔术师发牌问题"></a>魔术师发牌问题</h2><p>&#160;&#160;&#160;&#160;魔术师利用一副牌中的13张黑牌，预先将他们排好后叠放在一起，牌面朝下。对观众说：“我不看牌，只数数就可以才到每张牌是什么，我大声叔叔，你们听，不信？现场演示。”魔术师将最上面的那张牌数为1，把他翻过来正好是黑桃A，将黑桃A放在桌子上，第二次数1,2..将第一张牌放在这些牌的下面，将第二张牌翻过来，正好是黑桃2，也将他放在桌子上这样一次进行将13张牌全部翻出，准确无误。  </p>
-<p>问题：拍的开始顺序是如何排放的。<br>思路：</p>
-<h2 id="拉丁方阵问题"><a href="#拉丁方阵问题" class="headerlink" title="拉丁方阵问题"></a>拉丁方阵问题</h2><p>&#160;&#160;&#160;&#160;拉丁方阵是一种n x n的方阵，方阵中恰有n种不同的元素，每种元素恰有n个，并且每种元素在一行和一列种恰好出现一次。著名数学家和物理学家欧拉使用拉丁字母来作为拉丁方阵里元素的符号。(嗯哼，数独哎)<br>思路：</p>
-<ul>
-<li>第一行打印：1，2,3,…,n</li>
-<li>第二行打印：2,3,…,n,1</li>
-<li>第三行打印：3,…,n,2</li>
-<li>第n行打印：n,1,2,…,n-1</li>
-</ul>
-<h1 id="双向循环链表"><a href="#双向循环链表" class="headerlink" title="双向循环链表"></a>双向循环链表</h1><p>双向链表：每个数据结点种都有两个指针，分别指向直接后继和直接前驱。<br><img src="/2019/02/02/线性表之循环链表/doubleList.PNG" alt="">    </p>
-<p>双向循环链表：<br><img src="/2019/02/02/线性表之循环链表/doubleLoopList.PNG" alt="">  </p>
-<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p><img src="/2019/02/02/线性表之循环链表/insertDouble.PNG" alt="">  </p>
-<ul>
-<li>s指向p的next</li>
-<li>s的前驱指向p的前驱</li>
-<li>p指向s的前驱的next</li>
-<li>p指向s的前驱 </li>
-</ul>
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p><img src="/2019/02/02/线性表之循环链表/doubleDelete.PNG" alt="">  </p>
-<p>后续再更代码</p>
-
+<h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><h1 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h1><h1 id="递归和迭代"><a href="#递归和迭代" class="headerlink" title="递归和迭代"></a>递归和迭代</h1><h1 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h1><h1 id="经典问题"><a href="#经典问题" class="headerlink" title="经典问题"></a>经典问题</h1><h2 id="折半查找"><a href="#折半查找" class="headerlink" title="折半查找"></a>折半查找</h2><h2 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h2><h2 id="八皇后问题"><a href="#八皇后问题" class="headerlink" title="八皇后问题"></a>八皇后问题</h2>
       
     </div>
     
@@ -397,13 +349,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></p>
+        <p><span>本文标题:</span><a href="/2019/02/08/递归与分治/">递归与分治</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
-        <p><span>发布时间:</span>2019-02-02, 15:51:44</p>
-        <p><span>最后更新:</span>2019-02-03, 13:04:57</p>
+        <p><span>发布时间:</span>2019-02-08, 22:59:34</p>
+        <p><span>最后更新:</span>2019-02-08, 23:12:12</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/02/线性表之循环链表/" title="线性表之循环链表">http://yoursite.com/2019/02/02/线性表之循环链表/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/02/线性表之循环链表/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/02/08/递归与分治/" title="递归与分治">http://yoursite.com/2019/02/08/递归与分治/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/08/递归与分治/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -415,16 +367,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/03/栈和队列1/">
-                    栈和队列1
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/02/02/线性表-2/">
-                    线性表(2)
+                <a href="/2019/02/03/栈和队列1/">
+                    栈和队列1
                 </a>
             </div>
         
@@ -436,7 +382,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#（单）循环链表"><span class="toc-number">1.</span> <span class="toc-text">（单）循环链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#约瑟夫-Josephus-环"><span class="toc-number">1.2.</span> <span class="toc-text">约瑟夫(Josephus)环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接两个链表"><span class="toc-number">1.3.</span> <span class="toc-text">连接两个链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断单链表中是否有环"><span class="toc-number">1.4.</span> <span class="toc-text">判断单链表中是否有环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#魔术师发牌问题"><span class="toc-number">1.5.</span> <span class="toc-text">魔术师发牌问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拉丁方阵问题"><span class="toc-number">1.6.</span> <span class="toc-text">拉丁方阵问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#双向循环链表"><span class="toc-number">2.</span> <span class="toc-text">双向循环链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#插入"><span class="toc-number">2.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除"><span class="toc-number">2.2.</span> <span class="toc-text">删除</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#递归"><span class="toc-number">1.</span> <span class="toc-text">递归</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分治"><span class="toc-number">2.</span> <span class="toc-text">分治</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#迭代"><span class="toc-number">3.</span> <span class="toc-text">迭代</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#递归和迭代"><span class="toc-number">4.</span> <span class="toc-text">递归和迭代</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#递归和分治"><span class="toc-number">5.</span> <span class="toc-text">递归和分治</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#经典问题"><span class="toc-number">6.</span> <span class="toc-text">经典问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#折半查找"><span class="toc-number">6.1.</span> <span class="toc-text">折半查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#汉诺塔问题"><span class="toc-number">6.2.</span> <span class="toc-text">汉诺塔问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八皇后问题"><span class="toc-number">6.3.</span> <span class="toc-text">八皇后问题</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -472,7 +418,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"线性表之循环链表　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"递归与分治　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -492,15 +438,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/02/03/栈和队列1/" title="上一篇: 栈和队列1">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/02/02/线性表-2/" title="下一篇: 线性表(2)">
+            <a href="/2019/02/03/栈和队列1/" title="下一篇: 栈和队列1">
                 <i class="fa fa-angle-right"></i>
             </a>
         
