@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。注意：  一定要判断栈是否满，是否空 建表时，要考虑栈数据的类型，可能会有多种数据类型基本操作顺序栈（数组）   基础操作     判断栈是否为空 判断是否栈满，若满，返回false或者增加容量 栈的大小 返回栈顶元素 入栈 进栈">
+<meta name="description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。">
 <meta name="keywords" content="数据结构,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="栈和队列1">
 <meta property="og:url" content="http://yoursite.com/2019/02/03/栈和队列1/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。注意：  一定要判断栈是否满，是否空 建表时，要考虑栈数据的类型，可能会有多种数据类型基本操作顺序栈（数组）   基础操作     判断栈是否为空 判断是否栈满，若满，返回false或者增加容量 栈的大小 返回栈顶元素 入栈 进栈">
+<meta property="og:description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-07T15:16:18.352Z">
+<meta property="og:updated_time" content="2019-02-08T14:56:58.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="栈和队列1">
-<meta name="twitter:description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。注意：  一定要判断栈是否满，是否空 建表时，要考虑栈数据的类型，可能会有多种数据类型基本操作顺序栈（数组）   基础操作     判断栈是否为空 判断是否栈满，若满，返回false或者增加容量 栈的大小 返回栈顶元素 入栈 进栈">
+<meta name="twitter:description" content="栈又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&amp;#160;表尾&amp;#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -304,7 +304,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.2k字</span>
+        <span class="post-count">1.9k字</span>
       </span>
     </span>
 
@@ -313,7 +313,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6分</span>
+        <span class="post-count">9分</span>
       </span>
     </span>
 </div>
@@ -335,7 +335,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><p>又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&#160;<em>表尾</em>&#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。<br>注意：</p>
+        <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><p>又名堆栈。先进后出（Last in first out,LIFO）的线性表，要求只在&#160;<em>表尾</em>&#160;进行删除和插入操作，只移动栈顶指针，不允许改变栈底指针。<br><a id="more"></a><br>注意：</p>
 <ul>
 <li>一定要判断栈是否满，是否空</li>
 <li>建表时，要考虑栈数据的类型，可能会有多种数据类型<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="顺序栈（数组）"><a href="#顺序栈（数组）" class="headerlink" title="顺序栈（数组）"></a>顺序栈（数组）</h3></li>
@@ -349,9 +349,9 @@
 <li>栈的大小</li>
 <li>返回栈顶元素</li>
 <li>入栈</li>
-<li>进栈<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.stack;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">public class Base &#123;</span><br><span class="line">	/** 栈大小 */</span><br><span class="line">	private int maxSize ; </span><br><span class="line">	</span><br><span class="line">	/** 栈顶 */</span><br><span class="line">	private int top ; </span><br><span class="line">	</span><br><span class="line">	/** 数据域 */</span><br><span class="line">	private ArrayList&lt;Object&gt; data;</span><br><span class="line">	</span><br><span class="line">	/** 新增容量 */</span><br><span class="line">	private static final int INCREAT = 10;</span><br><span class="line">	/** </span><br><span class="line">	 * 判断是否为Null栈</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isEmpty() &#123;</span><br><span class="line">		return top == -1 ? true : false;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public Base() &#123;</span><br><span class="line">		this.maxSize = 0;</span><br><span class="line">		this.data = new ArrayList&lt;&gt;();</span><br><span class="line">		this.top = -1;</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 判断是否栈满</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isFill() &#123;</span><br><span class="line">		return top &gt;= maxSize-1 ? true : false;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 栈的大小</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public int Size() &#123;</span><br><span class="line">		return maxSize;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回栈顶元素</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public Object top() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return data.get(top--);</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 入栈</span><br><span class="line">	 * @param n</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public void Push(Object n) &#123;</span><br><span class="line">		//栈满,扩大栈</span><br><span class="line">		if(isFill()) &#123;</span><br><span class="line">			maxSize += INCREAT;//这里用的是集合，可以不用写，但如果用数组，要写的</span><br><span class="line">		&#125;</span><br><span class="line">		data.add(n);</span><br><span class="line">		top++;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 弹栈</span><br><span class="line">	 * @return Object类型，是因为不知道入栈的到底是什么妖魔鬼怪</span><br><span class="line">	 */</span><br><span class="line">	public Object Pop() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return top();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">		Base b = new Base();</span><br><span class="line">		b.Push(1);</span><br><span class="line">		b.Push(&quot;h&quot;);</span><br><span class="line">		System.out.println(&quot;栈顶元素：&quot;+b.top());</span><br><span class="line">		System.out.println(&quot;栈大小：&quot;+b.Size());</span><br><span class="line">		b.Push(&quot;aa&quot;);</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">栈大小：10</span><br><span class="line">出栈：h</span><br><span class="line">出栈：1</span><br><span class="line">出栈：null</span><br><span class="line">出栈：null</span><br><span class="line">出栈：null</span><br></pre></td></tr></table></figure>
-</li>
+<li>进栈  </li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.stack;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">public class Base &#123;</span><br><span class="line">	/** 栈大小 */</span><br><span class="line">	private int maxSize ; </span><br><span class="line">	</span><br><span class="line">	/** 栈顶 */</span><br><span class="line">	private int top ; </span><br><span class="line">	</span><br><span class="line">	/** 数据域 */</span><br><span class="line">	private ArrayList&lt;Object&gt; data;</span><br><span class="line">	</span><br><span class="line">	/** 新增容量 */</span><br><span class="line">	private static final int INCREAT = 10;</span><br><span class="line">	/** </span><br><span class="line">	 * 判断是否为Null栈</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isEmpty() &#123;</span><br><span class="line">		return top == -1 ? true : false;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public Base() &#123;</span><br><span class="line">		this.maxSize = 0;</span><br><span class="line">		this.data = new ArrayList&lt;&gt;();</span><br><span class="line">		this.top = -1;</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 判断是否栈满</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isFill() &#123;</span><br><span class="line">		return top &gt;= maxSize-1 ? true : false;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 栈的大小</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public int Size() &#123;</span><br><span class="line">		return maxSize;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回栈顶元素</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public Object top() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return data.get(top--);</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 入栈</span><br><span class="line">	 * @param n</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public void Push(Object n) &#123;</span><br><span class="line">		//栈满,扩大栈</span><br><span class="line">		if(isFill()) &#123;</span><br><span class="line">			maxSize += INCREAT;//这里用的是集合，可以不用写，但如果用数组，要写的</span><br><span class="line">		&#125;</span><br><span class="line">		data.add(n);</span><br><span class="line">		top++;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 弹栈</span><br><span class="line">	 * @return Object类型，是因为不知道入栈的到底是什么妖魔鬼怪</span><br><span class="line">	 */</span><br><span class="line">	public Object Pop() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return top();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">		Base b = new Base();</span><br><span class="line">		b.Push(1);</span><br><span class="line">		b.Push(&quot;h&quot;);</span><br><span class="line">		System.out.println(&quot;栈顶元素：&quot;+b.top());</span><br><span class="line">		System.out.println(&quot;栈大小：&quot;+b.Size());</span><br><span class="line">		b.Push(&quot;aa&quot;);</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+b.Pop());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">栈大小：10</span><br><span class="line">出栈：h</span><br><span class="line">出栈：1</span><br><span class="line">出栈：null</span><br><span class="line">出栈：null</span><br><span class="line">出栈：null</span><br></pre></td></tr></table></figure>
 <h2 id="链表栈"><a href="#链表栈" class="headerlink" title="链表栈"></a>链表栈</h2><p>方法一：</p>
 <ul>
 <li>头尾指针</li>
@@ -361,9 +361,171 @@
 <p>实现类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.stack;</span><br><span class="line"></span><br><span class="line">import timejjc.com.entity.Stack;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 链表栈</span><br><span class="line"> * @author 梁翠翠</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class LinkedStack &#123;</span><br><span class="line">	/** 栈顶 */</span><br><span class="line">	private Stack top ;</span><br><span class="line">	</span><br><span class="line">	/** 栈底 */</span><br><span class="line">	private Stack base;</span><br><span class="line">	</span><br><span class="line">	/** 栈大小 */</span><br><span class="line">	private int size;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 初始化</span><br><span class="line">	 */</span><br><span class="line">	public LinkedStack() &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.top = new Stack();</span><br><span class="line">		this.base = top;</span><br><span class="line">		this.size = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 栈大小</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public int Size() &#123;</span><br><span class="line">		return size;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 判断是否为空</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isEmpty() &#123;</span><br><span class="line">		return top == base ? true : false;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回栈顶元素</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public Object Top() &#123;</span><br><span class="line">		return top.getData();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 入栈</span><br><span class="line">	 * @param data</span><br><span class="line">	 */</span><br><span class="line">	public void Push(Object data) &#123;</span><br><span class="line">		Stack newStack = new Stack();</span><br><span class="line">		newStack.setData(data);</span><br><span class="line">		top.setTop(newStack);</span><br><span class="line">		top = newStack;</span><br><span class="line">		size++;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public Object Pop() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		Object data = top.getData();</span><br><span class="line">		size--;</span><br><span class="line">		Stack curr = base;</span><br><span class="line">		while(curr.getTop() != top) &#123;</span><br><span class="line">			curr = curr.getTop();</span><br><span class="line">		&#125;</span><br><span class="line">		top = curr;</span><br><span class="line">		curr.setTop(null);</span><br><span class="line">		return data;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		LinkedStack ls = new LinkedStack();</span><br><span class="line">		ls.Push(1);</span><br><span class="line">		ls.Push(2);</span><br><span class="line">		System.out.println(&quot;栈大小：&quot;+ls.Size());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+ls.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+ls.Pop());</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+ls.Pop());</span><br><span class="line">		ls.Push(&quot;a&quot;);</span><br><span class="line">		System.out.println(&quot;出栈：&quot;+ls.Pop());</span><br><span class="line">		System.out.println(&quot;栈大小：&quot;+ls.size);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">栈大小：2</span><br><span class="line">出栈：2</span><br><span class="line">出栈：1</span><br><span class="line">出栈：null</span><br><span class="line">出栈：a</span><br><span class="line">栈大小：0</span><br></pre></td></tr></table></figure></p>
 <p>方法二：使用头插法，这样就不需要尾指针（base）</p>
 <h1 id="进制扩展"><a href="#进制扩展" class="headerlink" title="进制扩展"></a>进制扩展</h1><p>二进制：计算机只有高频和低频<br>十进制：人类常用语言<br>八进制：早期计算机系统都是三的倍数，因此较方便<br>十六进制：一个字节=8位，刚好两个十六进制数可以表示完整，节省空间</p>
-<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>可查看 java.util.Queue接口<br>先进先出(FIFO)，可查看JAVA API,Queue继承了Collection接口<br>队头：删除<br>队尾：插入<br>也就是说，队尾进，队头出<br>分类： 顺序队列，循环队列  </p>
-<h2 id="数组实现"><a href="#数组实现" class="headerlink" title="数组实现"></a>数组实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.queue;</span><br><span class="line">/**</span><br><span class="line"> * 队列</span><br><span class="line"> * @author 梁翠翠</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">public class MyQueue&lt;T&gt; &#123;</span><br><span class="line"></span><br><span class="line">	private ArrayList&lt;T&gt; data = new ArrayList&lt;T&gt;();</span><br><span class="line">	private int front;</span><br><span class="line">	private int rear;</span><br><span class="line">	public MyQueue() &#123;</span><br><span class="line">		front = 0;</span><br><span class="line">		rear = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 判断是否为空</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isEmpty() &#123;</span><br><span class="line">		return front == rear;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回队列大小</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public int size() &#123;</span><br><span class="line">		return rear-front;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回队首元素</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public T getFront() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return data.get(front++);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 出队</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public T outQueue() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return getFront();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 入队</span><br><span class="line">	 */</span><br><span class="line">	public void InQueue(T item) &#123;</span><br><span class="line">		data.add(item);</span><br><span class="line">		rear++;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		MyQueue&lt;Integer&gt; mq = new MyQueue&lt;Integer&gt;();</span><br><span class="line">		mq.InQueue(1);</span><br><span class="line">		mq.InQueue(2);</span><br><span class="line">		System.out.println(&quot;队头元素：&quot;+mq.outQueue());</span><br><span class="line">		System.out.println(&quot;队大小&quot;+mq.size());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">队头元素：1</span><br><span class="line">队大小2</span><br></pre></td></tr></table></figure>
-<p>缺点：队列出队后，空间不能再次使用，造成了内存的浪费，因此需要将队列看成是一个环状空间，而循环队列，是需要用循环链表实现的</p>
+<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>可查看 java.util.Queue接口<br>先进先出(FIFO)，可查看JAVA API,Queue继承了Collection接口<br>队头：删除<br>队尾：插入<br>也就是说，队尾进，队头出<br>分类： 顺序队列，循环队列<br>每种队列都可以用数组和链表实现</p>
+<h2 id="顺序队列"><a href="#顺序队列" class="headerlink" title="顺序队列"></a>顺序队列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.queue;</span><br><span class="line">/**</span><br><span class="line"> * 队列</span><br><span class="line"> * @author 梁翠翠</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">public class MyQueue&lt;T&gt; &#123;</span><br><span class="line"></span><br><span class="line">	private ArrayList&lt;T&gt; data = new ArrayList&lt;T&gt;();</span><br><span class="line">	private int front;</span><br><span class="line">	private int rear;</span><br><span class="line">	public MyQueue() &#123;</span><br><span class="line">		front = 0;</span><br><span class="line">		rear = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 判断是否为空</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public boolean isEmpty() &#123;</span><br><span class="line">		return front == rear;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回队列大小</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public int size() &#123;</span><br><span class="line">		return rear-front;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 返回队首元素</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public T getFront() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return data.get(front++);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 出队</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public T outQueue() &#123;</span><br><span class="line">		if(isEmpty()) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		return getFront();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 入队</span><br><span class="line">	 */</span><br><span class="line">	public void InQueue(T item) &#123;</span><br><span class="line">		data.add(item);</span><br><span class="line">		rear++;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		MyQueue&lt;Integer&gt; mq = new MyQueue&lt;Integer&gt;();</span><br><span class="line">		mq.InQueue(1);</span><br><span class="line">		mq.InQueue(2);</span><br><span class="line">		System.out.println(&quot;队头元素：&quot;+mq.outQueue());</span><br><span class="line">		System.out.println(&quot;队大小&quot;+mq.size());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">队头元素：1</span><br><span class="line">队大小2</span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">缺点：队列出队后，空间不能再次使用，造成了内存的浪费，因此需要将队列看成是一个环状空间，而循环队列，是需要用循环链表实现的.   </span><br><span class="line"></span><br><span class="line">## 循环队列 ##  </span><br><span class="line">与顺序队列不同的是，不可用front == rear来区分是否队满或队空，需要新建一个布尔变量或者利用公式：  </span><br><span class="line">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;(rear+1)%n == front</span><br><span class="line"></span><br><span class="line">方法一：</span><br><span class="line">- 设置一个标志位flag，初始化为0</span><br><span class="line">- 入队为1，出队为0</span><br><span class="line">- 队为空：front == rear &amp;&amp; flag == 0</span><br><span class="line">- 队为满：front == rear &amp;&amp; flag == 1    </span><br><span class="line"></span><br><span class="line">方法二：</span><br><span class="line">- 保留一个元素的存储空间</span><br><span class="line">- 队满：(rear+1)%n == front</span><br><span class="line">- 队空：rear == front</span><br><span class="line"></span><br><span class="line">方法三：</span><br><span class="line">- 使用一个计数器，计算队中的元素个数</span><br><span class="line">- 队满：count&gt;0 &amp;&amp; front == rear</span><br><span class="line">- 队空：count == 0</span><br><span class="line"></span><br><span class="line">实现（方法二）</span><br></pre></td></tr></table></figure>
+<p>package timejjc.com.queue;<br>/**</p>
+<ul>
+<li>循环队列—需要考虑队满的情况</li>
+<li>@author 梁翠翠<br><em>
+</em>/</li>
+</ul>
+<p>import java.util.ArrayList;</p>
+<p>public class LoopQueue<t> {</t></p>
+<pre><code>private Object[] data;
+private int rear;
+private int front;
+private int maxSize = 10;
+private static final int INCREAT = 10;//每次增长10空间
+
+public LoopQueue(){
+    this.rear = 0;
+    this.front = 0;
+    this.data = new Object[maxSize];
+}
+
+public boolean isEmpty() {
+    if(rear == front) {
+        return true; 
+    }
+    return false;
+}
+
+public boolean isFill() {
+    if((rear+1)%maxSize == front) {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * 获取队头元素
+ * @param n
+ */
+public Object queueFront(Object n ) {
+    if(isEmpty()) {
+        return null;
+    }
+    return  data[(front+1)%maxSize];
+}
+
+public void enQueue(Object n) {
+    if(isFill()) {
+        System.out.println(&quot;Queue is Fill&quot;);
+    } else {
+        rear = (rear+1)%maxSize;
+        data[rear] = n;
+    }
+}
+
+public Object deQueue(){
+    if(isEmpty()) {
+        return null;
+    } 
+    return queueFront(front);
+}
+public static void main(String[] args) {
+    LoopQueue&lt;Integer&gt; lq = new LoopQueue&lt;Integer&gt;();
+    lq.enQueue(1);
+    lq.enQueue(2);
+    lq.enQueue(3);
+    lq.enQueue(4);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    lq.enQueue(5);
+    System.out.println(lq.deQueue());//1
+
+}
+</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>package timejjc.com.queue;<br>/**</p>
+<ul>
+<li>循环队列–集合不需要判断队满，但需要判断是否为空，因为是坟墓</li>
+<li>@author 梁翠翠<br><em>
+</em>/</li>
+</ul>
+<p>import java.util.ArrayList;</p>
+<p>public class LoopQueue<t> {</t></p>
+<pre><code>private ArrayList&lt;T&gt; data = new ArrayList&lt;T&gt;();
+private int rear;
+private int front;
+
+public LoopQueue(){
+    this.rear = 0;
+    this.front = 0;
+}
+
+public boolean isEmpty() {
+    if(rear == front) {
+        return true; 
+    }
+    return false;
+}
+
+/**
+ * 获取队头元素
+ * @param n
+ */
+public T queueFront() {
+    if(isEmpty()) {
+        return null;
+    }
+    T item = data.get(front%data.size());
+    front = (front+1)%data.size();
+    return  item;
+}
+
+public void enQueue(T n) {
+    if(data.size() == 0) {
+        rear = rear+1;
+    } else {
+        rear = (rear+1)%data.size();
+    }
+
+    data.add(n);
+}
+
+public Object deQueue(){
+    if(isEmpty()) {
+        return null;
+    } 
+    return queueFront();
+}
+public static void main(String[] args) {
+    LoopQueue&lt;Integer&gt; lq = new LoopQueue&lt;Integer&gt;();
+    lq.enQueue(1);
+    lq.enQueue(2);
+    lq.enQueue(3);
+    lq.enQueue(4);
+    lq.enQueue(5);
+    lq.enQueue(6);
+    lq.enQueue(7);
+    lq.enQueue(8);
+    lq.enQueue(9);
+    lq.enQueue(10);
+    lq.enQueue(11);
+    lq.enQueue(12);
+    lq.enQueue(13);
+    lq.enQueue(14);
+    System.out.println(lq.deQueue());//1
+    System.out.println(lq.deQueue());//2
+    System.out.println(lq.deQueue());//3
+    System.out.println(lq.deQueue());//4
+    System.out.println(lq.deQueue());//5
+    System.out.println(lq.deQueue());//6
+    System.out.println(lq.deQueue());//7
+    System.out.println(lq.deQueue());//8
+
+}
+</code></pre><p>}</p>
+<p><code>`</code></p>
+<p>后续更新的话，需要更新链表的实现方式</p>
 
       
     </div>
@@ -375,7 +537,7 @@
         <p><span>本文标题:</span><a href="/2019/02/03/栈和队列1/">栈和队列1</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
         <p><span>发布时间:</span>2019-02-03, 13:05:21</p>
-        <p><span>最后更新:</span>2019-02-07, 23:16:18</p>
+        <p><span>最后更新:</span>2019-02-08, 22:56:58</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/03/栈和队列1/" title="栈和队列1">http://yoursite.com/2019/02/03/栈和队列1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/03/栈和队列1/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -405,7 +567,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#栈"><span class="toc-number">1.</span> <span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">1.1.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#顺序栈（数组）"><span class="toc-number">1.1.1.</span> <span class="toc-text">顺序栈（数组）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链表栈"><span class="toc-number">1.2.</span> <span class="toc-text">链表栈</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进制扩展"><span class="toc-number">2.</span> <span class="toc-text">进制扩展</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#队列"><span class="toc-number">3.</span> <span class="toc-text">队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组实现"><span class="toc-number">3.1.</span> <span class="toc-text">数组实现</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#栈"><span class="toc-number">1.</span> <span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作"><span class="toc-number">1.1.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#顺序栈（数组）"><span class="toc-number">1.1.1.</span> <span class="toc-text">顺序栈（数组）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链表栈"><span class="toc-number">1.2.</span> <span class="toc-text">链表栈</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#进制扩展"><span class="toc-number">2.</span> <span class="toc-text">进制扩展</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#队列"><span class="toc-number">3.</span> <span class="toc-text">队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序队列"><span class="toc-number">3.1.</span> <span class="toc-text">顺序队列</span></a></li></ol></li></ol>
         
     </div>
     <style>
