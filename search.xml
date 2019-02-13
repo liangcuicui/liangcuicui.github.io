@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>树</title>
+      <link href="/2019/02/14/%E6%A0%91/"/>
+      <url>/2019/02/14/%E6%A0%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>是一对多的数据结构<br>树是n个结点的有限集，当n = 0 时称为空树。在任意一棵非空树中：  </p><ul><li>有且仅有一个特定的称为根的结点</li><li>当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)   <a id="more"></a><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2></li><li>度<br>结点拥有的子树，树的度是各结点度的最大值  </li></ul><ol><li>度为 0 的结点称为叶节点(leaf)或者终端结点</li><li>度不为0 的结点称为分支结点，或非终端节点，除了根节点外，分支结点也称为内部结点。</li></ol><ul><li>结点的层次(level)  </li></ul><ol><li>结点的层次从根开始定在一起，根为第一层</li><li>双亲在同一层的结点互为堂兄弟</li><li>结点的最大层次称为树的深度(depth)或高度</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>BF and KMP</title>
       <link href="/2019/02/12/BF-and-KMP/"/>
       <url>/2019/02/12/BF-and-KMP/</url>
