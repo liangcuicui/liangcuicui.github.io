@@ -15,20 +15,18 @@
 
 
 
-<meta name="description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次简历各元素结点并逐个插入链表。">
-<meta name="keywords" content="数据结构,算法">
+<meta name="description" content="两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。   示例:给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]   123456">
+<meta name="keywords" content="算法题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表(2)">
-<meta property="og:url" content="http://yoursite.com/2019/02/02/线性表-2/index.html">
+<meta property="og:title" content="leetcode">
+<meta property="og:url" content="http://yoursite.com/2019/02/14/leetcode/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次简历各元素结点并逐个插入链表。">
+<meta property="og:description" content="两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。   示例:给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]   123456">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/02/线性表-2/compare.PNG">
-<meta property="og:updated_time" content="2019-02-02T07:51:22.958Z">
+<meta property="og:updated_time" content="2019-02-14T05:45:35.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表(2)">
-<meta name="twitter:description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次简历各元素结点并逐个插入链表。">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/02/线性表-2/compare.PNG">
+<meta name="twitter:title" content="leetcode">
+<meta name="twitter:description" content="两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。   示例:给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1]   123456">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -60,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>线性表(2) | TimeJjc&#39;s Blog</title>
+<title>leetcode | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +275,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-线性表-2" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-leetcode" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/02/02/线性表-2/" class="article-date">
-      <time datetime="2019-02-02T01:36:21.000Z" itemprop="datePublished">2019-02-02</time>
+      <a href="/2019/02/14/leetcode/" class="article-date">
+      <time datetime="2019-02-14T02:23:04.000Z" itemprop="datePublished">2019-02-14</time>
 </a>
 
 
@@ -296,7 +294,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      线性表(2)
+      leetcode
     </h1>
   
 
@@ -306,7 +304,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">796字</span>
+        <span class="post-count">739字</span>
       </span>
     </span>
 
@@ -327,7 +325,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法题/">算法题</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -337,52 +335,50 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>&#160;&#160;&#160;&#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次简历各元素结点并逐个插入链表。<br><a id="more"></a><br>思路：  </p>
+        <h1 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h1><blockquote>
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+</blockquote>
+<blockquote>
+<p>示例:<br>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
+</blockquote>
 <ul>
-<li>声明一个结点p和计数器变量i；</li>
-<li>初始化一空链表L；</li>
-<li>让L的头节点的指针指向NULL，即建立一个带头节点的单链表；</li>
-<li>循环实现后继结点的赋值和插入。  <h2 id="头插法"><a href="#头插法" class="headerlink" title="头插法"></a>头插法</h2>始终把新加进的元素放在表头后的第一个位置：  </li>
-<li>新节点的next指向头节点后面；</li>
-<li>表头的next指向新节点。  </li>
-</ul>
-<p>生成的链表中结点的次序和输入的顺序是想法的！ </p>
-<h2 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法"></a>尾插法</h2><p>始终把新元素放在表尾：</p>
-<ul>
-<li>当前节点指向新节点</li>
-<li>新节点成为当前结点</li>
-<li>三个结点，head,新节点(newNode)，当前结点（cur）  <h1 id="整表删除"><a href="#整表删除" class="headerlink" title="整表删除"></a>整表删除</h1>从内存中释放<br>思路：</li>
-<li>声明结点p,q</li>
-<li>大奖第一个结点赋值给p,下一结点赋值给q</li>
-<li>循环执行释放p和将q赋值给p的操作<br>JAVA中，GC释放  </li>
-</ul>
-<h1 id="比较单链表，顺序表"><a href="#比较单链表，顺序表" class="headerlink" title="比较单链表，顺序表"></a>比较单链表，顺序表</h1><p><img src="/2019/02/02/线性表-2/compare.PNG" alt="">  </p>
-<h1 id="静态链表"><a href="#静态链表" class="headerlink" title="静态链表"></a>静态链表</h1><p>用数组描述的链表 </p>
-<ul>
-<li>包括数据域和游标</li>
-<li>数组的第一个和最后一个元素做特殊处理，data域不存数据</li>
-<li>未使用的数组元素成为备用链表</li>
-<li>数组的第一个元素，即下标为0的哪个元素的游标存放备用链表的第一个结点的下标</li>
-<li>数组的最后一个元素，即下标为MAXSIZE-1的游标存放第一个由数值的元素的下标，相当于头节点  </li>
-</ul>
-<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>静态链表是为了给没有指针的变编程语言设计的一种实现单链表功能的方法。</p>
-<p>嘿嘿嘿，不太懂啊</p>
-<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>题目：快速找到未知长度单链表的中间结点</p>
-<p><strong>方法一</strong></p>
-<ul>
-<li>遍历单链表确定链表长度</li>
-<li>再次从头节点出发循环L/2次找到单链表的中间结点 </li>
-<li>复杂度O(L+L/2) = O(3L/2)     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class MidData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode minBase(LNode head) &#123;</span><br><span class="line">		int size = 0;</span><br><span class="line">		LNode p = head;</span><br><span class="line">		while(p.getNext() != null) &#123;</span><br><span class="line">			p = p.getNext();</span><br><span class="line">			size++;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=0; i&lt;size/2; i++) &#123;</span><br><span class="line">			head = head.getNext();</span><br><span class="line">		&#125;</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        int[] arr = new int[2];</span><br><span class="line">        for(int i=0;i&lt;nums.length-1;i++)&#123;</span><br><span class="line">            for(int j=i+1;j&lt;nums.length;j++)&#123;</span><br><span class="line">                if(nums[i]+nums[j] == target)&#123;</span><br><span class="line">                    arr[0] = i;</span><br><span class="line">                    arr[1] = j;</span><br><span class="line">                    return arr;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>方法二</strong><br>快慢指针  </p>
+<p>运行时间58ms，属于暴力解法了，击败24.62%的用户，太菜了  </p>
 <ul>
-<li>设置两个指针 search,mid都指向单链表的头节点，其中search的移动速度是mid的2倍，当search指向末尾结点的时候，min正好就在中间了，即标尺的思想。  </li>
-<li>算法复杂度O(L/2)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class MidData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode midD(LNode head) &#123;</span><br><span class="line">		LNode search = head;</span><br><span class="line">		LNode mid = head;</span><br><span class="line">		while(search.getNext() != null) &#123;</span><br><span class="line">			if(search.getNext().getNext() != null) &#123;</span><br><span class="line">				search = search.getNext().getNext();</span><br><span class="line">				mid = mid.getNext();</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				search = search.getNext();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return mid;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>利用hashmap的动态分配</li>
 </ul>
-<h2 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h2><p>题目:写一个完整的程序，实现随机生成20个元素的链表，查找重点节点的值并显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class TestMain &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		LNode head = new LNode();</span><br><span class="line">		LNode tail = head;</span><br><span class="line">		System.out.println(&quot;原始链表&quot;);</span><br><span class="line">		for(int i=0;i&lt;20;i++) &#123;</span><br><span class="line">			LNode tmp = new LNode(new Random().nextInt(100)+1);</span><br><span class="line">			tail.setNext(tmp);</span><br><span class="line">			tail = tmp;</span><br><span class="line">			System.out.print(tail.getData()+&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        int[] arr = new int[2];</span><br><span class="line">       HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">       for(int i=0;i&lt;nums.length;i++) &#123;</span><br><span class="line">    	   if(map.containsKey(target-nums[i])) &#123;</span><br><span class="line">    		   arr[0] = map.get(target-nums[i]);</span><br><span class="line">    		   arr[1] = i;</span><br><span class="line">    		   return arr;</span><br><span class="line">    	   &#125;else &#123;</span><br><span class="line">    		   map.put( nums[i],i);</span><br><span class="line">    	   &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       return arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行时间8ms,击败87.66%的用户</p>
+<h1 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h1><blockquote>
+<p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+</blockquote>
+<blockquote>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+</blockquote>
+<blockquote>
+<p>示例：<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode addTwoNumbers(ListNode l1, ListNode l2) &#123;</span><br><span class="line">       ListNode newNode = new ListNode(0);</span><br><span class="line">       ListNode cur = newNode;</span><br><span class="line">        int carry = 0;//进位</span><br><span class="line">        while(l1 !=null || l2 != null)&#123;</span><br><span class="line">            int val1 = (l1 != null)? l1.val : 0;</span><br><span class="line">            int val2 = (l2 != null)? l2.val : 0;</span><br><span class="line">            int num = carry+val1+val2;</span><br><span class="line">            carry = num/10;</span><br><span class="line">            //这里如果用cur.val = num%10;</span><br><span class="line">            //就需要cur.next = new ListNode(0);</span><br><span class="line">            //反正每次结点都需要new</span><br><span class="line">	        cur.next = new ListNode(num%10);</span><br><span class="line">	        cur = cur.next;</span><br><span class="line">            if(l1 != null)&#123;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            if(l2 != null)&#123;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(carry&gt;0)//最后如果还有进位</span><br><span class="line">            cur.next = new ListNode(carry);</span><br><span class="line">        return newNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行时间68ms,击败19.44%的用户<br>算是最直接的写法了，看来还要优化  </p>
+<h1 id="无重复字符的最长字串"><a href="#无重复字符的最长字串" class="headerlink" title="无重复字符的最长字串"></a>无重复字符的最长字串</h1><blockquote>
+<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
+</blockquote>
+<p>示例 1:  </p>
+<blockquote>
+<p>输入: “abcabcbb”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。</p>
+</blockquote>
+<p>示例 2:  </p>
+<blockquote>
+<p>输入: “bbbbb”<br>输出: 1<br>解释: 因为无重复字符的最长子串是 “b”，所以其长度为 1。</p>
+</blockquote>
+<p>示例 3:</p>
+<blockquote>
+<p>输入: “pwwkew”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “wke”，所以其长度为 3。  </p>
+</blockquote>
+<pre><code>请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。
+</code></pre>
       
     </div>
     
@@ -390,13 +386,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/02/线性表-2/">线性表(2)</a></p>
+        <p><span>本文标题:</span><a href="/2019/02/14/leetcode/">leetcode</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">梁翠翠</a></p>
-        <p><span>发布时间:</span>2019-02-02, 09:36:21</p>
-        <p><span>最后更新:</span>2019-02-02, 15:51:22</p>
+        <p><span>发布时间:</span>2019-02-14, 10:23:04</p>
+        <p><span>最后更新:</span>2019-02-14, 13:45:35</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/02/线性表-2/" title="线性表(2)">http://yoursite.com/2019/02/02/线性表-2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/02/线性表-2/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/02/14/leetcode/" title="leetcode">http://yoursite.com/2019/02/14/leetcode/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/14/leetcode/　　作者: 梁翠翠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -408,16 +404,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/02/线性表之循环链表/">
-                    线性表之循环链表
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/02/01/线性表/">
-                    线性表（List）之增删改查
+                <a href="/2019/02/14/树/">
+                    树
                 </a>
             </div>
         
@@ -429,7 +419,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#单链表的整表创建"><span class="toc-number">1.</span> <span class="toc-text">单链表的整表创建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#头插法"><span class="toc-number">1.2.</span> <span class="toc-text">头插法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#尾插法"><span class="toc-number">1.3.</span> <span class="toc-text">尾插法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整表删除"><span class="toc-number">2.</span> <span class="toc-text">整表删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#比较单链表，顺序表"><span class="toc-number">3.</span> <span class="toc-text">比较单链表，顺序表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#静态链表"><span class="toc-number">4.</span> <span class="toc-text">静态链表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#插入"><span class="toc-number">4.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除"><span class="toc-number">4.2.</span> <span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#练习"><span class="toc-number">5.</span> <span class="toc-text">练习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#查找"><span class="toc-number">5.1.</span> <span class="toc-text">查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建表"><span class="toc-number">5.2.</span> <span class="toc-text">建表</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#两数之和"><span class="toc-number">1.</span> <span class="toc-text">两数之和</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#两数相加"><span class="toc-number">2.</span> <span class="toc-text">两数相加</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#无重复字符的最长字串"><span class="toc-number">3.</span> <span class="toc-text">无重复字符的最长字串</span></a></li></ol>
         
     </div>
     <style>
@@ -465,7 +455,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"线性表(2)　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"leetcode　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -485,15 +475,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/02/02/线性表之循环链表/" title="上一篇: 线性表之循环链表">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/02/01/线性表/" title="下一篇: 线性表（List）之增删改查">
+            <a href="/2019/02/14/树/" title="下一篇: 树">
                 <i class="fa fa-angle-right"></i>
             </a>
         
