@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
 <meta property="og:description" content="两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-14T06:15:44.592Z">
+<meta property="og:updated_time" content="2019-02-14T10:12:58.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode">
 <meta name="twitter:description" content="两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。">
@@ -338,10 +338,7 @@
         <h1 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h1><blockquote>
 <p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br><a id="more"></a><br>示例:<br>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
 </blockquote>
-<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        int[] arr = new int[2];</span><br><span class="line">        for(int i=0;i&lt;nums.length-1;i++)&#123;</span><br><span class="line">            for(int j=i+1;j&lt;nums.length;j++)&#123;</span><br><span class="line">                if(nums[i]+nums[j] == target)&#123;</span><br><span class="line">                    arr[0] = i;</span><br><span class="line">                    arr[1] = j;</span><br><span class="line">                    return arr;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        int[] arr = new int[2];</span><br><span class="line">        for(int i=0;i&lt;nums.length-1;i++)&#123;</span><br><span class="line">            for(int j=i+1;j&lt;nums.length;j++)&#123;</span><br><span class="line">                if(nums[i]+nums[j] == target)&#123;</span><br><span class="line">                    arr[0] = i;</span><br><span class="line">                    arr[1] = j;</span><br><span class="line">                    return arr;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行时间58ms，属于暴力解法了，击败24.62%的用户，太菜了  </p>
 <ul>
 <li>利用hashmap的动态分配</li>
@@ -386,7 +383,7 @@
         <p><span>本文标题:</span><a href="/2019/02/14/leetcode/">leetcode</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-14, 10:23:04</p>
-        <p><span>最后更新:</span>2019-02-14, 14:15:44</p>
+        <p><span>最后更新:</span>2019-02-14, 18:12:58</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/14/leetcode/" title="leetcode">http://yoursite.com/2019/02/14/leetcode/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/14/leetcode/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
