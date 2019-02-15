@@ -23,10 +23,13 @@
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
 <meta property="og:description" content="树定义是一对多的数据结构树是n个结点的有限集，当n = 0 时称为空树。在任意一棵非空树中：    有且仅有一个特定的称为根的结点 当n&amp;gt;1时，其余结点可分为m(m&amp;gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-13T17:12:53.011Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/14/树/treeParent.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/14/树/treeChildren">
+<meta property="og:updated_time" content="2019-02-15T10:08:36.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树">
 <meta name="twitter:description" content="树定义是一对多的数据结构树是n个结点的有限集，当n = 0 时称为空树。在任意一棵非空树中：    有且仅有一个特定的称为根的结点 当n&amp;gt;1时，其余结点可分为m(m&amp;gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/14/树/treeParent.PNG">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -196,7 +199,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法题/">算法题</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法题/">算法题</a></li></ul>
                     </div>
                 </section>
                 
@@ -304,7 +307,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">231字</span>
+        <span class="post-count">491字</span>
       </span>
     </span>
 
@@ -338,23 +341,31 @@
         <h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>是一对多的数据结构<br>树是n个结点的有限集，当n = 0 时称为空树。在任意一棵非空树中：  </p>
 <ul>
 <li>有且仅有一个特定的称为根的结点</li>
-<li>当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)   <a id="more"></a>
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2></li>
-<li>度<br>结点拥有的子树，树的度是各结点度的最大值  </li>
+<li>当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)   <a id="more"></a>  
+</li>
 </ul>
-<ol>
-<li>度为 0 的结点称为叶节点(leaf)或者终端结点</li>
-<li>度不为0 的结点称为分支结点，或非终端节点，除了根节点外，分支结点也称为内部结点。</li>
-</ol>
-<ul>
-<li>结点的层次(level)  </li>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li><p>度<br>结点拥有的子树，树的度是各结点度的最大值<br>度为 0 的结点称为叶节点(leaf)或者终端结点<br>度不为0 的结点称为分支结点，或非终端节点，除了根节点外，分支结点也称为内部结点。</p>
+</li>
+<li><p>结点的层次(level)<br>结点的层次从根开始定在一起，根为第一层<br>双亲在同一层的结点互为堂兄弟</p>
+</li>
+<li><p>结点的祖先<br>从根节点到该节点所经过分支上的所有结点</p>
+</li>
+<li><p>深度或高度<br>结点的最大层次称为树的深度(depth)或高度</p>
+</li>
+<li><p>森林(fores)<br>由m(m&gt;=0)棵互不相交的树组成的集合 </p>
+</li>
+<li><p>兄弟(sibling)<br>同一个双亲的孩子之间称为兄弟 </p>
+</li>
+<li><p>无序树和有序树<br>如果将树中结点的各子树看成从左至右是有次序的，不能互换的，则是有序树，否则是无序树。</p>
+</li>
 </ul>
-<ol>
-<li>结点的层次从根开始定在一起，根为第一层</li>
-<li>双亲在同一层的结点互为堂兄弟</li>
-<li>结点的最大层次称为树的深度(depth)或高度</li>
-</ol>
-
+<h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><p>顺序结构和链表结构都是一对一；树可以实现一对多的结构</p>
+<h3 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h3><p>以一组连续空间存储树的结点，同时在每个结点中，附设一个指示器指向其双亲结点到链表中的位置。<br><img src="/2019/02/14/树/treeParent.PNG" alt=""></p>
+<p><strong><em>需要知道自己的数据和双亲位置</em></strong></p>
+<p><strong>优点</strong><br>&#160;&#160;&#160;&#160;找到双亲的速度很快，复杂度为O(1)<br><strong>缺点</strong><br>&#160;&#160;&#160;&#160;如果需要找到孩子数据，需要遍历整个结构</p>
+<h3 id="孩子表示法"><a href="#孩子表示法" class="headerlink" title="孩子表示法"></a>孩子表示法</h3><p><img src="/2019/02/14/树/treeChildren" alt=""></p>
+<h3 id="孩子兄弟表示法"><a href="#孩子兄弟表示法" class="headerlink" title="孩子兄弟表示法"></a>孩子兄弟表示法</h3>
       
     </div>
     
@@ -365,7 +376,7 @@
         <p><span>本文标题:</span><a href="/2019/02/14/树/">树</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-14, 00:57:24</p>
-        <p><span>最后更新:</span>2019-02-14, 01:12:53</p>
+        <p><span>最后更新:</span>2019-02-15, 18:08:36</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/14/树/" title="树">http://yoursite.com/2019/02/14/树/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/14/树/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -401,7 +412,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#树"><span class="toc-number">1.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#术语"><span class="toc-number">1.2.</span> <span class="toc-text">术语</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#树"><span class="toc-number">1.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#术语"><span class="toc-number">1.2.</span> <span class="toc-text">术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树的存储结构"><span class="toc-number">1.3.</span> <span class="toc-text">树的存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#双亲表示法"><span class="toc-number">1.3.1.</span> <span class="toc-text">双亲表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#孩子表示法"><span class="toc-number">1.3.2.</span> <span class="toc-text">孩子表示法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#孩子兄弟表示法"><span class="toc-number">1.3.3.</span> <span class="toc-text">孩子兄弟表示法</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -471,7 +482,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">数据结构与算法之逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
 
 
