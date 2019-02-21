@@ -15,19 +15,19 @@
 
 
 
-<meta name="description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次遍历各元素结点并逐个插入链表。">
+<meta name="description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，依次遍历各元素结点并逐个插入链表。">
 <meta name="keywords" content="数据结构,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性表(2)">
 <meta property="og:url" content="http://yoursite.com/2019/02/02/线性表-2/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次遍历各元素结点并逐个插入链表。">
+<meta property="og:description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，依次遍历各元素结点并逐个插入链表。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/02/02/线性表-2/compare.PNG">
-<meta property="og:updated_time" content="2019-02-19T14:58:46.041Z">
+<meta property="og:updated_time" content="2019-02-21T01:33:20.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表(2)">
-<meta name="twitter:description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次遍历各元素结点并逐个插入链表。">
+<meta name="twitter:description" content="单链表的整表创建定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，依次遍历各元素结点并逐个插入链表。">
 <meta name="twitter:image" content="http://yoursite.com/2019/02/02/线性表-2/compare.PNG">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -306,7 +306,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">795字</span>
+        <span class="post-count">827字</span>
       </span>
     </span>
 
@@ -337,7 +337,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>&#160;&#160;&#160;&#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，一次遍历各元素结点并逐个插入链表。<br><a id="more"></a><br>思路：  </p>
+        <h1 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>&#160;&#160;&#160;&#160;创建单链表的过程是一个动态生成链表的过程，从“空表”的初始状态起，依次遍历各元素结点并逐个插入链表。<br><a id="more"></a><br>思路：  </p>
 <ul>
 <li>声明一个结点p和计数器变量i；</li>
 <li>初始化一空链表L；</li>
@@ -346,7 +346,7 @@
 <li>新节点的next指向头节点后面；</li>
 <li>表头的next指向新节点。  </li>
 </ul>
-<p>生成的链表中结点的次序和输入的顺序是想法的！ </p>
+<p>生成的链表中结点的次序和输入的顺序是相反的！ </p>
 <h2 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法"></a>尾插法</h2><p>始终把新元素放在表尾：</p>
 <ul>
 <li>当前节点指向新节点</li>
@@ -381,7 +381,7 @@
 <li>算法复杂度O(L/2)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class MidData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode midD(LNode head) &#123;</span><br><span class="line">		LNode search = head;</span><br><span class="line">		LNode mid = head;</span><br><span class="line">		while(search.getNext() != null) &#123;</span><br><span class="line">			if(search.getNext().getNext() != null) &#123;</span><br><span class="line">				search = search.getNext().getNext();</span><br><span class="line">				mid = mid.getNext();</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				search = search.getNext();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return mid;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h2><p>题目:写一个完整的程序，实现随机生成20个元素的链表，查找重点节点的值并显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class TestMain &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		LNode head = new LNode();</span><br><span class="line">		LNode tail = head;</span><br><span class="line">		System.out.println(&quot;原始链表&quot;);</span><br><span class="line">		for(int i=0;i&lt;20;i++) &#123;</span><br><span class="line">			LNode tmp = new LNode(new Random().nextInt(100)+1);</span><br><span class="line">			tail.setNext(tmp);</span><br><span class="line">			tail = tmp;</span><br><span class="line">			System.out.print(tail.getData()+&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h2><p>题目:写一个完整的程序，实现随机生成20个元素的链表，查找中间节点的值并显示<br>这里展示的代码只是随机生成20个元素的链表，再结合前面的代码就可以了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class TestMain &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		LNode head = new LNode();</span><br><span class="line">		LNode tail = head;</span><br><span class="line">		System.out.println(&quot;原始链表&quot;);</span><br><span class="line">		for(int i=0;i&lt;20;i++) &#123;</span><br><span class="line">			LNode tmp = new LNode(new Random().nextInt(100)+1);</span><br><span class="line">			tail.setNext(tmp);</span><br><span class="line">			tail = tmp;</span><br><span class="line">			System.out.print(tail.getData()+&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -393,7 +393,7 @@
         <p><span>本文标题:</span><a href="/2019/02/02/线性表-2/">线性表(2)</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-02, 09:36:21</p>
-        <p><span>最后更新:</span>2019-02-19, 22:58:46</p>
+        <p><span>最后更新:</span>2019-02-21, 09:33:20</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/02/线性表-2/" title="线性表(2)">http://yoursite.com/2019/02/02/线性表-2/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/02/线性表-2/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -499,7 +499,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/代码习题/">代码习题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
 
 

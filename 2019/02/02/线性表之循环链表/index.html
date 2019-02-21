@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/doubleLoopList.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/insertDouble.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/02/02/线性表之循环链表/doubleDelete.PNG">
-<meta property="og:updated_time" content="2019-02-19T15:00:08.498Z">
+<meta property="og:updated_time" content="2019-02-21T01:29:31.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表之循环链表">
 <meta name="twitter:description" content="（单）循环链表定义最后一个结点的指针域指向头节点，形成一个环">
@@ -360,7 +360,7 @@
 <p><img src="/2019/02/02/线性表之循环链表/loopListDouble。PNG" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class TwoToOne &#123;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * </span><br><span class="line">	 * @param a 第一个链表的尾指针</span><br><span class="line">	 * @param b 第二个链表的尾指针</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	public static LNode twoOne(LNode a, LNode b) &#123;</span><br><span class="line">		LNode tmp = a.getNext();//a的头节点</span><br><span class="line">		System.out.println(&quot;aaa&quot;+b.getNext().getNext().getData());</span><br><span class="line">		a.setNext(b.getNext().getNext());</span><br><span class="line">		b.setNext(tmp);</span><br><span class="line">		return tmp;//新链表的头结点位置</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="判断单链表中是否有环"><a href="#判断单链表中是否有环" class="headerlink" title="判断单链表中是否有环"></a>判断单链表中是否有环</h2><p><strong>所谓有环，不一定是尾节点指向头节点，尾节点可以指向链表中的任意结点</strong><br>方法一：</p>
 <ul>
-<li>使用p,q两个指针，p总是向前走，单q每次都从头开始走</li>
+<li>使用p,q两个指针，p总是向前走，但q每次都从头开始走</li>
 <li>对于每个结点，看p走的步数是否和q与q一样，不一样代表有环  </li>
 </ul>
 <p>方法二：</p>
@@ -400,7 +400,7 @@
         <p><span>本文标题:</span><a href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-02, 15:51:44</p>
-        <p><span>最后更新:</span>2019-02-19, 23:00:08</p>
+        <p><span>最后更新:</span>2019-02-21, 09:29:31</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/02/线性表之循环链表/" title="线性表之循环链表">http://yoursite.com/2019/02/02/线性表之循环链表/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/02/线性表之循环链表/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -506,7 +506,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/代码习题/">代码习题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
 
 

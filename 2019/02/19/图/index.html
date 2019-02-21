@@ -24,7 +24,7 @@
 <meta property="og:description" content="定义图(Graph)是由顶点的有穷非空集合和顶点之间边的集合组成。通常表示为：G(V,E),其中，G表示一个图，V是图G中顶点的集合，E是图G中边的集合。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/02/19/图/1.PNG">
-<meta property="og:updated_time" content="2019-02-19T13:44:47.363Z">
+<meta property="og:updated_time" content="2019-02-21T09:46:23.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图">
 <meta name="twitter:description" content="定义图(Graph)是由顶点的有穷非空集合和顶点之间边的集合组成。通常表示为：G(V,E),其中，G表示一个图，V是图G中顶点的集合，E是图G中边的集合。">
@@ -306,7 +306,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">799字</span>
+        <span class="post-count">983字</span>
       </span>
     </span>
 
@@ -315,7 +315,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -379,6 +379,13 @@
 <h2 id="十字链表"><a href="#十字链表" class="headerlink" title="十字链表"></a>十字链表</h2><p>把邻接表和逆邻接表结合起来。<br>结构为：tailVex   headVex    headLink   tailLink<br>Vex表示顶点，Link表示结点<br>常用！！！！！！！！</p>
 <h2 id="邻接多重表"><a href="#邻接多重表" class="headerlink" title="邻接多重表"></a>邻接多重表</h2><p>是对边的操作</p>
 <h2 id="边集数组"><a href="#边集数组" class="headerlink" title="边集数组"></a>边集数组</h2><p>由两个一维数组组成，一个存储顶点，一个存储边信息，这个边数组每个数据元素由一条边的起点下标，重点下标和全组成。<br><img src="/2019/02/19/图/1.PNG" alt=""></p>
+<h1 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h1><h2 id="深度优先遍历"><a href="#深度优先遍历" class="headerlink" title="深度优先遍历"></a>深度优先遍历</h2><p>是图论的基本算法。也称为深度优先搜索(Depth-First-Search)一条路走到黑，再返回上一步，找到没有走过的路，是结合了回溯和递归的遍历，类似于树的前序遍历。<br>一般使用右手原则，即每次走最右边的顶点</p>
+<h2 id="广度优先遍历"><a href="#广度优先遍历" class="headerlink" title="广度优先遍历"></a>广度优先遍历</h2><p>是连通图的一种遍历策略，从一个顶点V0开始，辐射状地优先遍历其周围较广的区域。</p>
+<ul>
+<li>从图中某个顶点V0触发，并访问此顶点</li>
+<li>依次访问V0未曾访问的邻接点，依次访问邻接点未被访问的邻接点……</li>
+<li>一直到所有顶点都被访问完</li>
+</ul>
 
       
     </div>
@@ -390,7 +397,7 @@
         <p><span>本文标题:</span><a href="/2019/02/19/图/">图</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-19, 18:40:15</p>
-        <p><span>最后更新:</span>2019-02-19, 21:44:47</p>
+        <p><span>最后更新:</span>2019-02-21, 17:46:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/19/图/" title="图">http://yoursite.com/2019/02/19/图/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/19/图/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -404,6 +411,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/02/21/代码习题/">
+                    代码习题
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -420,7 +433,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">2.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接矩阵"><span class="toc-number">2.1.</span> <span class="toc-text">邻接矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接表"><span class="toc-number">2.2.</span> <span class="toc-text">邻接表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十字链表"><span class="toc-number">2.3.</span> <span class="toc-text">十字链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接多重表"><span class="toc-number">2.4.</span> <span class="toc-text">邻接多重表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边集数组"><span class="toc-number">2.5.</span> <span class="toc-text">边集数组</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">2.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接矩阵"><span class="toc-number">2.1.</span> <span class="toc-text">邻接矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接表"><span class="toc-number">2.2.</span> <span class="toc-text">邻接表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十字链表"><span class="toc-number">2.3.</span> <span class="toc-text">十字链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接多重表"><span class="toc-number">2.4.</span> <span class="toc-text">邻接多重表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边集数组"><span class="toc-number">2.5.</span> <span class="toc-text">边集数组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#遍历"><span class="toc-number">3.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度优先遍历"><span class="toc-number">3.1.</span> <span class="toc-text">深度优先遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#广度优先遍历"><span class="toc-number">3.2.</span> <span class="toc-text">广度优先遍历</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -476,7 +489,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/02/21/代码习题/" title="上一篇: 代码习题">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -488,7 +503,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/代码习题/">代码习题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
 
 
