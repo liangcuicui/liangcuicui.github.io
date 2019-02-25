@@ -15,18 +15,20 @@
 
 
 
-<meta name="description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空">
+<meta name="description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空  2">
 <meta name="keywords" content="算法题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代码习题">
 <meta property="og:url" content="http://yoursite.com/2019/02/21/代码习题/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空">
+<meta property="og:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空  2">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-21T01:45:13.620Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/21/代码习题/maxSubStr.PNG">
+<meta property="og:updated_time" content="2019-02-23T05:11:25.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码习题">
-<meta name="twitter:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空">
+<meta name="twitter:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空  2">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/21/代码习题/maxSubStr.PNG">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -304,7 +306,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">139字</span>
+        <span class="post-count">681字</span>
       </span>
     </span>
 
@@ -313,7 +315,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -347,6 +349,28 @@
 <li>逆序后面的链表</li>
 <li>依次循环，每次各去除两个链表的一个结点，直至next为空</li>
 </ul>
+<h1 id="2-求两个字符串的最长公共子串"><a href="#2-求两个字符串的最长公共子串" class="headerlink" title="2.求两个字符串的最长公共子串"></a>2.求两个字符串的最长公共子串</h1><ol>
+<li>暴力求解<br>利用动态规划法，双重for循环。</li>
+</ol>
+<ul>
+<li>初始化二维数组max[][]，赋值为0</li>
+<li>双重循环两个字符串，如果字符串在某一位置相等,赋值max+1，</li>
+<li>两个变量，max记录最长公共子串的长度，maxI记录最长公共子串最后一个字符的位置</li>
+<li>最长公共子串的位置是从下标maxI-max开始，下标增加max位的字符</li>
+<li>需要注意的是，比较的时候对max数组的赋值，因为循环是从1开始的</li>
+</ul>
+<p><img src="/2019/02/21/代码习题/maxSubStr.PNG" alt="">  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String str1 = &quot;GCCCTAGCG&quot;;</span><br><span class="line">		String str2 = &quot;GCGCAATG&quot;;</span><br><span class="line">		getMaxSubStr(str1, str2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private static void getMaxSubStr(String str1, String str2) &#123;</span><br><span class="line">		if(str1 == null || str2 == null) &#123;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		int[][] m = new int[str1.length()+1][str2.length()+1];</span><br><span class="line">		int max = 0;//最长公共子序列的长度</span><br><span class="line">		int maxI = 0;//最长公共子序列的最后一个字符的位置</span><br><span class="line">		for(int i=0;i&lt;str1.length()+1;i++) &#123;</span><br><span class="line">			for(int j=0;j&lt;str2.length()+1;j++) &#123;</span><br><span class="line">				m[i][j] = 0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=1;i&lt;str1.length()+1;i++) &#123;</span><br><span class="line">			for(int j=1;j&lt;str2.length()+1;j++) &#123;</span><br><span class="line">				if(str1.charAt(i-1) == str2.charAt(j-1)) &#123;</span><br><span class="line">					m[i][j] = m[i-1][j-1]+1;</span><br><span class="line">					if(max&lt;m[i][j]) &#123;</span><br><span class="line">						max = m[i][j];</span><br><span class="line">						maxI = i;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(str1.substring(maxI-max, maxI));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>滑动比较法</li>
+</ol>
+<ul>
+<li>保持str1的位置不变，移动str2,比较重叠字符的公共子串</li>
+<li>移动时，如果当前重叠子串的长度大于maxI,更新maxI<h1 id="3-求字符串的所有排序（未去重）"><a href="#3-求字符串的所有排序（未去重）" class="headerlink" title="3.求字符串的所有排序（未去重）"></a>3.求字符串的所有排序（未去重）</h1></li>
+<li>第一步，第一个字符和后面所有字符，依次交换</li>
+<li>第二步，固定第一个字符，对剩余的字符进行全排列（交换）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void swap(char[] str, int start, int i) &#123;</span><br><span class="line">		char tmp = str[start];</span><br><span class="line">		str[start] = str[i];</span><br><span class="line">		str[i] = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void Permutation(char[] str, int start) &#123;</span><br><span class="line">		if(str.length == 0 || start&lt;0) &#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		if(start == str.length-1) &#123;</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			for(int i = start;i&lt;str.length;i++) &#123;</span><br><span class="line">				swap(str,start,i);</span><br><span class="line">				Permutation(str, start+1);</span><br><span class="line">				swap(str,i,start);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String string = &quot;abc&quot;;</span><br><span class="line">		char[] str = string.toCharArray();</span><br><span class="line">		Permutation(str, 0);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -358,7 +382,7 @@
         <p><span>本文标题:</span><a href="/2019/02/21/代码习题/">代码习题</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-21, 09:37:51</p>
-        <p><span>最后更新:</span>2019-02-21, 09:45:13</p>
+        <p><span>最后更新:</span>2019-02-23, 13:11:25</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/21/代码习题/" title="代码习题">http://yoursite.com/2019/02/21/代码习题/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/21/代码习题/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -372,6 +396,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/02/26/图的遍历/">
+                    图的遍历
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -388,7 +418,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-对链表进行重新排序"><span class="toc-number">1.</span> <span class="toc-text">1.对链表进行重新排序</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-对链表进行重新排序"><span class="toc-number">1.</span> <span class="toc-text">1.对链表进行重新排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-求两个字符串的最长公共子串"><span class="toc-number">2.</span> <span class="toc-text">2.求两个字符串的最长公共子串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-求字符串的所有排序（未去重）"><span class="toc-number">3.</span> <span class="toc-text">3.求字符串的所有排序（未去重）</span></a></li></ol>
         
     </div>
     <style>
@@ -444,7 +474,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/02/26/图的遍历/" title="上一篇: 图的遍历">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -456,7 +488,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/代码习题/">代码习题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/图的遍历/">图的遍历</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/代码习题/">代码习题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
 
 
 

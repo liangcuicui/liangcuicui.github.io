@@ -277,6 +277,81 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-图的遍历" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/02/26/图的遍历/" class="article-date">
+      <time datetime="2019-02-25T16:17:34.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/26/图的遍历/">图的遍历</a>
+    </h1>
+  
+
+		
+		   <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">0字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+        
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-代码习题" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
@@ -306,7 +381,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">139字</span>
+        <span class="post-count">681字</span>
       </span>
     </span>
 
@@ -315,7 +390,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -337,6 +412,28 @@
 <li>将链表分成两个来链表</li>
 <li>逆序后面的链表</li>
 <li>依次循环，每次各去除两个链表的一个结点，直至next为空</li>
+</ul>
+<h1 id="2-求两个字符串的最长公共子串"><a href="#2-求两个字符串的最长公共子串" class="headerlink" title="2.求两个字符串的最长公共子串"></a>2.求两个字符串的最长公共子串</h1><ol>
+<li>暴力求解<br>利用动态规划法，双重for循环。</li>
+</ol>
+<ul>
+<li>初始化二维数组max[][]，赋值为0</li>
+<li>双重循环两个字符串，如果字符串在某一位置相等,赋值max+1，</li>
+<li>两个变量，max记录最长公共子串的长度，maxI记录最长公共子串最后一个字符的位置</li>
+<li>最长公共子串的位置是从下标maxI-max开始，下标增加max位的字符</li>
+<li>需要注意的是，比较的时候对max数组的赋值，因为循环是从1开始的</li>
+</ul>
+<p><img src="/2019/02/21/代码习题/maxSubStr.PNG" alt="">  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String str1 = &quot;GCCCTAGCG&quot;;</span><br><span class="line">		String str2 = &quot;GCGCAATG&quot;;</span><br><span class="line">		getMaxSubStr(str1, str2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private static void getMaxSubStr(String str1, String str2) &#123;</span><br><span class="line">		if(str1 == null || str2 == null) &#123;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		int[][] m = new int[str1.length()+1][str2.length()+1];</span><br><span class="line">		int max = 0;//最长公共子序列的长度</span><br><span class="line">		int maxI = 0;//最长公共子序列的最后一个字符的位置</span><br><span class="line">		for(int i=0;i&lt;str1.length()+1;i++) &#123;</span><br><span class="line">			for(int j=0;j&lt;str2.length()+1;j++) &#123;</span><br><span class="line">				m[i][j] = 0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=1;i&lt;str1.length()+1;i++) &#123;</span><br><span class="line">			for(int j=1;j&lt;str2.length()+1;j++) &#123;</span><br><span class="line">				if(str1.charAt(i-1) == str2.charAt(j-1)) &#123;</span><br><span class="line">					m[i][j] = m[i-1][j-1]+1;</span><br><span class="line">					if(max&lt;m[i][j]) &#123;</span><br><span class="line">						max = m[i][j];</span><br><span class="line">						maxI = i;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(str1.substring(maxI-max, maxI));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>滑动比较法</li>
+</ol>
+<ul>
+<li>保持str1的位置不变，移动str2,比较重叠字符的公共子串</li>
+<li>移动时，如果当前重叠子串的长度大于maxI,更新maxI<h1 id="3-求字符串的所有排序（未去重）"><a href="#3-求字符串的所有排序（未去重）" class="headerlink" title="3.求字符串的所有排序（未去重）"></a>3.求字符串的所有排序（未去重）</h1></li>
+<li>第一步，第一个字符和后面所有字符，依次交换</li>
+<li>第二步，固定第一个字符，对剩余的字符进行全排列（交换）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void swap(char[] str, int start, int i) &#123;</span><br><span class="line">		char tmp = str[start];</span><br><span class="line">		str[start] = str[i];</span><br><span class="line">		str[i] = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void Permutation(char[] str, int start) &#123;</span><br><span class="line">		if(str.length == 0 || start&lt;0) &#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		if(start == str.length-1) &#123;</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			for(int i = start;i&lt;str.length;i++) &#123;</span><br><span class="line">				swap(str,start,i);</span><br><span class="line">				Permutation(str, start+1);</span><br><span class="line">				swap(str,i,start);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String string = &quot;abc&quot;;</span><br><span class="line">		char[] str = string.toCharArray();</span><br><span class="line">		Permutation(str, 0);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
@@ -397,7 +494,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">983字</span>
+        <span class="post-count">1.6k字</span>
       </span>
     </span>
 
@@ -406,7 +503,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -673,42 +770,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h1><ol>
+              <h1 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h1><ol>
 <li>递归<br>&#160;&#160;&#160;&#160;直接或间接地调用自身的算法    </li>
 <li>分治<br>&#160;&#160;&#160;&#160;将一个规模为n的，难以解决的问题分解为k个规模较小的子问题，<em>子问题相互独立</em>  </li>
 </ol>
 <p>将子问题递归解决，得到源问题的解  </p>
 <ol start="3">
-<li>典型案例<br>Fibonacci数列，阶乘，Hanoi塔，二分法搜索，高速排序，合并排序</li>
-</ol>
-<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><ol>
-<li>定义<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Dynamis programming,是运筹学的一个分支，是求解决策过程最优化的数学方法。 </li>
-<li>基本思想<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;类似分治法，将待求解问题分解成若干个子问题，先求解子问题，但是<em>子问题不是相互独立的</em>，避免大量的重复计算，每一次要用到前一问题的解   </li>
-<li><p>分类<br>线性动态规划： 拦截导弹， 合唱队形， 挖地雷， 建学校， 剑客决斗<br>区域动态规划： 石子合并， 加分二叉树， 统计单词个数， 炮兵布阵<br>树形动态规划： 贪吃的九头龙， 二分查找树， 聚会的欢乐， 数字三角形。<br>背包动态规划： 01背包问题， 完全背包问题， 分组背包问题， 二维背包， 装箱问题， 挤牛奶， </p>
-</li>
-<li><p>实例<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;最短路径问题， 项目管理， 网络流优化， 最长公共子序列，最大连续子序列和， 矩阵连乘， 凸多边形最优三角剖分， 电路布线。</p>
-</li>
-</ol>
-<h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><ol>
-<li>定义<br>&#160;&#160;&#160;&#160;&#160;&#160;对问题求解时，总是做出再当前看来最好的选择，也就是说，不从整体最优上加以考虑。<br>某个状态以前的过程不会影响以后的状态，只与当前状态有关。  </li>
-<li>与动态规划的区别<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;贪心算法是自顶向下、以迭代的方法做出相继选择，每做一次贪心选择就将所求问题简化为规模更小的子问题，最后得到一个整体最优解。<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;不能回退，动态规划可以</li>
-<li>思路<br>建立数学模型来描述问题<br>把求解的问题分成若干个子问题<br>对每一子问题求解，得到子问题的局部最优解<br>八字问题的解局部最优解合成原问题的一个解  </li>
-<li>案例<br>01背包问题， 马踏棋盘，最小生成树的Prim算法和Kruskal算法<h1 id="回溯"><a href="#回溯" class="headerlink" title="回溯"></a>回溯</h1></li>
-<li>定义<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;能进则进，不进则退  。类似枚举的搜索尝试过程，主要再搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就返回，尝试别的路径，<em>是一种选优搜索法</em><br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;需要深度优先的方式搜索解空间 </li>
-<li>案例<br>八皇后问题<h1 id="分支限界"><a href="#分支限界" class="headerlink" title="分支限界"></a>分支限界</h1></li>
-<li><p>定义<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;每一个活结点只有一次机会成为扩展结点。活结点一旦成为扩展结点，就一次性产生所有儿子结点，在儿子结点中，导致不可行解或者非最优解的儿子结点被舍弃，其余儿子结点被加入活结点表中。再从活结点中取下一结点成为当前扩展结点。重复……<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;常以广度优先或以最小消耗优先的方式搜索问题的解空间树。</p>
-</li>
-<li><p>方法  </p>
-</li>
-</ol>
-<ul>
-<li>队列式(FIFO)分支限界法<br>按照队列原则选区下一个结点为扩展结点</li>
-<li>优先队列式分支限界法<br>按优先队列中规定的优先级选取优先级最高的结点成为当前扩展结点。</li>
-</ul>
-<ol start="3">
-<li>与回溯法区别<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;回溯是求条件下的所有解，分支限界是一个解<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;回溯是深度优先，分支限界是广度优先   </li>
-</ol>
-
+<li>典型案例<br>Fibonacci数列，阶乘，Hanoi塔，二分法搜索，高速排序，合并排序</li></ol>
+          
       
     </div>
     
@@ -721,6 +790,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2019/02/15/五个常见算法/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -862,7 +935,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2.5k字</span>
+        <span class="post-count">2.7k字</span>
       </span>
     </span>
 
@@ -871,7 +944,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">12分</span>
+        <span class="post-count">13分</span>
       </span>
     </span>
 </div>
@@ -1076,93 +1149,6 @@
       
         <p class="article-more-link">
           <a href="/2019/02/12/BF-and-KMP/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-递归与分治" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/02/08/递归与分治/" class="article-date">
-      <time datetime="2019-02-08T14:59:34.000Z" itemprop="datePublished">2019-02-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/08/递归与分治/">递归与分治</a>
-    </h1>
-  
-
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.7k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7分</span>
-      </span>
-    </span>
-</div>
-        
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>直接或间接调用自身的一种方法，减少了程序的代码量，即：<br>&#160;&#160;&#160;&#160;用有限的语句定义对象的无限集合<br>前提条件：</p>
-<ul>
-<li>不可无限制的调用自己，需要有一个出口</li>
-<li>子问题不可大于原始问题</li></ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/02/08/递归与分治/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
