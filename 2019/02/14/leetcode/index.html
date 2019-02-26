@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
 <meta property="og:description" content="1.两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-25T17:03:12.192Z">
+<meta property="og:updated_time" content="2019-02-26T05:54:14.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode">
 <meta name="twitter:description" content="1.两数之和 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。">
@@ -304,7 +304,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2.7k字</span>
+        <span class="post-count">4k字</span>
       </span>
     </span>
 
@@ -313,7 +313,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">13分</span>
+        <span class="post-count">18分</span>
       </span>
     </span>
 </div>
@@ -408,8 +408,73 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 7.0整数反转 #</span><br><span class="line">给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br><span class="line"> 示例 2:</span><br><span class="line"></span><br><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br><span class="line">示例 3:</span><br><span class="line"></span><br><span class="line">输入: 120</span><br><span class="line">输出: 21</span><br><span class="line">注意:</span><br><span class="line"></span><br><span class="line">假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</span><br></pre></td></tr></table></figure>
 <p>class Solution {<br>    public int reverse(int x) {<br>        int rev = 0;<br>            while (x != 0) {<br>                int pop = x % 10;<br>                x /= 10;<br>                if (rev &gt; Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 &amp;&amp; pop &gt; Integer.MAX_VALUE % 10)) return 0;<br>                if (rev &lt; Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 &amp;&amp; pop &lt; -Integer.MAX_VALUE % 10)) return 0;<br>                rev = rev * 10 + pop;<br>            }<br>            return rev;<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">执行用时43ms,击败了64.62%的用户  </span><br><span class="line">内存消耗32.6MB,击败了43.26%的用户</span><br><span class="line"></span><br><span class="line">判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: 121</span><br><span class="line">输出: true</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: -121</span><br><span class="line">输出: false</span><br><span class="line">解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</span><br><span class="line">示例 3:</span><br><span class="line"></span><br><span class="line">输入: 10</span><br><span class="line">输出: false</span><br><span class="line">解释: 从右向左读, 为 01 。因此它不是一个回文数。</span><br></pre></td></tr></table></figure></p>
-<p> public boolean isPalindrome(int x) {<br>        if(x&lt;0)<br>            return false;<br>        boolean rlt = false;<br>        int rev = 0;<br>        int n = x;<br>        while (n != 0) {<br>            int pop = n % 10;<br>            n /= 10;<br>            if (rev &gt; Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 &amp;&amp; pop &gt; Integer.MAX_VALUE % 10)) return false;<br>            if (rev &lt; Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 &amp;&amp; pop &lt; -Integer.MAX_VALUE % 10)) return false;<br>            rev = rev * 10 + pop;<br>        }<br>        if(rev == x)<br>            rlt = true;<br>        return rlt;<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行用时146ms，击败了81.29%的用户</span><br><span class="line">内存消耗：30.3MB，击败了63.98%的用户</span><br><span class="line"></span><br><span class="line">emmmmm,最快的一次了</span><br><span class="line"></span><br><span class="line"># 344.反转字符串 #</span><br><span class="line">&gt;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。  </span><br><span class="line">不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。  </span><br><span class="line">你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&gt;示例 1：  </span><br><span class="line">输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]  </span><br><span class="line">输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</span><br><span class="line"></span><br><span class="line">&gt;示例 2：  </span><br><span class="line">输入：[&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]  </span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</span><br></pre></td></tr></table></figure></p>
-<p>class Solution {<br>    public void reverseString(char[] s) {<br>        for(int i=0,j = s.length-1;i&lt;j;i++,j–) {<br>            char tmp = s[i];<br>            s[i] = s[j];<br>            s[j] = tmp;<br>        }<br>        for(int i=0;i&lt;s.length;i++) {<br>            System.out.print(s[i]);<br>        }<br>    }<br>}<br><code>`</code></p>
+<p> public boolean isPalindrome(int x) {<br>        if(x&lt;0)<br>            return false;<br>        boolean rlt = false;<br>        int rev = 0;<br>        int n = x;<br>        while (n != 0) {<br>            int pop = n % 10;<br>            n /= 10;<br>            if (rev &gt; Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 &amp;&amp; pop &gt; Integer.MAX_VALUE % 10)) return false;<br>            if (rev &lt; Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 &amp;&amp; pop &lt; -Integer.MAX_VALUE % 10)) return false;<br>            rev = rev * 10 + pop;<br>        }<br>        if(rev == x)<br>            rlt = true;<br>        return rlt;<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行用时146ms，击败了81.29%的用户  </span><br><span class="line">内存消耗：30.3MB，击败了63.98%的用户  </span><br><span class="line"></span><br><span class="line">emmmmm,最快的一次了</span><br><span class="line"></span><br><span class="line"># 11.盛最多水的容器 #</span><br><span class="line"></span><br><span class="line">&gt;给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</span><br><span class="line"></span><br><span class="line">&gt;说明：你不能倾斜容器，且 n 的值至少为 2。</span><br><span class="line"></span><br><span class="line">&gt;示例:  </span><br><span class="line">输入: [1,8,6,2,5,4,8,3,7]  </span><br><span class="line">输出: 49</span><br><span class="line"></span><br><span class="line">暴力解</span><br></pre></td></tr></table></figure></p>
+<p>public int maxArea(int[] height) {<br>        int max = 0;<br>        for(int i=0;i&lt;height.length;i++) {<br>            for(int j=i+1;j&lt;height.length;j++) {</p>
+<pre><code>            int num = Math.min(height[i], height[j])*(j-i);
+            max = max&lt;num ? num:max;
+        }
+    }
+     return max;
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行用时402ms,击败了22.18%的用户  </span><br><span class="line">内存消耗47.8MB，击败了0.96%的用户</span><br><span class="line"></span><br><span class="line">方法二：双指针法（官方题解）  </span><br><span class="line">思想：  </span><br><span class="line">&amp;#160;&amp;#160;&amp;#160;&amp;#160;两线段之间形成的区域总是会受到其中较短那条长度的限制，此外，线段距离越远，得到的面积越大   </span><br><span class="line">分析：</span><br><span class="line">- 两个指针，一个指向头， 一个指向尾  </span><br><span class="line">- 每一步中，比较max，且较短线段的指针向较长线段指针的一侧移动。</span><br></pre></td></tr></table></figure>
+<p> public int maxArea(int[] height) {<br>       int max = 0;<br>        int i=0;<br>        int j = height.length-1;<br>        while(i&lt;j) {<br>            max = Math.max(max, Math.min(height[i], height[j])*(j-i));<br>            if(height[i]&gt;height[j]) {<br>                j–;<br>            } else {<br>                i++;<br>            }<br>        }<br>         return max;<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">执行用时：10ms,击败了64.19%的用户  </span><br><span class="line">内存消耗47.1MB,击败了0.96%的用户  </span><br><span class="line"># 接雨水 #</span><br><span class="line"></span><br><span class="line">是一道难题，思路难，以下是百度的答案 (思路是百度给的，但是没有看答案哟)</span><br><span class="line">&gt;给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</span><br><span class="line">![](leetcode/接雨水.PNG)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;示例:  </span><br><span class="line">输入: [0,1,0,2,1,0,1,3,2,1,2,1]  </span><br><span class="line">输出: 6  </span><br><span class="line">分析：</span><br><span class="line">如果想接到雨水，需要满足的条件是</span><br><span class="line">- height[i-1]&gt;height[i]</span><br><span class="line">- height[i]&lt;height[i+1]  </span><br><span class="line"></span><br><span class="line">假设已知最高点的坐标macIndex及其高度maxValue,考虑从左逐渐靠近最高点，此时，只需考虑第一个条件，因为始终有height[maxIndex]&gt;height[i]   </span><br><span class="line">*局部最高curRoot*</span><br><span class="line">局部最高与其余高度值得差值和即为积水和。  </span><br><span class="line">例如上例；积水和分别为:</span><br><span class="line">&gt;左侧：[0,1,1,2,2,2,2]（左往右）,那么左侧积水和为1+1+2+1 = 5</span><br><span class="line">&gt;右侧:[2,2,2,1]（右往左）,那么左侧积水和为1+1</span><br><span class="line">积水和为：5+1 = 6    </span><br><span class="line">  </span><br><span class="line">方法：</span><br><span class="line">- 遍历整个数组，找最高点  </span><br><span class="line">- 从左向右遍历至最高点坐标，求积水和</span><br><span class="line">- 从右向左遍历至最高点坐标，求积水和</span><br></pre></td></tr></table></figure></p>
+<p> /**</p>
+<pre><code>  * 接雨水
+  * @param height
+  * @return
+  */
+ public static int trap(int[] height) {
+     if(height == null || height.length == 0) {
+         return 0;
+     }
+    int max = 0;
+    int maxIndex = 0;
+   //遍历数组找到最高点
+    for(int i=0;i&lt;height.length;i++) {
+        if(height[i]&gt;max) {
+            maxIndex = i;
+            max = height[i];
+        }
+    }
+    int left = 0,right = 0;
+    //从左向右遍历至最高点，返回积水和
+    if(maxIndex&gt;0) {
+        left = countWaterLeft(0, maxIndex, height);
+    }
+    //从右向左遍历至最高点，返回积水和
+    if(maxIndex&lt;height.length-1) {
+        right = countWaterRight(maxIndex, height.length-1, height);
+    }
+
+    max = left+right;
+    return max;
+  }
+
+public static int countWaterRight(int maxIndex, int length, int[] height) {
+    int res = 0;
+    int[] result = new int[length - maxIndex];
+    int j=result.length-2;
+    //height: 0,1,0,2,1,0,1,3,2,1,2,1
+     //result:               [2,2,2,1]
+    result[result.length-1] = height[length];
+    for(int i=length-1;i&gt;maxIndex;i--) {
+        result[j] = Math.max(result[j+1], height[i]);
+        res += Math.abs((result[j]-height[i]));
+        j--;
+    }
+    return res;
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行用时24ms,击败了43.90%的用户  </span><br><span class="line">内存消耗453.MB，击败了0.94%的用户</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">来一份网友答案：：</span><br></pre></td></tr></table></figure>
+<p>找到三个值，第一是头值，第二是尾值，第三是除去头和尾之外，中间的最大值，如果中间的最大值小于头和尾的最小值，那么直接就可以计算出结果，如大于等于最大值（其实等于也可以直接处理，避免下一次递归，但是我为了懒省事没写。。。），则从中间把它们一分为二，再分别求值加到一起。运行时间11ms,超越100%。<br>class Solution {<br>    public int trap(int[] height) {<br>        if(height.length&lt;3){<br>            return 0;<br>        }<br>        return find(height,0,height.length-1);<br>    }<br>    public int find(int[] height,int start,int end){<br>        if(end-start&lt;2){//递归的终点<br>            return 0;<br>        }<br>        int max=-1,tmp=-1,min_two=Math.min(height[start],height[end]),sum=0;;<br>        for(int i=start+1;i&lt;end;i++){<br>            //这一句写在哪里都行<br>            sum=sum+(min_two-height[i]);<br>            if(height[i]&gt;max){<br>                max=height[i];<br>                tmp=i;<br>            }<br>        }</p>
+<pre><code>    if(max&lt;min_two){//上面的加法其实应该在这里，转移到上面和在这里其实都一样
+        //sum=sum+(min_two-height[i]);
+        return sum;
+    }else{//其实这里还可以优化一下当中间的max值等于start或者end的时候，当它等于start,那么直接计算即可，不用进行下一次递归，因为下一次递归会再扫描一遍
+        return find(height,start,tmp)+find(height,tmp,end);
+    }
+}
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"># 344.反转字符串 #</span><br><span class="line">&gt;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。  </span><br><span class="line">不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。  </span><br><span class="line">你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&gt;示例 1：  </span><br><span class="line">输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]  </span><br><span class="line">输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</span><br><span class="line"></span><br><span class="line">&gt;示例 2：  </span><br><span class="line">输入：[&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]  </span><br><span class="line">输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>class Solution {<br>    public void reverseString(char[] s) {<br>        for(int i=0,j = s.length-1;i&lt;j;i++,j–) {<br>            char tmp = s[i];<br>            s[i] = s[j];<br>            s[j] = tmp;<br>        }<br>        for(int i=0;i&lt;s.length;i++) {<br>            System.out.print(s[i]);<br>        }<br>    }<br>}<br><code>`</code><br>执行用时</p>
 
       
     </div>
@@ -421,7 +486,7 @@
         <p><span>本文标题:</span><a href="/2019/02/14/leetcode/">leetcode</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-14, 10:23:04</p>
-        <p><span>最后更新:</span>2019-02-26, 01:03:12</p>
+        <p><span>最后更新:</span>2019-02-26, 13:54:14</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/14/leetcode/" title="leetcode">http://yoursite.com/2019/02/14/leetcode/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/14/leetcode/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
