@@ -15,14 +15,18 @@
 
 
 
+<meta name="description" content="深度优先搜索Depth First Search.  与树的先序遍历类似。从某个顶点出发，依次向下访问 马踏棋盘问题广度优先搜索Breadth First Search. 又称为“宽度优先搜索”或“横向优先搜索”从某一顶点出发，依次访问邻接的所有顶点因为BFS并不使用经验法则算法，所以展开结点而得到的子节点都会被加进一个先进先出的队列中。 邻接矩阵实现1234567void BFSTraverse">
+<meta name="keywords" content="数据结构,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图的遍历">
 <meta property="og:url" content="http://yoursite.com/2019/02/26/图的遍历/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
+<meta property="og:description" content="深度优先搜索Depth First Search.  与树的先序遍历类似。从某个顶点出发，依次向下访问 马踏棋盘问题广度优先搜索Breadth First Search. 又称为“宽度优先搜索”或“横向优先搜索”从某一顶点出发，依次访问邻接的所有顶点因为BFS并不使用经验法则算法，所以展开结点而得到的子节点都会被加进一个先进先出的队列中。 邻接矩阵实现1234567void BFSTraverse">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-25T16:17:34.998Z">
+<meta property="og:updated_time" content="2019-02-27T01:54:48.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的遍历">
+<meta name="twitter:description" content="深度优先搜索Depth First Search.  与树的先序遍历类似。从某个顶点出发，依次向下访问 马踏棋盘问题广度优先搜索Breadth First Search. 又称为“宽度优先搜索”或“横向优先搜索”从某一顶点出发，依次访问邻接的所有顶点因为BFS并不使用经验法则算法，所以展开结点而得到的子节点都会被加进一个先进先出的队列中。 邻接矩阵实现1234567void BFSTraverse">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -300,7 +304,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">165字</span>
       </span>
     </span>
 
@@ -320,6 +324,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -327,7 +335,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h1 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h1><p>Depth First Search.  与树的先序遍历类似。从某个顶点出发，依次向下访问</p>
+<h2 id="马踏棋盘问题"><a href="#马踏棋盘问题" class="headerlink" title="马踏棋盘问题"></a>马踏棋盘问题</h2><h1 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h1><p>Breadth First Search. 又称为“宽度优先搜索”或“横向优先搜索”<br>从某一顶点出发，依次访问邻接的所有顶点<br>因为BFS并不使用经验法则算法，所以展开结点而得到的子节点都会被加进一个先进先出的队列中。</p>
+<h2 id="邻接矩阵实现"><a href="#邻接矩阵实现" class="headerlink" title="邻接矩阵实现"></a>邻接矩阵实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void BFSTraverse(Graph G)&#123;</span><br><span class="line">	int i,j;</span><br><span class="line">	Queue Q;</span><br><span class="line">	for(i=0; i&lt;G.numVertexes; i++)&#123;</span><br><span class="line">		visited[i] = false;//初始化，都未被访问过</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="邻接表实现"><a href="#邻接表实现" class="headerlink" title="邻接表实现"></a>邻接表实现</h2>
       
     </div>
     
@@ -338,7 +349,7 @@
         <p><span>本文标题:</span><a href="/2019/02/26/图的遍历/">图的遍历</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-26, 00:17:34</p>
-        <p><span>最后更新:</span>2019-02-26, 00:17:34</p>
+        <p><span>最后更新:</span>2019-02-27, 09:54:48</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/26/图的遍历/" title="图的遍历">http://yoursite.com/2019/02/26/图的遍历/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/26/图的遍历/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -368,7 +379,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#深度优先搜索"><span class="toc-number">1.</span> <span class="toc-text">深度优先搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#马踏棋盘问题"><span class="toc-number">1.1.</span> <span class="toc-text">马踏棋盘问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#广度优先搜索"><span class="toc-number">2.</span> <span class="toc-text">广度优先搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接矩阵实现"><span class="toc-number">2.1.</span> <span class="toc-text">邻接矩阵实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邻接表实现"><span class="toc-number">2.2.</span> <span class="toc-text">邻接表实现</span></a></li></ol></li></ol>
         
     </div>
     <style>
