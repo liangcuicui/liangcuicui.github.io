@@ -24,7 +24,7 @@
 <meta property="og:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空  2">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/02/21/代码习题/maxSubStr.PNG">
-<meta property="og:updated_time" content="2019-02-23T05:11:25.689Z">
+<meta property="og:updated_time" content="2019-02-27T11:56:50.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码习题">
 <meta name="twitter:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。  思路：  找到链表的中间结点(暴力法或者快慢指针法) 将链表分成两个来链表 逆序后面的链表 依次循环，每次各去除两个链表的一个结点，直至next为空  2">
@@ -306,7 +306,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">681字</span>
+        <span class="post-count">800字</span>
       </span>
     </span>
 
@@ -371,6 +371,13 @@
 <li>第二步，固定第一个字符，对剩余的字符进行全排列（交换）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void swap(char[] str, int start, int i) &#123;</span><br><span class="line">		char tmp = str[start];</span><br><span class="line">		str[start] = str[i];</span><br><span class="line">		str[i] = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void Permutation(char[] str, int start) &#123;</span><br><span class="line">		if(str.length == 0 || start&lt;0) &#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		if(start == str.length-1) &#123;</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			for(int i = start;i&lt;str.length;i++) &#123;</span><br><span class="line">				swap(str,start,i);</span><br><span class="line">				Permutation(str, start+1);</span><br><span class="line">				swap(str,i,start);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String string = &quot;abc&quot;;</span><br><span class="line">		char[] str = string.toCharArray();</span><br><span class="line">		Permutation(str, 0);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h1 id="4-将多个有序的list集合组合成一个有序的集合"><a href="#4-将多个有序的list集合组合成一个有序的集合" class="headerlink" title="4. 将多个有序的list集合组合成一个有序的集合"></a>4. 将多个有序的list集合组合成一个有序的集合</h1><p>数美时代技术有限公司的一道面试题，25分，本人直接用了：<br>Collections.sort() emmmmmm直接扣掉了15分，当时太紧张了，脑子都是懵的，不过也是基础不扎实的缘故。 </p>
+<p>思路：</p>
+<ul>
+<li>俩俩比较，但是总觉得会有更优的算法，要不然为何强调是有序的集合</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>感觉是不是需要递归啊</p>
 
       
     </div>
@@ -382,7 +389,7 @@
         <p><span>本文标题:</span><a href="/2019/02/21/代码习题/">代码习题</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
         <p><span>发布时间:</span>2019-02-21, 09:37:51</p>
-        <p><span>最后更新:</span>2019-02-23, 13:11:25</p>
+        <p><span>最后更新:</span>2019-02-27, 19:56:50</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/02/21/代码习题/" title="代码习题">http://yoursite.com/2019/02/21/代码习题/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/21/代码习题/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -418,7 +425,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-对链表进行重新排序"><span class="toc-number">1.</span> <span class="toc-text">1.对链表进行重新排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-求两个字符串的最长公共子串"><span class="toc-number">2.</span> <span class="toc-text">2.求两个字符串的最长公共子串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-求字符串的所有排序（未去重）"><span class="toc-number">3.</span> <span class="toc-text">3.求字符串的所有排序（未去重）</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-对链表进行重新排序"><span class="toc-number">1.</span> <span class="toc-text">1.对链表进行重新排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-求两个字符串的最长公共子串"><span class="toc-number">2.</span> <span class="toc-text">2.求两个字符串的最长公共子串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-求字符串的所有排序（未去重）"><span class="toc-number">3.</span> <span class="toc-text">3.求字符串的所有排序（未去重）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-将多个有序的list集合组合成一个有序的集合"><span class="toc-number">4.</span> <span class="toc-text">4. 将多个有序的list集合组合成一个有序的集合</span></a></li></ol>
         
     </div>
     <style>
