@@ -15,23 +15,28 @@
 
 
 
-<meta name="description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
+<meta name="description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;也叫 二分树、二元树、对分树等。是n(n&amp;gt;=0)个结点的有限元素的集合,该集合或为空，或为由一个根元素以及两个互不相交的、被分别称为左子树和右子树的二叉树组成。当集合为空时，称该二叉树为空二叉树。 注意 子树不能大于2哟 左右子树是有顺序的哟 如果没有左子树，是允许有右子树的">
 <meta name="keywords" content="数据结构,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表（List）之增删改查">
-<meta property="og:url" content="http://yoursite.com/2019/02/01/线性表/index.html">
+<meta property="og:title" content="二叉树(Binary Tree)">
+<meta property="og:url" content="http://yoursite.com/2019/02/17/树之二叉树/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
+<meta property="og:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;也叫 二分树、二元树、对分树等。是n(n&amp;gt;=0)个结点的有限元素的集合,该集合或为空，或为由一个根元素以及两个互不相交的、被分别称为左子树和右子树的二叉树组成。当集合为空时，称该二叉树为空二叉树。 注意 子树不能大于2哟 左右子树是有顺序的哟 如果没有左子树，是允许有右子树的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/LNode.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/node.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/head.png">
-<meta property="og:updated_time" content="2019-02-20T01:50:43.144Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/1.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/2.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/3.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/4.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/5.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/6.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/7.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/8.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/9.PNG">
+<meta property="og:updated_time" content="2019-02-17T09:51:10.221Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表（List）之增删改查">
-<meta name="twitter:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
+<meta name="twitter:title" content="二叉树(Binary Tree)">
+<meta name="twitter:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;也叫 二分树、二元树、对分树等。是n(n&amp;gt;=0)个结点的有限元素的集合,该集合或为空，或为由一个根元素以及两个互不相交的、被分别称为左子树和右子树的二叉树组成。当集合为空时，称该二叉树为空二叉树。 注意 子树不能大于2哟 左右子树是有顺序的哟 如果没有左子树，是允许有右子树的">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/17/树之二叉树/二叉树/1.PNG">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -63,7 +68,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>线性表（List）之增删改查 | TimeJjc&#39;s Blog</title>
+<title>二叉树(Binary Tree) | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -280,11 +285,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-线性表" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-树之二叉树" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/02/01/线性表/" class="article-date">
-      <time datetime="2019-02-01T08:31:54.000Z" itemprop="datePublished">2019-02-01</time>
+      <a href="/2019/02/17/树之二叉树/" class="article-date">
+      <time datetime="2019-02-17T04:28:33.000Z" itemprop="datePublished">2019-02-17</time>
 </a>
 
 
@@ -299,7 +304,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      线性表（List）之增删改查
+      二叉树(Binary Tree)
     </h1>
   
 
@@ -340,75 +345,73 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>&#160;&#160;&#160;&#160;由0或多个数据元素组成的有限个序列，为0时，是空表<br><a id="more"></a></p>
-<h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><p>&#160;&#160;&#160;&#160;第一个元素无前驱，最后一个元素无后继，其他元素都<strong><em>有且只有</em></strong>一个前驱和后继。线性关系是不允许有第三者的！！！   </p>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>&#160;&#160;&#160;&#160;一组性质相同的值的集合及定义在此集合上的一些操作的总称<br>&#160;&#160;&#160;&#160;JAVA中数据类型分为两种：  </p>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>&#160;&#160;&#160;&#160;也叫 二分树、二元树、对分树等。是n(n&gt;=0)个结点的有限元素的集合,该集合或为空，或为由一个根元素以及两个互不相交的、被分别称为左子树和右子树的二叉树组成。当集合为空时，称该二叉树为空二叉树。</p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li>子树不能大于2哟</li>
+<li>左右子树是有顺序的哟</li>
+<li>如果没有左子树，是允许有右子树的<a id="more"></a>
+<h1 id="特殊二叉树"><a href="#特殊二叉树" class="headerlink" title="特殊二叉树"></a>特殊二叉树</h1></li>
+</ul>
+<ol>
+<li>斜树<br><img src="/2019/02/17/树之二叉树/二叉树/1.PNG" alt=""></li>
+<li>满二叉树<br>如果在一棵二叉树中，所有的分支结点都存在左子树和右子树，并且所有叶子结点都在同一层上面。<br><img src="/2019/02/17/树之二叉树/二叉树/2.PNG" alt=""><br>结点数为2^n-1    ,n表示深度</li>
+<li>完全二叉树<br>一棵深度为k的有n个结点的二叉树，对树中的结点按从上至下，从左至右的顺序进行编号。如果说编号为i(1&lt;=i &lt;=n )的结点与满二叉树中编号为i的结点在二叉树中的位置相同的话，则称为是完全二叉树<br><strong><em>满二叉树一定是完全二叉树，但是完全二叉树不一定是满二叉树</em></strong><br><strong>特点：</strong><br>&#160;&#160;&#160;&#160;叶子结点只能出现在最后一层或者倒数第二层上<br>&#160;&#160;&#160;&#160;最下层叶子结点集中在树的左部（根据满二叉树的定义来的）<br>&#160;&#160;&#160;&#160;同样结点数的二叉树，完全二叉树的深度是最小的  </li>
+<li>线索二叉树<br>n个结点的二叉链表中含有n+1个空指针域。利用二叉链表中的空指针域，存放指向结点在某种遍历次序下的前驱和后继结点的指针（附加的指针称为线索）   <h1 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h1><h2 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h2>一维数组存储结点，从上至下，从左至右，不存在的结点可以用-1表示<br>但是如果空结点过多（如斜树）h会造成大量的空间浪费，适用性不强，一般使用链式存储<h2 id="链表结构"><a href="#链表结构" class="headerlink" title="链表结构"></a>链表结构</h2>二叉链表</li>
+</ol>
 <ul>
-<li><p>基本数据（原子）类型：不可再分<br><img src="/2019/02/01/线性表/type_base.png" alt="">  </p>
-</li>
-<li><p>引用数据类型<br>&#160;&#160;&#160;&#160;类、接口、数组<br>&#160;&#160;&#160;&#160;很重要！！！，否则无法理解“指针”操作</p>
-</li>
+<li>数据</li>
+<li>左子树结点，右子树结点  </li>
 </ul>
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><ul>
-<li>求元素个数</li>
-<li>插入</li>
-<li>删除</li>
-<li>查找</li>
-<li>判断是否为空  </li>
-</ul>
-<h1 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h1><p>&#160;&#160;&#160;&#160;顺序存储和链表存储  </p>
-<h2 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h2><p>&#160;&#160;&#160;&#160;栈内存是顺序结构的<br>&#160;&#160;&#160;&#160;用一段地址连续的存储单元依次存储线性表的数据元素<br>需要封装的属性（3）：</p>
+<p>结构为：左子树   数据  右子树<br><img src="/2019/02/17/树之二叉树/二叉树/3.PNG" alt=""> </p>
+<h1 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h1><p><em>注意：</em><br>树的结点之间不存在唯一的前驱和后继关系，在访问一个结点后，下一个被访问的结点棉面临着不同的选择。  </p>
 <ul>
-<li>起始位置</li>
-<li>最大存储容量</li>
-<li>当前长度<br><strong><em><font color="red">注意：线性表的首地址为：1</font></em></strong>    </li>
+<li>前序遍历<br>根-左-右</li>
 </ul>
-<p>时间复杂度</p>
-<ol>
-<li>删除/插入<br>最好情况：不移动元素&#160;O(1)<br>最坏情况:移动n个元素&#160;O(n)<br>平均情况:O((n-1)/2),&#160;即&#160;O(n)   </li>
-</ol>
-<p>&#160;&#160;2.存、取<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;都为&#160;O(1)  </p>
-<p>优点  </p>
-<ol>
-<li>不需要为表中元素之间的逻辑关系增加额外的存储空间 </li>
-<li>快速存取表中任意位置的元素……谁让人家是顺序的呢，嘿嘿嘿  </li>
-</ol>
-<p>缺点  </p>
-<ol>
-<li>插入和删除太慢了，除非数据特别少，否则不要用啊！！！</li>
-<li>若线性表的长度变化较大（大量的插入和删除） ，无法确定存储空格键的容量啊</li>
-<li>存储空间碎片化，毕竟人家存储空间的分配是一整块来着的呀，当一大块空间剩下一小块时，而这一小块空间又不够我们用的，那就只能浪费掉，然后再次申请一大块空间，两个大块之间的小块就属于“碎片”啦  </li>
-</ol>
-<h2 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h2><p>位置是随意的哦，但是要求存元素本身及其后继指针  </p>
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li>数据域<br>存储数据元素信息的域  </li>
-<li>指针域<br>存储后继位置的域  </li>
-<li>指针<br>指针域中存储的信息  </li>
-<li>结点(存储映像)<br>数据域 + 指针域    <h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><img src="/2019/02/01/线性表/LNode.png" alt="">  </li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private static void traverse(Tree root,int level) &#123;</span><br><span class="line">	if(root != null) &#123;</span><br><span class="line">		print(root,level);</span><br><span class="line">		traverse(root.getLchild(), level+1);</span><br><span class="line">		traverse(root.getRchild(), level+1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>中序遍历<br>左-根-右</li>
 </ul>
-<h4 id="头指针-头节点-首元节点"><a href="#头指针-头节点-首元节点" class="headerlink" title="头指针/头节点/首元节点"></a>头指针/头节点/首元节点</h4><ul>
-<li>头指针<br>指链表指向的第一个结点的指针，若链表有头结点，则是指向头结点的指针。<br>单链表可由一个头指针唯一确定（标识）</li>
-<li>元首结点<br>指链表中存储第一个元素的结点</li>
-<li>头结点<br>在链表的首元结点之前附设的一个节点，数据域内存放的是空表标志和表长等信息<br><img src="/2019/02/01/线性表/node.png" alt="">  </li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private static void traverse(Tree root,int level) &#123;</span><br><span class="line">	if(root != null) &#123;</span><br><span class="line">		traverse(root.getLchild(), level+1);</span><br><span class="line">		print(root,level);</span><br><span class="line">		traverse(root.getRchild(), level+1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>后序遍历<br>左-右-根</li>
 </ul>
-<p>&#160;&#160;&#160;&#160;<strong> 无论链表是否为空，头指针均不为 </strong>，人家是唯一标识啊😏     </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class LNode &#123;</span><br><span class="line">	/** 数据域 */</span><br><span class="line">	private  int data ;</span><br><span class="line">	</span><br><span class="line">	/** 节点域 */</span><br><span class="line">	private LNode next;</span><br><span class="line"></span><br><span class="line">	public int getData() &#123;</span><br><span class="line">		return data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	public void setData(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode getNext() &#123;</span><br><span class="line">		return next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setNext(LNode next) &#123;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data, LNode next) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="单链表的读取"><a href="#单链表的读取" class="headerlink" title="单链表的读取"></a>单链表的读取</h4><ul>
-<li>获得链表第i个数据<br>&#160;1. 声明一个结点p指向链表第一个结点，初始化&#160;j&#160;从1开始<br>&#160;2. 当j&lt;i时，遍历链表，p指针后移，j++;<br>&#160;3. 若循环到末尾p为空，则不存在第i个元素<br>&#160;4. 否则查找成功，返回结点p的数据</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private static void traverse(Tree root,int level) &#123;</span><br><span class="line">	if(root != null) &#123;</span><br><span class="line">		traverse(root.getLchild(), level+1);</span><br><span class="line">		traverse(root.getRchild(), level+1);</span><br><span class="line">		print(root,level);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>层次遍历  </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class GetIData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode IData(LNode head,int i) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		while(head != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			head = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		//判断是否遍历完整个链表</span><br><span class="line">		if(head == null || j&lt;i)</span><br><span class="line">			return null;</span><br><span class="line">		</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&#160;&#160;&#160;&#160;单链表的循环，建议使用while,因为并不知道单链表的长度</p>
-<h4 id="单链表的插入"><a href="#单链表的插入" class="headerlink" title="单链表的插入"></a>单链表的插入</h4><ul>
-<li>在第i个数据插入结点<br>&#160;1. 新节点指向当前结点的后继<br>&#160;2. 当前结点指向新节点</li>
+<p>节点类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.entity;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class Tree &#123;</span><br><span class="line">	private Object data;</span><br><span class="line">	private Tree lchild;</span><br><span class="line">	private Tree rchild;</span><br><span class="line">	public Object getData() &#123;</span><br><span class="line">		return data;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setData(Object data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125;</span><br><span class="line">	public Tree getLchild() &#123;</span><br><span class="line">		return lchild;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setLchild(Tree lchild) &#123;</span><br><span class="line">		this.lchild = lchild;</span><br><span class="line">	&#125;</span><br><span class="line">	public Tree getRchild() &#123;</span><br><span class="line">		return rchild;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setRchild(Tree rchild) &#123;</span><br><span class="line">		this.rchild = rchild;</span><br><span class="line">	&#125;</span><br><span class="line">	public Tree(Object data, Tree lchild, Tree rchild) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.data = data;</span><br><span class="line">		this.lchild = lchild;</span><br><span class="line">		this.rchild = rchild;</span><br><span class="line">	&#125;</span><br><span class="line">	public Tree() &#123;</span><br><span class="line">		super();</span><br><span class="line">		// TODO Auto-generated constructor stub</span><br><span class="line">	&#125;</span><br><span class="line">	public Tree(Object data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.tree;</span><br><span class="line"></span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">import timejjc.com.entity.Tree;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 二叉树</span><br><span class="line"> * @author 梁翠翠</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class BinaryTree &#123;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Tree root = new Tree(0);</span><br><span class="line">		Tree createTree = createTree(root);</span><br><span class="line">		System.out.println(&quot;结点\t层次&quot;);</span><br><span class="line">		traverse(createTree,1);</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 遍历</span><br><span class="line">	 * @param root</span><br><span class="line">	 */</span><br><span class="line">	private static void traverse(Tree root,int level) &#123;</span><br><span class="line">		if(root != null) &#123;</span><br><span class="line">			print(root,level);</span><br><span class="line">			traverse(root.getLchild(), level+1);</span><br><span class="line">			traverse(root.getRchild(), level+1);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	private static void print(Tree root,int level) &#123;</span><br><span class="line">		System.out.println(root.getData()+&quot;\t&quot;+level);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 建立二叉树</span><br><span class="line">	 * @param root 树结点</span><br><span class="line">	 * @param level  层次</span><br><span class="line">	 */</span><br><span class="line">	private static Tree createTree(Tree root) &#123;</span><br><span class="line">		</span><br><span class="line">			Scanner scan = new Scanner(System.in);</span><br><span class="line">			String n = scan.nextLine();</span><br><span class="line">			if(&quot;#&quot;.equals(n)) &#123;//叶子结点</span><br><span class="line">				return null;</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				root.setData(n);</span><br><span class="line">				root.setLchild(createTree(new Tree(0)));</span><br><span class="line">				root.setRchild(createTree(new Tree(0)));</span><br><span class="line">				return root;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输入 ：ABD##F##CE###<br>输出：<br>结点    层次<br>A       1<br>B       2<br>D       3<br>F       3<br>C       2<br>E       3</p>
+<p>“#”表示他的双亲是叶子结点</p>
+<h1 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h1><p><img src="/2019/02/17/树之二叉树/二叉树/4.PNG" alt=""><br>嘿嘿，不懂<br>😭</p>
+<h1 id="树-森林、二叉树转换"><a href="#树-森林、二叉树转换" class="headerlink" title="树/森林、二叉树转换"></a>树/森林、二叉树转换</h1><p><img src="/2019/02/17/树之二叉树/二叉树/5.PNG" alt=""></p>
+<h2 id="树到二叉树的转换"><a href="#树到二叉树的转换" class="headerlink" title="树到二叉树的转换"></a>树到二叉树的转换</h2><ul>
+<li>每个兄弟结点连线</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class InsertData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode insert(LNode head, int i, int newData) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		LNode tmp = head;</span><br><span class="line">		while (tmp != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			tmp = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		if(tmp == null || j&lt;i || i&lt;0) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		//new一个空结点p</span><br><span class="line">		LNode p = new LNode(0);</span><br><span class="line">		&lt;font color=red&gt;p.setData(newData);&lt;/font&gt;</span><br><span class="line">		//p指向head后继:p.next = head.next</span><br><span class="line">		p.setNext(tmp.getNext());</span><br><span class="line">		//head指向p:head.next = p;</span><br><span class="line">		tmp.setNext(p);</span><br><span class="line">		return head.getNext();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里返回的时head.getNext()是因为，在定义head时，为：</p>
-<blockquote>
-<p>LNode head = new LNode(0);<br>这时head是有头节点的   </p>
-</blockquote>
-<p><img src="/2019/02/01/线性表/head.png" alt="">  </p>
-<h4 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h4><p>&#160;1. 找到要删除结点的前驱结点（j=1开始）<br>&#160;2. 前驱结点直接指向要删除结点的后继结点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class DeleteNode &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode deleteINode(LNode node, int i) &#123;</span><br><span class="line">		int j = 1;</span><br><span class="line">		LNode tmp = node;</span><br><span class="line">		while(tmp != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			tmp = tmp.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		if(tmp == null || j&lt;i || i&lt;0) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp.setNext(tmp.getNext().getNext());</span><br><span class="line">		return node.getNext();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/17/树之二叉树/二叉树/6.PNG" alt=""></p>
+<ul>
+<li>去掉与孩子的连线（第一个长子除外）</li>
+</ul>
+<p><img src="/2019/02/17/树之二叉树/二叉树/7.PNG" alt=""></p>
+<ul>
+<li>调整位置  </li>
+</ul>
+<p><img src="/2019/02/17/树之二叉树/二叉树/8.PNG" alt=""></p>
+<h2 id="森林到二叉树的转换"><a href="#森林到二叉树的转换" class="headerlink" title="森林到二叉树的转换"></a>森林到二叉树的转换</h2><ul>
+<li>将森林中的每棵树转为二叉树</li>
+<li>将根一次连在一起</li>
+<li>调整位置</li>
+</ul>
+<h2 id="二叉树到树、森林的转换"><a href="#二叉树到树、森林的转换" class="headerlink" title="二叉树到树、森林的转换"></a>二叉树到树、森林的转换</h2><ul>
+<li>若结点x是其双亲y的左孩子，则把x的右孩子，有孩子的有孩子，，，，，，都与y用连线连起来</li>
+<li>去除双亲所有右孩子的连线</li>
+</ul>
+<p><em>二叉树的根节点有右孩子就是森林，没有就是树</em></p>
+<h1 id="树与森林的遍历"><a href="#树与森林的遍历" class="headerlink" title="树与森林的遍历"></a>树与森林的遍历</h1><h2 id="先根遍历"><a href="#先根遍历" class="headerlink" title="先根遍历"></a>先根遍历</h2><p>先访问树的根节点，然后再一次访问根的每棵子树</p>
+<h2 id="后根遍历"><a href="#后根遍历" class="headerlink" title="后根遍历"></a>后根遍历</h2><p>先遍历树的每棵子树，再遍历根</p>
+<p><img src="/2019/02/17/树之二叉树/二叉树/9.PNG" alt=""></p>
+<p>嗒嗒嗒，森林的遍历，名词叫做前序遍历和后序遍历，其实就是按照树的先根遍历和后根遍历一次来访问森林的每一棵树。</p>
+<p>树、森林的前根遍历和（转变后的）二叉树的前序遍历相同<br>后根遍历和（转变后的）二叉树的中序遍历相同。</p>
 
       
     </div>
@@ -417,13 +420,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/01/线性表/">线性表（List）之增删改查</a></p>
+        <p><span>本文标题:</span><a href="/2019/02/17/树之二叉树/">二叉树(Binary Tree)</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
-        <p><span>发布时间:</span>2019-02-01, 16:31:54</p>
-        <p><span>最后更新:</span>2019-02-20, 09:50:43</p>
+        <p><span>发布时间:</span>2019-02-17, 12:28:33</p>
+        <p><span>最后更新:</span>2019-02-17, 17:51:10</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/01/线性表/" title="线性表（List）之增删改查">http://yoursite.com/2019/02/01/线性表/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/01/线性表/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/02/17/树之二叉树/" title="二叉树(Binary Tree)">http://yoursite.com/2019/02/17/树之二叉树/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/17/树之二叉树/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -436,15 +439,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/02/线性表-2/">
-                    线性表(2)
+                <a href="/2019/02/17/哈夫曼树/">
+                    哈夫曼树
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/02/01/时间复杂度与空间复杂度/">
-                    时间复杂度与空间复杂度
+                <a href="/2019/02/15/五个常见算法/">
+                    五个常见算法
                 </a>
             </div>
         
@@ -456,7 +459,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#条件"><span class="toc-number">2.</span> <span class="toc-text">条件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本操作"><span class="toc-number">4.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">5.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序存储"><span class="toc-number">5.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式存储"><span class="toc-number">5.2.</span> <span class="toc-text">链式存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">5.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单链表"><span class="toc-number">5.2.2.</span> <span class="toc-text">单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#头指针-头节点-首元节点"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">头指针/头节点/首元节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的读取"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">单链表的读取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的插入"><span class="toc-number">5.2.2.3.</span> <span class="toc-text">单链表的插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的删除"><span class="toc-number">5.2.2.4.</span> <span class="toc-text">单链表的删除</span></a></li></ol></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注意"><span class="toc-number">2.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#特殊二叉树"><span class="toc-number">3.</span> <span class="toc-text">特殊二叉树</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">4.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序存储"><span class="toc-number">4.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链表结构"><span class="toc-number">4.2.</span> <span class="toc-text">链表结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二叉树的遍历"><span class="toc-number">5.</span> <span class="toc-text">二叉树的遍历</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#线索二叉树"><span class="toc-number">6.</span> <span class="toc-text">线索二叉树</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#树-森林、二叉树转换"><span class="toc-number">7.</span> <span class="toc-text">树/森林、二叉树转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#树到二叉树的转换"><span class="toc-number">7.1.</span> <span class="toc-text">树到二叉树的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#森林到二叉树的转换"><span class="toc-number">7.2.</span> <span class="toc-text">森林到二叉树的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二叉树到树、森林的转换"><span class="toc-number">7.3.</span> <span class="toc-text">二叉树到树、森林的转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#树与森林的遍历"><span class="toc-number">8.</span> <span class="toc-text">树与森林的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#先根遍历"><span class="toc-number">8.1.</span> <span class="toc-text">先根遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后根遍历"><span class="toc-number">8.2.</span> <span class="toc-text">后根遍历</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -492,7 +495,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"线性表（List）之增删改查　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"二叉树(Binary Tree)　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -512,7 +515,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/02/02/线性表-2/" title="上一篇: 线性表(2)">
+            <a href="/2019/02/17/哈夫曼树/" title="上一篇: 哈夫曼树">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -520,7 +523,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/02/01/时间复杂度与空间复杂度/" title="下一篇: 时间复杂度与空间复杂度">
+            <a href="/2019/02/15/五个常见算法/" title="下一篇: 五个常见算法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
