@@ -15,20 +15,23 @@
 
 
 
-<meta name="description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。">
-<meta name="keywords" content="算法题">
+<meta name="description" content="定义是二叉排序树的一种，在二叉树中，可能会出现比较极端的二叉树，例如斜树，这样在查找的过程中，很影响效率，而平衡二叉排序树就很好的解决了这个问题。">
+<meta name="keywords" content="数据结构,算法,树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代码习题">
-<meta property="og:url" content="http://yoursite.com/2019/02/21/代码习题/index.html">
+<meta property="og:title" content="树之平衡二叉树">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/树之平衡二叉树/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。">
+<meta property="og:description" content="定义是二叉排序树的一种，在二叉树中，可能会出现比较极端的二叉树，例如斜树，这样在查找的过程中，很影响效率，而平衡二叉排序树就很好的解决了这个问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/21/代码习题/maxSubStr.PNG">
-<meta property="og:updated_time" content="2019-03-04T11:08:45.267Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/20/树之平衡二叉树/avl_left.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/20/树之平衡二叉树/avl_right.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/20/树之平衡二叉树/avl_leftright.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/20/树之平衡二叉树/avl_rightleft.png">
+<meta property="og:updated_time" content="2019-03-20T07:03:37.647Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代码习题">
-<meta name="twitter:description" content="1.对链表进行重新排序题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…要求：    再原来链表的基础上进行排序，即不能申请新的结点 只能修改结点的next域，不能修改数据域。">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/21/代码习题/maxSubStr.PNG">
+<meta name="twitter:title" content="树之平衡二叉树">
+<meta name="twitter:description" content="定义是二叉排序树的一种，在二叉树中，可能会出现比较极端的二叉树，例如斜树，这样在查找的过程中，很影响效率，而平衡二叉排序树就很好的解决了这个问题。">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/20/树之平衡二叉树/avl_left.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -60,7 +63,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>代码习题 | TimeJjc&#39;s Blog</title>
+<title>树之平衡二叉树 | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +280,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-代码习题" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-树之平衡二叉树" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/02/21/代码习题/" class="article-date">
-      <time datetime="2019-02-21T01:37:51.000Z" itemprop="datePublished">2019-02-21</time>
+      <a href="/2019/03/20/树之平衡二叉树/" class="article-date">
+      <time datetime="2019-03-19T23:11:28.000Z" itemprop="datePublished">2019-03-20</time>
 </a>
 
 
@@ -296,7 +299,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      代码习题
+      树之平衡二叉树
     </h1>
   
 
@@ -306,7 +309,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">800字</span>
+        <span class="post-count">1.1k字</span>
       </span>
     </span>
 
@@ -315,7 +318,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">5分</span>
       </span>
     </span>
 </div>
@@ -327,7 +330,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法题/">算法题</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树/">树</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -337,45 +340,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="1-对链表进行重新排序"><a href="#1-对链表进行重新排序" class="headerlink" title="1.对链表进行重新排序"></a>1.对链表进行重新排序</h1><p>题目：给定链表 L0-L1-L2-…-Ln-1-Ln,把链表重新排序为L0-Ln-L1-Ln-1-L2-Ln-2-…<br>要求：  </p>
-<ul>
-<li>再原来链表的基础上进行排序，即不能申请新的结点</li>
-<li>只能修改结点的next域，不能修改数据域。<a id="more"></a>
-思路：</li>
-<li>找到链表的中间结点(暴力法或者快慢指针法)</li>
-<li>将链表分成两个来链表</li>
-<li>逆序后面的链表</li>
-<li>依次循环，每次各去除两个链表的一个结点，直至next为空</li>
-</ul>
-<h1 id="2-求两个字符串的最长公共子串"><a href="#2-求两个字符串的最长公共子串" class="headerlink" title="2.求两个字符串的最长公共子串"></a>2.求两个字符串的最长公共子串</h1><ol>
-<li>暴力求解<br>利用动态规划法，双重for循环。</li>
-</ol>
-<ul>
-<li>初始化二维数组max[][]，赋值为0</li>
-<li>双重循环两个字符串，如果字符串在某一位置相等,赋值max+1，</li>
-<li>两个变量，max记录最长公共子串的长度，maxI记录最长公共子串最后一个字符的位置</li>
-<li>最长公共子串的位置是从下标maxI-max开始，下标增加max位的字符</li>
-<li>需要注意的是，比较的时候对max数组的赋值，因为循环是从1开始的</li>
-</ul>
-<p><img src="/2019/02/21/代码习题/maxSubStr.PNG" alt="">  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String str1 = &quot;GCCCTAGCG&quot;;</span><br><span class="line">		String str2 = &quot;GCGCAATG&quot;;</span><br><span class="line">		getMaxSubStr(str1, str2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	private static void getMaxSubStr(String str1, String str2) &#123;</span><br><span class="line">		if(str1 == null || str2 == null) &#123;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		int[][] m = new int[str1.length()+1][str2.length()+1];</span><br><span class="line">		int max = 0;//最长公共子序列的长度</span><br><span class="line">		int maxI = 0;//最长公共子序列的最后一个字符的位置</span><br><span class="line">		for(int i=0;i&lt;str1.length()+1;i++) &#123;</span><br><span class="line">			for(int j=0;j&lt;str2.length()+1;j++) &#123;</span><br><span class="line">				m[i][j] = 0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=1;i&lt;str1.length()+1;i++) &#123;</span><br><span class="line">			for(int j=1;j&lt;str2.length()+1;j++) &#123;</span><br><span class="line">				if(str1.charAt(i-1) == str2.charAt(j-1)) &#123;</span><br><span class="line">					m[i][j] = m[i-1][j-1]+1;</span><br><span class="line">					if(max&lt;m[i][j]) &#123;</span><br><span class="line">						max = m[i][j];</span><br><span class="line">						maxI = i;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(str1.substring(maxI-max, maxI));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>滑动比较法</li>
-</ol>
-<ul>
-<li>保持str1的位置不变，移动str2,比较重叠字符的公共子串</li>
-<li>移动时，如果当前重叠子串的长度大于maxI,更新maxI<h1 id="3-求字符串的所有排序（未去重）"><a href="#3-求字符串的所有排序（未去重）" class="headerlink" title="3.求字符串的所有排序（未去重）"></a>3.求字符串的所有排序（未去重）</h1></li>
-<li>第一步，第一个字符和后面所有字符，依次交换</li>
-<li>第二步，固定第一个字符，对剩余的字符进行全排列（交换）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class TestString &#123;</span><br><span class="line"></span><br><span class="line">	public static void swap(char[] str, int start, int i) &#123;</span><br><span class="line">		char tmp = str[start];</span><br><span class="line">		str[start] = str[i];</span><br><span class="line">		str[i] = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void Permutation(char[] str, int start) &#123;</span><br><span class="line">		if(str.length == 0 || start&lt;0) &#123;</span><br><span class="line">			return ;</span><br><span class="line">		&#125;</span><br><span class="line">		if(start == str.length-1) &#123;</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			for(int i = start;i&lt;str.length;i++) &#123;</span><br><span class="line">				swap(str,start,i);</span><br><span class="line">				Permutation(str, start+1);</span><br><span class="line">				swap(str,i,start);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		String string = &quot;abc&quot;;</span><br><span class="line">		char[] str = string.toCharArray();</span><br><span class="line">		Permutation(str, 0);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>是二叉排序树的一种，在二叉树中，可能会出现比较极端的二叉树，例如斜树，这样在查找的过程中，很影响效率，而平衡二叉排序树就很好的解决了这个问题。<br><a id="more"></a><br>AVL（和AVL算法有区别）,要么是一棵空树，要么左右子树都是平衡二叉树，且左右子树的深度之差的绝对值不超过1，算法复杂度O(lon(n))<br>又名平衡二叉搜索树Self-balancing binary search tree  </p>
+<h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><ol>
+<li>红黑树<br>一种自平衡二叉查找树，可以用于实现关联数组，又称为“对称二叉B树”</li>
+<li><p>AVL<br>最早的自平衡二叉查找树算法，也是高度平衡树</p>
 </li>
-</ul>
-<h1 id="4-将多个有序的list集合组合成一个有序的集合"><a href="#4-将多个有序的list集合组合成一个有序的集合" class="headerlink" title="4. 将多个有序的list集合组合成一个有序的集合"></a>4. 将多个有序的list集合组合成一个有序的集合</h1><p>数美时代技术有限公司的一道面试题，25分，本人直接用了：<br>Collections.sort() emmmmmm直接扣掉了15分，当时太紧张了，脑子都是懵的，不过也是基础不扎实的缘故。 </p>
-<p>思路：</p>
+<li><p>替罪羊树</p>
+</li>
+<li>Treap<br>一棵二叉排序树，记录一个额外的数据（优先级），有堆的性质</li>
+<li>伸展树<br>Splay Tree ,一种二叉排序树，优势为不需要记录用于平衡树的冗余信息</li>
+</ol>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><p>将一棵二叉树，变成平衡二叉树，依靠的是旋转，通常会出现四种情况<br>（1）左旋转<br><img src="/2019/03/20/树之平衡二叉树/avl_left.png" alt=""><br>（2）右旋转<br><img src="/2019/03/20/树之平衡二叉树/avl_right.png" alt=""><br>（3）左右旋转<br><img src="/2019/03/20/树之平衡二叉树/avl_leftright.png" alt=""><br>（4）右左旋转<br><img src="/2019/03/20/树之平衡二叉树/avl_rightleft.png" alt=""></p>
+<p>总之，什么时候双旋转呢？那就是bf符号不一致的时候，<br>什么时候会失去平衡呢，简单总结就是4句话  </p>
 <ul>
-<li>俩俩比较，但是总觉得会有更优的算法，要不然为何强调是有序的集合</li>
+<li>在左孩子的左子树上插入元素 - 右旋转</li>
+<li>在左孩子的右子树上插入元素 - 左右旋转</li>
+<li>在右孩子的右子树上插入元素 - 左旋转</li>
+<li>在右孩子的左子树上插入元素 - 右左旋转<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2>设一个平衡因子bf<br>IF 平衡因子 &gt;=2<br>&#160;&#160;&#160;&#160;IF 左结点的平衡因子 &lt;0<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;左旋转然后右旋转<br>&#160;&#160;&#160;&#160;&#160;ELSE<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;右旋转<br>ELSE IF 平衡因子 &lt;=-2<br>&#160;&#160;&#160;&#160;&#160;&#160;IF 右结点的平衡因子 &gt;0<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;右旋转<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;ELSE<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;左旋转</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>感觉是不是需要递归啊</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br></pre></td><td class="code"><pre><span class="line">package timejjc.com.tree;</span><br><span class="line"></span><br><span class="line">import timejjc.com.entity.Tree;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 平衡二叉树</span><br><span class="line"> * @author 梁翠翠</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class AVL &#123;</span><br><span class="line">	private static final int ALLOWED_IMBALANCE = 1;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int[] str = &#123;10,5,8,20,16,1,3,7,25&#125;;</span><br><span class="line">		Tree tree = new Tree(str[0]);</span><br><span class="line">		for(int i=1;i&lt;str.length;i++) &#123;</span><br><span class="line">			insertAvl(tree,str[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		print(tree);</span><br><span class="line">		System.out.println();</span><br><span class="line">		remove(tree,10);</span><br><span class="line">		print(tree);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 删除某个结点</span><br><span class="line">	 * @param tree</span><br><span class="line">	 * @param i</span><br><span class="line">	 */</span><br><span class="line">	private static Tree remove(Tree tree, int key) &#123;</span><br><span class="line">		if(tree == null) &#123;</span><br><span class="line">			return tree;</span><br><span class="line">		&#125;</span><br><span class="line">		if(key&lt;tree.getData()) &#123;</span><br><span class="line">			tree.setLchild(remove(tree.getLchild(), key));</span><br><span class="line">		&#125; else if(key&gt;tree.getData()) &#123;</span><br><span class="line">			tree.setRchild(remove(tree.getRchild(), key));</span><br><span class="line">		&#125;else if(tree.getLchild() != null &amp;&amp; tree.getRchild() != null) &#123;</span><br><span class="line">			tree.setData(findMin(tree.getRchild()).getData());</span><br><span class="line">			tree.setRchild(remove(tree.getRchild(), tree.getData()));</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			tree = (tree.getLchild() != null)?tree.getLchild():tree.getRchild();</span><br><span class="line">		&#125;</span><br><span class="line">		return balanceAVL(tree);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 找到右子树中最小的左子树（后继结点）</span><br><span class="line">	 * @param data</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	private static Tree findMin(Tree tree) &#123;</span><br><span class="line">		Tree tmp = tree;</span><br><span class="line">		while(tree.getLchild() != null) &#123;</span><br><span class="line">			tree = tree.getLchild();</span><br><span class="line">			tmp = tree;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(tmp.getData());</span><br><span class="line">		return tmp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 计算平衡因子</span><br><span class="line">	 */</span><br><span class="line">	private static int hight(Tree tree) &#123;</span><br><span class="line">		return tree == null ?-1 :tree.getBf();</span><br><span class="line">	&#125;</span><br><span class="line">	private static void print(Tree tree) &#123;</span><br><span class="line">		if(tree != null) &#123;</span><br><span class="line">			print(tree.getLchild());</span><br><span class="line">			System.out.print(tree.getData()+&quot; &quot;);</span><br><span class="line">			print(tree.getRchild());</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**  </span><br><span class="line">	 * 插入</span><br><span class="line">	 * @param tree</span><br><span class="line">	 * @param key  带插入的元素</span><br><span class="line">	 */</span><br><span class="line">	private static Tree insertAvl(Tree tree, int  key) &#123;</span><br><span class="line">		if(tree == null) &#123;</span><br><span class="line">			return new Tree(key, null, null);</span><br><span class="line">		&#125; else if(key &lt; tree.getData())&#123;//插入在左子树</span><br><span class="line">			tree.setLchild(insertAvl(tree.getLchild(), key));</span><br><span class="line">		&#125; else if(key &gt; tree.getData())&#123;</span><br><span class="line">			tree.setRchild(insertAvl(tree.getRchild(), key));</span><br><span class="line">		&#125;</span><br><span class="line">		return balanceAVL(tree);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 判断是否平衡</span><br><span class="line">	 * @param tree</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	private static Tree balanceAVL(Tree tree) &#123;</span><br><span class="line">		if(tree == null) &#123;</span><br><span class="line">			return tree;</span><br><span class="line">		&#125;</span><br><span class="line">		if(hight(tree.getLchild())-hight(tree.getRchild())&gt;ALLOWED_IMBALANCE) &#123;//左子树失去了平衡</span><br><span class="line">			if(hight(tree.getLchild().getLchild())&gt;=hight(tree.getLchild().getRchild())) &#123;//将值插入到右子树</span><br><span class="line">				tree = rotateWithLeftChild(tree);</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				tree = doubleWithLeftChild(tree);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else if(hight(tree.getRchild())-hight(tree.getLchild())&gt;ALLOWED_IMBALANCE) &#123;</span><br><span class="line">			if(hight(tree.getRchild().getRchild())&gt;=hight(tree.getRchild().getLchild())) &#123;</span><br><span class="line">				tree = rotateWithRightChild(tree);</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				tree = doubleWithRightChild(tree);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return tree;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 先左转再右转</span><br><span class="line">	 * @param tree</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	private static Tree doubleWithLeftChild(Tree tree) &#123;</span><br><span class="line">		Tree tmp = tree.getLchild();</span><br><span class="line">		tmp.setLchild(rotateWithRightChild(tmp));</span><br><span class="line">		return rotateWithLeftChild(tree);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private static Tree doubleWithRightChild(Tree tree) &#123;</span><br><span class="line">		Tree tmp = tree.getRchild();</span><br><span class="line">		tmp.setRchild(rotateWithLeftChild(tmp));</span><br><span class="line">		return rotateWithRightChild(tree);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * 单旋转，将左子树旋转到右子树</span><br><span class="line">	 * @param tree</span><br><span class="line">	 * @return</span><br><span class="line">	 */</span><br><span class="line">	private static Tree rotateWithLeftChild(Tree tree) &#123;</span><br><span class="line">		Tree tmp = tree.getLchild();</span><br><span class="line">		tree.setLchild(tree.getRchild());</span><br><span class="line">		tmp.setRchild(tree);</span><br><span class="line">		tree.setBf(Math.max(hight(tree.getLchild()), hight(tree.getRchild()))+1);</span><br><span class="line">		tmp.setBf(Math.max(hight(tmp.getLchild()), tree.getBf())+1);</span><br><span class="line">		return tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private static Tree rotateWithRightChild(Tree tree) &#123;</span><br><span class="line">		Tree tmp = tree.getRchild();</span><br><span class="line">		tree.setRchild(tree.getLchild());</span><br><span class="line">		tmp.setRchild(tree);</span><br><span class="line">		tree.setBf(Math.max(hight(tree.getLchild()), hight(tree.getRchild()))+1);</span><br><span class="line">		tmp.setBf(Math.max(hight(tmp.getRchild()), tree.getBf())+1);</span><br><span class="line">		return tmp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -384,13 +367,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/21/代码习题/">代码习题</a></p>
+        <p><span>本文标题:</span><a href="/2019/03/20/树之平衡二叉树/">树之平衡二叉树</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
-        <p><span>发布时间:</span>2019-02-21, 09:37:51</p>
-        <p><span>最后更新:</span>2019-03-04, 19:08:45</p>
+        <p><span>发布时间:</span>2019-03-20, 07:11:28</p>
+        <p><span>最后更新:</span>2019-03-20, 15:03:37</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/21/代码习题/" title="代码习题">http://yoursite.com/2019/02/21/代码习题/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/21/代码习题/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/03/20/树之平衡二叉树/" title="树之平衡二叉树">http://yoursite.com/2019/03/20/树之平衡二叉树/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/03/20/树之平衡二叉树/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -402,16 +385,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/26/图的遍历/">
-                    图的遍历
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/02/19/图/">
-                    图
+                <a href="/2019/03/19/树之二叉排序树/">
+                    树之二叉排序树
                 </a>
             </div>
         
@@ -423,7 +400,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-对链表进行重新排序"><span class="toc-number">1.</span> <span class="toc-text">1.对链表进行重新排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-求两个字符串的最长公共子串"><span class="toc-number">2.</span> <span class="toc-text">2.求两个字符串的最长公共子串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-求字符串的所有排序（未去重）"><span class="toc-number">3.</span> <span class="toc-text">3.求字符串的所有排序（未去重）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-将多个有序的list集合组合成一个有序的集合"><span class="toc-number">4.</span> <span class="toc-text">4. 将多个有序的list集合组合成一个有序的集合</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现方法"><span class="toc-number">2.</span> <span class="toc-text">实现方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现"><span class="toc-number">3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#图解"><span class="toc-number">3.1.</span> <span class="toc-text">图解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">3.2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.3.</span> <span class="toc-text">代码</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -459,7 +436,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"代码习题　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"树之平衡二叉树　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -479,15 +456,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/02/26/图的遍历/" title="上一篇: 图的遍历">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/02/19/图/" title="下一篇: 图">
+            <a href="/2019/03/19/树之二叉排序树/" title="下一篇: 树之二叉排序树">
                 <i class="fa fa-angle-right"></i>
             </a>
         
