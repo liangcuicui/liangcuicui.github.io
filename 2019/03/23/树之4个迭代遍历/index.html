@@ -15,23 +15,18 @@
 
 
 
-<meta name="description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
-<meta name="keywords" content="算法,数据结构">
+<meta name="description" content="一下的遍历都是迭代遍历    层次遍历层次遍历用到的是深度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。    12345678910111213141516171819202122232425262728293031class TreeNode">
+<meta name="keywords" content="算法,数据结构,树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表（List）之增删改查">
-<meta property="og:url" content="http://yoursite.com/2019/02/01/线性表/index.html">
+<meta property="og:title" content="树之4个迭代遍历">
+<meta property="og:url" content="http://yoursite.com/2019/03/23/树之4个迭代遍历/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
+<meta property="og:description" content="一下的遍历都是迭代遍历    层次遍历层次遍历用到的是深度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。    12345678910111213141516171819202122232425262728293031class TreeNode">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/LNode.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/node.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/01/线性表/head.png">
-<meta property="og:updated_time" content="2019-02-20T01:50:43.144Z">
+<meta property="og:updated_time" content="2019-03-23T04:02:55.235Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表（List）之增删改查">
-<meta name="twitter:description" content="定义&amp;#160;&amp;#160;&amp;#160;&amp;#160;由0或多个数据元素组成的有限个序列，为0时，是空表">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/01/线性表/type_base.png">
+<meta name="twitter:title" content="树之4个迭代遍历">
+<meta name="twitter:description" content="一下的遍历都是迭代遍历    层次遍历层次遍历用到的是深度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。    12345678910111213141516171819202122232425262728293031class TreeNode">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -63,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>线性表（List）之增删改查 | TimeJjc&#39;s Blog</title>
+<title>树之4个迭代遍历 | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -280,11 +275,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-线性表" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-树之4个迭代遍历" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/02/01/线性表/" class="article-date">
-      <time datetime="2019-02-01T08:31:54.000Z" itemprop="datePublished">2019-02-01</time>
+      <a href="/2019/03/23/树之4个迭代遍历/" class="article-date">
+      <time datetime="2019-03-23T03:23:04.000Z" itemprop="datePublished">2019-03-23</time>
 </a>
 
 
@@ -299,7 +294,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      线性表（List）之增删改查
+      树之4个迭代遍历
     </h1>
   
 
@@ -309,7 +304,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.3k字</span>
+        <span class="post-count">435字</span>
       </span>
     </span>
 
@@ -318,7 +313,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -330,7 +325,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树/">树</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -340,75 +335,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>&#160;&#160;&#160;&#160;由0或多个数据元素组成的有限个序列，为0时，是空表<br><a id="more"></a></p>
-<h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><p>&#160;&#160;&#160;&#160;第一个元素无前驱，最后一个元素无后继，其他元素都<strong><em>有且只有</em></strong>一个前驱和后继。线性关系是不允许有第三者的！！！   </p>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>&#160;&#160;&#160;&#160;一组性质相同的值的集合及定义在此集合上的一些操作的总称<br>&#160;&#160;&#160;&#160;JAVA中数据类型分为两种：  </p>
-<ul>
-<li><p>基本数据（原子）类型：不可再分<br><img src="/2019/02/01/线性表/type_base.png" alt="">  </p>
-</li>
-<li><p>引用数据类型<br>&#160;&#160;&#160;&#160;类、接口、数组<br>&#160;&#160;&#160;&#160;很重要！！！，否则无法理解“指针”操作</p>
-</li>
-</ul>
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><ul>
-<li>求元素个数</li>
-<li>插入</li>
-<li>删除</li>
-<li>查找</li>
-<li>判断是否为空  </li>
-</ul>
-<h1 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h1><p>&#160;&#160;&#160;&#160;顺序存储和链表存储  </p>
-<h2 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h2><p>&#160;&#160;&#160;&#160;栈内存是顺序结构的<br>&#160;&#160;&#160;&#160;用一段地址连续的存储单元依次存储线性表的数据元素<br>需要封装的属性（3）：</p>
-<ul>
-<li>起始位置</li>
-<li>最大存储容量</li>
-<li>当前长度<br><strong><em><font color="red">注意：线性表的首地址为：1</font></em></strong>    </li>
-</ul>
-<p>时间复杂度</p>
-<ol>
-<li>删除/插入<br>最好情况：不移动元素&#160;O(1)<br>最坏情况:移动n个元素&#160;O(n)<br>平均情况:O((n-1)/2),&#160;即&#160;O(n)   </li>
-</ol>
-<p>&#160;&#160;2.存、取<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;都为&#160;O(1)  </p>
-<p>优点  </p>
-<ol>
-<li>不需要为表中元素之间的逻辑关系增加额外的存储空间 </li>
-<li>快速存取表中任意位置的元素……谁让人家是顺序的呢，嘿嘿嘿  </li>
-</ol>
-<p>缺点  </p>
-<ol>
-<li>插入和删除太慢了，除非数据特别少，否则不要用啊！！！</li>
-<li>若线性表的长度变化较大（大量的插入和删除） ，无法确定存储空格键的容量啊</li>
-<li>存储空间碎片化，毕竟人家存储空间的分配是一整块来着的呀，当一大块空间剩下一小块时，而这一小块空间又不够我们用的，那就只能浪费掉，然后再次申请一大块空间，两个大块之间的小块就属于“碎片”啦  </li>
-</ol>
-<h2 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h2><p>位置是随意的哦，但是要求存元素本身及其后继指针  </p>
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li>数据域<br>存储数据元素信息的域  </li>
-<li>指针域<br>存储后继位置的域  </li>
-<li>指针<br>指针域中存储的信息  </li>
-<li>结点(存储映像)<br>数据域 + 指针域    <h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><img src="/2019/02/01/线性表/LNode.png" alt="">  </li>
-</ul>
-<h4 id="头指针-头节点-首元节点"><a href="#头指针-头节点-首元节点" class="headerlink" title="头指针/头节点/首元节点"></a>头指针/头节点/首元节点</h4><ul>
-<li>头指针<br>指链表指向的第一个结点的指针，若链表有头结点，则是指向头结点的指针。<br>单链表可由一个头指针唯一确定（标识）</li>
-<li>元首结点<br>指链表中存储第一个元素的结点</li>
-<li>头结点<br>在链表的首元结点之前附设的一个节点，数据域内存放的是空表标志和表长等信息<br><img src="/2019/02/01/线性表/node.png" alt="">  </li>
-</ul>
-<p>&#160;&#160;&#160;&#160;<strong> 无论链表是否为空，头指针均不为 </strong>，人家是唯一标识啊😏     </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class LNode &#123;</span><br><span class="line">	/** 数据域 */</span><br><span class="line">	private  int data ;</span><br><span class="line">	</span><br><span class="line">	/** 节点域 */</span><br><span class="line">	private LNode next;</span><br><span class="line"></span><br><span class="line">	public int getData() &#123;</span><br><span class="line">		return data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	public void setData(int data) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode getNext() &#123;</span><br><span class="line">		return next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void setNext(LNode next) &#123;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public LNode(int data, LNode next) &#123;</span><br><span class="line">		this.data = data;</span><br><span class="line">		this.next = next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="单链表的读取"><a href="#单链表的读取" class="headerlink" title="单链表的读取"></a>单链表的读取</h4><ul>
-<li>获得链表第i个数据<br>&#160;1. 声明一个结点p指向链表第一个结点，初始化&#160;j&#160;从1开始<br>&#160;2. 当j&lt;i时，遍历链表，p指针后移，j++;<br>&#160;3. 若循环到末尾p为空，则不存在第i个元素<br>&#160;4. 否则查找成功，返回结点p的数据</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class GetIData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode IData(LNode head,int i) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		while(head != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			head = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		//判断是否遍历完整个链表</span><br><span class="line">		if(head == null || j&lt;i)</span><br><span class="line">			return null;</span><br><span class="line">		</span><br><span class="line">		return head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&#160;&#160;&#160;&#160;单链表的循环，建议使用while,因为并不知道单链表的长度</p>
-<h4 id="单链表的插入"><a href="#单链表的插入" class="headerlink" title="单链表的插入"></a>单链表的插入</h4><ul>
-<li>在第i个数据插入结点<br>&#160;1. 新节点指向当前结点的后继<br>&#160;2. 当前结点指向新节点</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class InsertData &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode insert(LNode head, int i, int newData) &#123;</span><br><span class="line">		int j = 0;</span><br><span class="line">		LNode tmp = head;</span><br><span class="line">		while (tmp != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			tmp = head.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		if(tmp == null || j&lt;i || i&lt;0) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		//new一个空结点p</span><br><span class="line">		LNode p = new LNode(0);</span><br><span class="line">		&lt;font color=red&gt;p.setData(newData);&lt;/font&gt;</span><br><span class="line">		//p指向head后继:p.next = head.next</span><br><span class="line">		p.setNext(tmp.getNext());</span><br><span class="line">		//head指向p:head.next = p;</span><br><span class="line">		tmp.setNext(p);</span><br><span class="line">		return head.getNext();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里返回的时head.getNext()是因为，在定义head时，为：</p>
-<blockquote>
-<p>LNode head = new LNode(0);<br>这时head是有头节点的   </p>
-</blockquote>
-<p><img src="/2019/02/01/线性表/head.png" alt="">  </p>
-<h4 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h4><p>&#160;1. 找到要删除结点的前驱结点（j=1开始）<br>&#160;2. 前驱结点直接指向要删除结点的后继结点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class DeleteNode &#123;</span><br><span class="line"></span><br><span class="line">	public static LNode deleteINode(LNode node, int i) &#123;</span><br><span class="line">		int j = 1;</span><br><span class="line">		LNode tmp = node;</span><br><span class="line">		while(tmp != null &amp;&amp; j&lt;i) &#123;</span><br><span class="line">			tmp = tmp.getNext();</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		if(tmp == null || j&lt;i || i&lt;0) &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp.setNext(tmp.getNext().getNext());</span><br><span class="line">		return node.getNext();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>一下的遍历都是迭代遍历   </p>
+<h1 id="层次遍历"><a href="#层次遍历" class="headerlink" title="层次遍历"></a>层次遍历</h1><p>层次遍历用到的是深度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列<br>遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class TreeNode &#123;</span><br><span class="line">        int val;</span><br><span class="line">        TreeNode left;</span><br><span class="line">        TreeNode right;</span><br><span class="line">        TreeNode(int x) &#123; val = x; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) &#123;</span><br><span class="line">    	 List&lt;List&lt;Integer&gt;&gt; rlt = new ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">    	 if(root == null) &#123;</span><br><span class="line">    		 return rlt;</span><br><span class="line">    	 &#125;</span><br><span class="line">    	 Queue&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();</span><br><span class="line">    	 queue.offer(root);</span><br><span class="line">    	 while(!queue.isEmpty()) &#123;</span><br><span class="line">    		 int count = queue.size();</span><br><span class="line">    		 List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">    		 while(count&gt;0) &#123;</span><br><span class="line">    			 TreeNode node = queue.poll();</span><br><span class="line">    			 list.add(node.val);</span><br><span class="line">    			 if(node.left != null) &#123;</span><br><span class="line">    				 queue.offer(node.left);</span><br><span class="line">    			 &#125;</span><br><span class="line">    			 if(node.right != null) &#123;</span><br><span class="line">    				 queue.offer(node.right);</span><br><span class="line">    			 &#125;</span><br><span class="line">    			 count--;</span><br><span class="line">    		 &#125;</span><br><span class="line">    		 rlt.add(list);</span><br><span class="line">    	 &#125;</span><br><span class="line">    	 return rlt;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>跟层次遍历不一样的是，后三种遍历都是用栈的形式，先进后出   </p>
+<h1 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h1><p>压栈顺序，先右后左<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; preorderTraversal(TreeNode root)&#123;</span><br><span class="line">	List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">	if(root == null)&#123;</span><br><span class="line">    	return list;</span><br><span class="line">    &#125;</span><br><span class="line">	Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();</span><br><span class="line">    stack.push(root);</span><br><span class="line">	while(!stack.isEmpty())&#123;</span><br><span class="line">		TreeNode node = stack.pop();</span><br><span class="line">        list.add(node.val);</span><br><span class="line">		if(node.right != null)&#123;</span><br><span class="line">			stack.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">  		if(node.left != null)&#123;</span><br><span class="line">			stack.push(node.left);</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	return list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h1><p>左孩子入栈，出栈，再开始右孩子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; preorderTraversal(TreeNode root)&#123;</span><br><span class="line">	List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();</span><br><span class="line">        while(root!=null||!stack.isEmpty())&#123;</span><br><span class="line">            while(root!=null)&#123;</span><br><span class="line">                stack.push(root);</span><br><span class="line">                root = root.left;</span><br><span class="line">            &#125;</span><br><span class="line">            root = stack.pop();</span><br><span class="line">            list.add(root.val);</span><br><span class="line">            root = root.right;</span><br><span class="line">        &#125;</span><br><span class="line">        return list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h1><p>还没写哈哈哈哈哈<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -417,13 +350,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/01/线性表/">线性表（List）之增删改查</a></p>
+        <p><span>本文标题:</span><a href="/2019/03/23/树之4个迭代遍历/">树之4个迭代遍历</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
-        <p><span>发布时间:</span>2019-02-01, 16:31:54</p>
-        <p><span>最后更新:</span>2019-02-20, 09:50:43</p>
+        <p><span>发布时间:</span>2019-03-23, 11:23:04</p>
+        <p><span>最后更新:</span>2019-03-23, 12:02:55</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/01/线性表/" title="线性表（List）之增删改查">http://yoursite.com/2019/02/01/线性表/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/01/线性表/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/03/23/树之4个迭代遍历/" title="树之4个迭代遍历">http://yoursite.com/2019/03/23/树之4个迭代遍历/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/03/23/树之4个迭代遍历/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -435,16 +368,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/02/线性表-2/">
-                    线性表(2)
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/02/01/时间复杂度与空间复杂度/">
-                    时间复杂度与空间复杂度
+                <a href="/2019/03/21/经典排序算法/">
+                    经典排序算法
                 </a>
             </div>
         
@@ -456,7 +383,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#条件"><span class="toc-number">2.</span> <span class="toc-text">条件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型"><span class="toc-number">3.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基本操作"><span class="toc-number">4.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储结构"><span class="toc-number">5.</span> <span class="toc-text">存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序存储"><span class="toc-number">5.1.</span> <span class="toc-text">顺序存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式存储"><span class="toc-number">5.2.</span> <span class="toc-text">链式存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">5.2.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单链表"><span class="toc-number">5.2.2.</span> <span class="toc-text">单链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#头指针-头节点-首元节点"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">头指针/头节点/首元节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的读取"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">单链表的读取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的插入"><span class="toc-number">5.2.2.3.</span> <span class="toc-text">单链表的插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单链表的删除"><span class="toc-number">5.2.2.4.</span> <span class="toc-text">单链表的删除</span></a></li></ol></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#层次遍历"><span class="toc-number">1.</span> <span class="toc-text">层次遍历</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前序遍历"><span class="toc-number">2.</span> <span class="toc-text">前序遍历</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#中序遍历"><span class="toc-number">3.</span> <span class="toc-text">中序遍历</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后序遍历"><span class="toc-number">4.</span> <span class="toc-text">后序遍历</span></a></li></ol>
         
     </div>
     <style>
@@ -492,7 +419,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"线性表（List）之增删改查　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"树之4个迭代遍历　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -512,15 +439,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/02/02/线性表-2/" title="上一篇: 线性表(2)">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/02/01/时间复杂度与空间复杂度/" title="下一篇: 时间复杂度与空间复杂度">
+            <a href="/2019/03/21/经典排序算法/" title="下一篇: 经典排序算法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
