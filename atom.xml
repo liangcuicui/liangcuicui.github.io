@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-23T04:02:55.235Z</updated>
+  <updated>2019-04-02T14:21:59.522Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,28 +17,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>树之4个迭代遍历</title>
-    <link href="http://yoursite.com/2019/03/23/%E6%A0%91%E4%B9%8B4%E4%B8%AA%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86/"/>
-    <id>http://yoursite.com/2019/03/23/树之4个迭代遍历/</id>
-    <published>2019-03-23T03:23:04.000Z</published>
-    <updated>2019-03-23T04:02:55.235Z</updated>
+    <title>三次握手四次挥手</title>
+    <link href="http://yoursite.com/2019/04/02/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
+    <id>http://yoursite.com/2019/04/02/三次握手四次挥手/</id>
+    <published>2019-04-02T14:19:27.000Z</published>
+    <updated>2019-04-02T14:21:59.522Z</updated>
     
-    <content type="html"><![CDATA[<p>一下的遍历都是迭代遍历   </p><h1 id="层次遍历"><a href="#层次遍历" class="headerlink" title="层次遍历"></a>层次遍历</h1><p>层次遍历用到的是深度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列<br>遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。   </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class TreeNode &#123;</span><br><span class="line">        int val;</span><br><span class="line">        TreeNode left;</span><br><span class="line">        TreeNode right;</span><br><span class="line">        TreeNode(int x) &#123; val = x; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) &#123;</span><br><span class="line">     List&lt;List&lt;Integer&gt;&gt; rlt = new ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">     if(root == null) &#123;</span><br><span class="line">     return rlt;</span><br><span class="line">     &#125;</span><br><span class="line">     Queue&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();</span><br><span class="line">     queue.offer(root);</span><br><span class="line">     while(!queue.isEmpty()) &#123;</span><br><span class="line">     int count = queue.size();</span><br><span class="line">     List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">     while(count&gt;0) &#123;</span><br><span class="line">     TreeNode node = queue.poll();</span><br><span class="line">     list.add(node.val);</span><br><span class="line">     if(node.left != null) &#123;</span><br><span class="line">     queue.offer(node.left);</span><br><span class="line">     &#125;</span><br><span class="line">     if(node.right != null) &#123;</span><br><span class="line">     queue.offer(node.right);</span><br><span class="line">     &#125;</span><br><span class="line">     count--;</span><br><span class="line">     &#125;</span><br><span class="line">     rlt.add(list);</span><br><span class="line">     &#125;</span><br><span class="line">     return rlt;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure><p>跟层次遍历不一样的是，后三种遍历都是用栈的形式，先进后出   </p><h1 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h1><p>压栈顺序，先右后左<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; preorderTraversal(TreeNode root)&#123;</span><br><span class="line">List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">if(root == null)&#123;</span><br><span class="line">    return list;</span><br><span class="line">    &#125;</span><br><span class="line">Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();</span><br><span class="line">    stack.push(root);</span><br><span class="line">while(!stack.isEmpty())&#123;</span><br><span class="line">TreeNode node = stack.pop();</span><br><span class="line">        list.add(node.val);</span><br><span class="line">if(node.right != null)&#123;</span><br><span class="line">stack.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">  if(node.left != null)&#123;</span><br><span class="line">stack.push(node.left);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">return list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h1><p>左孩子入栈，出栈，再开始右孩子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; preorderTraversal(TreeNode root)&#123;</span><br><span class="line">List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();</span><br><span class="line">        while(root!=null||!stack.isEmpty())&#123;</span><br><span class="line">            while(root!=null)&#123;</span><br><span class="line">                stack.push(root);</span><br><span class="line">                root = root.left;</span><br><span class="line">            &#125;</span><br><span class="line">            root = stack.pop();</span><br><span class="line">            list.add(root.val);</span><br><span class="line">            root = root.right;</span><br><span class="line">        &#125;</span><br><span class="line">        return list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h1><p>还没写哈哈哈哈哈<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="三握四挥"><a href="#三握四挥" class="headerlink" title="三握四挥"></a>三握四挥</h1><p>本篇文章讲解的是TCP协议三次握手和四次挥手的一个详情。<br><a id="more"></a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;一下的遍历都是迭代遍历   &lt;/p&gt;
-&lt;h1 id=&quot;层次遍历&quot;&gt;&lt;a href=&quot;#层次遍历&quot; class=&quot;headerlink&quot; title=&quot;层次遍历&quot;&gt;&lt;/a&gt;层次遍历&lt;/h1&gt;&lt;p&gt;层次遍历用到的是深度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候
-      
+      &lt;h1 id=&quot;三握四挥&quot;&gt;&lt;a href=&quot;#三握四挥&quot; class=&quot;headerlink&quot; title=&quot;三握四挥&quot;&gt;&lt;/a&gt;三握四挥&lt;/h1&gt;&lt;p&gt;本篇文章讲解的是TCP协议三次握手和四次挥手的一个详情。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="计算机网络" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="TCP" scheme="http://yoursite.com/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树之4个迭代遍历</title>
+    <link href="http://yoursite.com/2019/03/23/%E6%A0%91%E4%B9%8B4%E4%B8%AA%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86/"/>
+    <id>http://yoursite.com/2019/03/23/树之4个迭代遍历/</id>
+    <published>2019-03-23T03:23:04.000Z</published>
+    <updated>2019-04-02T14:22:02.441Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下的遍历都是迭代遍历   </p><h1 id="层次遍历"><a href="#层次遍历" class="headerlink" title="层次遍历"></a>层次遍历</h1><p>层次遍历用到的是广度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列<br>遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。<br><a id="more"></a> </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class TreeNode &#123;</span><br><span class="line">        int val;</span><br><span class="line">        TreeNode left;</span><br><span class="line">        TreeNode right;</span><br><span class="line">        TreeNode(int x) &#123; val = x; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) &#123;</span><br><span class="line">     List&lt;List&lt;Integer&gt;&gt; rlt = new ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">     if(root == null) &#123;</span><br><span class="line">     return rlt;</span><br><span class="line">     &#125;</span><br><span class="line">     Queue&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();</span><br><span class="line">     queue.offer(root);</span><br><span class="line">     while(!queue.isEmpty()) &#123;</span><br><span class="line">     int count = queue.size();</span><br><span class="line">     List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">     while(count&gt;0) &#123;</span><br><span class="line">     TreeNode node = queue.poll();</span><br><span class="line">     list.add(node.val);</span><br><span class="line">     if(node.left != null) &#123;</span><br><span class="line">     queue.offer(node.left);</span><br><span class="line">     &#125;</span><br><span class="line">     if(node.right != null) &#123;</span><br><span class="line">     queue.offer(node.right);</span><br><span class="line">     &#125;</span><br><span class="line">     count--;</span><br><span class="line">     &#125;</span><br><span class="line">     rlt.add(list);</span><br><span class="line">     &#125;</span><br><span class="line">     return rlt;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure><p>跟层次遍历不一样的是，后三种遍历都是用栈的形式，先进后出   </p><h1 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h1><p>压栈顺序，先右后左<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; preorderTraversal(TreeNode root)&#123;</span><br><span class="line">List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">if(root == null)&#123;</span><br><span class="line">    return list;</span><br><span class="line">    &#125;</span><br><span class="line">Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;();</span><br><span class="line">    stack.push(root);</span><br><span class="line">while(!stack.isEmpty())&#123;</span><br><span class="line">TreeNode node = stack.pop();</span><br><span class="line">        list.add(node.val);</span><br><span class="line">if(node.right != null)&#123;</span><br><span class="line">stack.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">  if(node.left != null)&#123;</span><br><span class="line">stack.push(node.left);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">return list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h1><p>左孩子入栈，出栈，再开始右孩子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; preorderTraversal(TreeNode root)&#123;</span><br><span class="line">List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();</span><br><span class="line">        while(root!=null||!stack.isEmpty())&#123;</span><br><span class="line">            while(root!=null)&#123;</span><br><span class="line">                stack.push(root);</span><br><span class="line">                root = root.left;</span><br><span class="line">            &#125;</span><br><span class="line">            root = stack.pop();</span><br><span class="line">            list.add(root.val);</span><br><span class="line">            root = root.right;</span><br><span class="line">        &#125;</span><br><span class="line">        return list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h1><p>还没写哈哈哈哈哈<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以下的遍历都是迭代遍历   &lt;/p&gt;
+&lt;h1 id=&quot;层次遍历&quot;&gt;&lt;a href=&quot;#层次遍历&quot; class=&quot;headerlink&quot; title=&quot;层次遍历&quot;&gt;&lt;/a&gt;层次遍历&lt;/h1&gt;&lt;p&gt;层次遍历用到的是广度优先算法，BFS,从根节点开始一层层的搜索，所以在遍历的时候用到了队列&lt;br&gt;遍历的时候用到了两层循环，因为我们需要每一层的结点，用一个list存储，如果用一层循环的话，那么就是每一个结点用一个list存储。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
     
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
     
@@ -60,9 +79,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -82,9 +101,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
     
@@ -106,9 +125,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
     
@@ -134,9 +153,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="图" scheme="http://yoursite.com/tags/%E5%9B%BE/"/>
     
@@ -159,9 +178,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="图" scheme="http://yoursite.com/tags/%E5%9B%BE/"/>
     
@@ -254,9 +273,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="图" scheme="http://yoursite.com/tags/%E5%9B%BE/"/>
     
@@ -278,9 +297,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="图" scheme="http://yoursite.com/tags/%E5%9B%BE/"/>
     
@@ -304,9 +323,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="图" scheme="http://yoursite.com/tags/%E5%9B%BE/"/>
     
@@ -351,9 +370,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="图" scheme="http://yoursite.com/tags/%E5%9B%BE/"/>
     
@@ -375,9 +394,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -401,9 +420,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
     
@@ -431,9 +450,9 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -484,33 +503,6 @@
     
     
       <category term="算法题" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树</title>
-    <link href="http://yoursite.com/2019/02/14/%E6%A0%91/"/>
-    <id>http://yoursite.com/2019/02/14/树/</id>
-    <published>2019-02-13T16:57:24.000Z</published>
-    <updated>2019-03-23T03:26:04.934Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>是一对多的数据结构<br>树是n个结点的有限集，当n = 0 时称为空树。在任意一棵非空树中：  </p><ul><li>有且仅有一个特定的称为根的结点</li><li>当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)   <a id="more"></a>  </li></ul><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul><li><p>度<br>结点拥有的子树，树的度是各结点度的最大值<br>度为 0 的结点称为叶节点(leaf)或者终端结点<br>度不为0 的结点称为分支结点，或非终端节点，除了根节点外，分支结点也称为内部结点。</p></li><li><p>结点的层次(level)<br>结点的层次从根开始定在一起，根为第一层<br>双亲在同一层的结点互为堂兄弟</p></li><li><p>结点的祖先<br>从根节点到该节点所经过分支上的所有结点</p></li><li><p>深度或高度<br>结点的最大层次称为树的深度(depth)或高度</p></li><li><p>森林(fores)<br>由m(m&gt;=0)棵互不相交的树组成的集合 </p></li><li><p>兄弟(sibling)<br>同一个双亲的孩子之间称为兄弟 </p></li><li><p>无序树和有序树<br>如果将树中结点的各子树看成从左至右是有次序的，不能互换的，则是有序树，否则是无序树。</p></li></ul><h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><p>顺序结构和链表结构都是一对一；树可以实现一对多的结构</p><h3 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h3><p>以一组连续空间存储树的结点，同时在每个结点中，附设一个指示器指向其双亲结点到链表中的位置。<br><img src="/2019/02/14/树/treeParent.PNG" alt=""></p><p><strong><em>需要知道自己的数据和双亲位置</em></strong></p><p><strong>优点</strong><br>&#160;&#160;&#160;&#160;找到双亲的速度很快，复杂度为O(1)<br><strong>缺点</strong><br>&#160;&#160;&#160;&#160;如果需要找到孩子数据，需要遍历整个结构</p><h3 id="孩子表示法"><a href="#孩子表示法" class="headerlink" title="孩子表示法"></a>孩子表示法</h3><p>数组和链表的搭配结合<br>孩子表示法<br><img src="/2019/02/14/树/treeChildren" alt="">  </p><p>双亲孩子表示法<br><img src="/2019/02/14/树/treeChildrenParent" alt="">  </p><h3 id="孩子兄弟表示法"><a href="#孩子兄弟表示法" class="headerlink" title="孩子兄弟表示法"></a>孩子兄弟表示法</h3><p>左孩子右兄弟</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;树&quot;&gt;&lt;a href=&quot;#树&quot; class=&quot;headerlink&quot; title=&quot;树&quot;&gt;&lt;/a&gt;树&lt;/h1&gt;&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;是一对多的数据结构&lt;br&gt;树是n个结点的有限集，当n = 0 时称为空树。在任意一棵非空树中：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;有且仅有一个特定的称为根的结点&lt;/li&gt;
-&lt;li&gt;当n&amp;gt;1时，其余结点可分为m(m&amp;gt;0)个互不相交的有限集，其中每个集合本身又是一棵树，并称为根的子树(SubTree)&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-      <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
     
   </entry>
   
