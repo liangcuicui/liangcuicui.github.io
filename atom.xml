@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-22T03:27:13.892Z</updated>
+  <updated>2019-06-27T14:40:41.273Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++ Primer学习之旅</title>
+    <link href="http://yoursite.com/2019/06/27/C-Primer%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/"/>
+    <id>http://yoursite.com/2019/06/27/C-Primer学习之旅/</id>
+    <published>2019-06-27T14:25:02.000Z</published>
+    <updated>2019-06-27T14:40:41.273Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第二章-变量和基本类型"><a href="#第二章-变量和基本类型" class="headerlink" title="第二章 变量和基本类型"></a>第二章 变量和基本类型</h2><h3 id="引用和指针"><a href="#引用和指针" class="headerlink" title="引用和指针"></a>引用和指针</h3><p><em>引用</em>：并非是对象，只是作为一个已经存在的对象所起的另外一个名字，所以他是没有实际地址的<br><em>指针</em>：本身就是一个对象，而且在指针的生命周期内它可以先后指向几个不同的对象；不需要在初始的时候赋初值，，引用必须有初始值！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;第二章-变量和基本类型&quot;&gt;&lt;a href=&quot;#第二章-变量和基本类型&quot; class=&quot;headerlink&quot; title=&quot;第二章 变量和基本类型&quot;&gt;&lt;/a&gt;第二章 变量和基本类型&lt;/h2&gt;&lt;h3 id=&quot;引用和指针&quot;&gt;&lt;a href=&quot;#引用和指针&quot; class
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>面试</title>
@@ -475,35 +498,6 @@
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新年第一周</title>
-    <link href="http://yoursite.com/2019/02/15/%E6%96%B0%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%91%A8/"/>
-    <id>http://yoursite.com/2019/02/15/新年第一周/</id>
-    <published>2019-02-15T01:59:53.000Z</published>
-    <updated>2019-03-17T08:28:25.638Z</updated>
-    
-    <content type="html"><![CDATA[<p>作为新年的第一周，真的是，微笑中透露着疲惫</p><ul><li>周二给同学发了简历，然后挂了</li><li>数据结构真的不好复习</li><li>刷题真的伤时间</li><li>第一周13号线停了一周，我单程时间就变成了2小时</li><li>7：40出发，9：40到公司，心态已崩</li><li>新年愿望：<blockquote><p>换工作<br>顺利毕业<br>皮肤变好<br>瘦<br>如果可以，还有小哥哥</p></blockquote></li></ul><ul><li>最后一定要说：尹腾召是个大傻子，大猪蹄子，糟老头子</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;作为新年的第一周，真的是，微笑中透露着疲惫&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;周二给同学发了简历，然后挂了&lt;/li&gt;
-&lt;li&gt;数据结构真的不好复习&lt;/li&gt;
-&lt;li&gt;刷题真的伤时间&lt;/li&gt;
-&lt;li&gt;第一周13号线停了一周，我单程时间就变成了2小时&lt;/li&gt;
-&lt;li&gt;7：40出发，
-      
-    
-    </summary>
-    
-    
-      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

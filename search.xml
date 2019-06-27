@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>C++ Primer学习之旅</title>
+      <link href="/2019/06/27/C-Primer%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/"/>
+      <url>/2019/06/27/C-Primer%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第二章-变量和基本类型"><a href="#第二章-变量和基本类型" class="headerlink" title="第二章 变量和基本类型"></a>第二章 变量和基本类型</h2><h3 id="引用和指针"><a href="#引用和指针" class="headerlink" title="引用和指针"></a>引用和指针</h3><p><em>引用</em>：并非是对象，只是作为一个已经存在的对象所起的另外一个名字，所以他是没有实际地址的<br><em>指针</em>：本身就是一个对象，而且在指针的生命周期内它可以先后指向几个不同的对象；不需要在初始的时候赋初值，，引用必须有初始值！！！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面试</title>
       <link href="/2019/05/14/%E9%9D%A2%E8%AF%95/"/>
       <url>/2019/05/14/%E9%9D%A2%E8%AF%95/</url>
