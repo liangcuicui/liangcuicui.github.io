@@ -15,18 +15,13 @@
 
 
 
-<meta name="description" content="定义也称赫夫曼树、最优二叉树，Huffman,是首个实用的压缩编码方案。&amp;#160;&amp;#160;&amp;#160;&amp;#160;给定n个权值作为n个叶子结点，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉为最优二叉树，也称为哈夫曼树。">
-<meta name="keywords" content="数据结构,算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="哈夫曼树">
-<meta property="og:url" content="http://yoursite.com/2019/02/17/树之哈夫曼树/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TimeJjc&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2019/09/index.html">
 <meta property="og:site_name" content="TimeJjc&#39;s Blog">
-<meta property="og:description" content="定义也称赫夫曼树、最优二叉树，Huffman,是首个实用的压缩编码方案。&amp;#160;&amp;#160;&amp;#160;&amp;#160;给定n个权值作为n个叶子结点，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉为最优二叉树，也称为哈夫曼树。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-17T14:41:50.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="哈夫曼树">
-<meta name="twitter:description" content="定义也称赫夫曼树、最优二叉树，Huffman,是首个实用的压缩编码方案。&amp;#160;&amp;#160;&amp;#160;&amp;#160;给定n个权值作为n个叶子结点，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉为最优二叉树，也称为哈夫曼树。">
+<meta name="twitter:title" content="TimeJjc&#39;s Blog">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>哈夫曼树 | TimeJjc&#39;s Blog</title>
+<title>Archives: 2019/9 | TimeJjc&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -68,8 +63,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -279,201 +274,52 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-树之哈夫曼树" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2019/02/17/树之哈夫曼树/" class="article-date">
-      <time datetime="2019-02-17T10:12:32.000Z" itemprop="datePublished">2019-02-17</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2019/09/05/考研狗/" class="archive-article-date">
+      <time datetime="2019-09-05T13:10:51.000Z" itemprop="datePublished">09-05</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      哈夫曼树
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/09/05/考研狗/">考研狗</a>
     </h1>
   
 
-		
-		   <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">298字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-        
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>也称赫夫曼树、最优二叉树，Huffman,是首个实用的压缩编码方案。<br>&#160;&#160;&#160;&#160;给定n个权值作为n个叶子结点，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉为最优二叉树，也称为哈夫曼树。<br><a id="more"></a><br>&#160;&#160;&#160;&#160;哈夫曼树是带权路径最短的树，权值较大的结点离根较近。</p>
-<ul>
-<li>路径长度<br>从根节点到该节点的路径上的连接数</li>
-<li>树的路径长度<br>树中每个叶子结点的路径长度之和</li>
-<li>结点带权路径长度<br>结点的路径长度与结点权值的乘积</li>
-<li>树的带权路径长度<br>WPL(Weighted Path Length)是树中所有叶子结点的带权路径长度之和，WPL越小，树的结构越优。<h1 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h1></li>
-<li>定长编码<br>约定8位表示一个字符</li>
-<li>变长编码<br>单个编码的长度不一致，可以根据整体出现频率来调节<br>-前缀码<br>没有任何码字是其他码字的前缀</li>
-</ul>
-<p>约定，左子树用0表示，右子树用1表示<br><strong><em>很很很重要</em></strong></p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/02/17/树之哈夫曼树/">哈夫曼树</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">CC</a></p>
-        <p><span>发布时间:</span>2019-02-17, 18:12:32</p>
-        <p><span>最后更新:</span>2019-02-17, 22:41:50</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/02/17/树之哈夫曼树/" title="哈夫曼树">http://yoursite.com/2019/02/17/树之哈夫曼树/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/02/17/树之哈夫曼树/　　作者: CC" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/02/19/图/">
-                    图
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/02/17/树之二叉树/">
-                    二叉树(Binary Tree)
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#哈夫曼编码"><span class="toc-number">2.</span> <span class="toc-text">哈夫曼编码</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+          
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"哈夫曼树　| TimeJjc's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2019/02/19/图/" title="上一篇: 图">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2019/02/17/树之二叉树/" title="下一篇: 二叉树(Binary Tree)">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/05/考研狗/">考研狗</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/27/C-Primer学习之旅/">C++ Primer学习之旅</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/14/面试/">面试</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/02/三次握手四次挥手/">三次握手四次挥手</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/23/树之4个迭代遍历/">树之4个迭代遍历</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/21/经典排序算法/">经典排序算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/20/树之平衡二叉树/">树之平衡二叉树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/树之二叉排序树/">树之二叉排序树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/图论之关键路径/">图论之关键路径</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/图论之拓扑结构/">图论之拓扑结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/关联分析之Apriori/">关联分析之Apriori</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/09/来京第一次搬家/">来京第一次搬家</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/05/正向代理和反向代理/">正向代理和反向代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/01/图论之最小生成树/">树之最小生成树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/01/图论之最短路径/">图论之最短路径</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/图的遍历/">图的遍历</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/代码习题/">代码习题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/图/">图</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/树之哈夫曼树/">哈夫曼树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/树之二叉树/">二叉树(Binary Tree)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/五个常见算法/">五个常见算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/新年第一周/">新年第一周</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/leetcode/">leetcode</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/BF-and-KMP/">BF and KMP</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/递归与分治/">递归与分治</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/03/栈和队列1/">栈和队列1</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表之循环链表/">线性表之循环链表</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/02/线性表-2/">线性表(2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/线性表/">线性表（List）之增删改查</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/时间复杂度与空间复杂度/">时间复杂度与空间复杂度</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/30/数据结构与算法之逆序/">算法之链表逆序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/24/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
